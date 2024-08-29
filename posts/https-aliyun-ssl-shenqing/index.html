@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>HTTPS阿里云免费申请SSL证书 | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="现在很多网站都是以https方式访问，那么什么是https呢？百度百科是这样解释的：  HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。  也就是说https是HTTP的安全版">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTPS阿里云免费申请SSL证书">
+<meta property="og:url" content="https://gitee.com/xzweixing/hexo/posts/https-aliyun-ssl-shenqing/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="现在很多网站都是以https方式访问，那么什么是https呢？百度百科是这样解释的：  HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。  也就是说https是HTTP的安全版">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/xzweixing/hexo/img/touxiang.jpg">
+<meta property="article:published_time" content="2017-08-23T15:05:30.000Z">
+<meta property="article:modified_time" content="2023-08-26T14:26:47.053Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="阿里云">
+<meta property="article:tag" content="https">
+<meta property="article:tag" content="SSL">
+<meta property="article:tag" content="免费SSL">
+<meta property="article:tag" content="证书">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/xzweixing/hexo/img/touxiang.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://gitee.com/xzweixing/hexo/posts/https-aliyun-ssl-shenqing/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'HTTPS阿里云免费申请SSL证书',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-08-26 22:26:47'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">350</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">747</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="WEIXING.ME"><span class="site-name">WEIXING.ME</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">HTTPS阿里云免费申请SSL证书</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-08-23T15:05:30.000Z" title="发表于 2017-08-23 23:05:30">2017-08-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-26T14:26:47.053Z" title="更新于 2023-08-26 22:26:47">2023-08-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/tech/">tech</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="HTTPS阿里云免费申请SSL证书"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><a target="_blank" rel="noopener" href="https://www.weixing.me/wp-content/uploads/2017/08/2017082323074392.jpg"><img src="https://www.weixing.me/wp-content/uploads/2017/08/2017082323074392.jpg"></a>现在很多网站都是以https方式访问，那么什么是https呢？百度百科是这样解释的：</p>
+<blockquote>
+<p>HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p>
+</blockquote>
+<p>也就是说https是HTTP的安全版，里面加入了SSL，那SSL又是什么呢？继续百度百科：</p>
+<blockquote>
+<p>SSL(Secure Sockets Layer 安全套接层),及其继任者传输层安全（Transport Layer Security，TLS）是为网络通信提供安全及数据完整性的一种安全协议。TLS与SSL在传输层对网络连接进行加密。</p>
+</blockquote>
+<p>明白了，SSL是网络通信的一种安全协议，有了SSL安全协议，就能是通信通道成为https。 好了，那怎么去申请SSL证书呢？现在有很多免费的<strong>SSL证书</strong>可供大家申请，比如说阿里云的、腾讯云的、七牛云的，还有很多很多，下面**<a target="_blank" rel="noopener" href="http://http;//weixing.me">魏星博客</a>**就以阿里云举例，教大家怎么去申请免费的SSL证书。 首先进入阿里云的控制台，在左侧菜单中找到安全云盾下面的证书服务 <a target="_blank" rel="noopener" href="https://www.weixing.me/wp-content/uploads/2017/08/2017082322484436.png"><img src="https://www.weixing.me/wp-content/uploads/2017/08/2017082322484436.png"></a> 点击进入后，出现购买界面，点击右上角购买证书<a target="_blank" rel="noopener" href="https://www.weixing.me/wp-content/uploads/2017/08/2017082322494953.png"><img src="https://www.weixing.me/wp-content/uploads/2017/08/2017082322494953.png"></a> 选择免费型DV SSL证书 <a target="_blank" rel="noopener" href="https://www.weixing.me/wp-content/uploads/2017/08/2017082322504483.png"><img src="https://www.weixing.me/wp-content/uploads/2017/08/2017082322504483.png"></a> 选择完以后，点击立即购买。根据提示一步步完成购买，提示“支付成功” <a target="_blank" rel="noopener" href="https://www.weixing.me/wp-content/uploads/2017/08/2017082322520725.png"><img src="https://www.weixing.me/wp-content/uploads/2017/08/2017082322520725.png"></a> 购买完成后，需要对SSL进行信息补全，然后是完善信息，提交审核 <a target="_blank" rel="noopener" href="https://www.weixing.me/wp-content/uploads/2017/08/2017082322532473.png"><img src="https://www.weixing.me/wp-content/uploads/2017/08/2017082322532473.png"></a><a target="_blank" rel="noopener" href="https://www.weixing.me/wp-content/uploads/2017/08/2017082322533418.png"><img src="https://www.weixing.me/wp-content/uploads/2017/08/2017082322533418.png"></a> <a target="_blank" rel="noopener" href="https://www.weixing.me/wp-content/uploads/2017/08/2017082322542016.png"><img src="https://www.weixing.me/wp-content/uploads/2017/08/2017082322542016.png"></a> 补全信息，对DNS进行配置，txt记录值为阿里云系统生成记录值，配置完成后保存。 <a target="_blank" rel="noopener" href="https://www.weixing.me/wp-content/uploads/2017/08/2017082322543759.png"><img src="https://www.weixing.me/wp-content/uploads/2017/08/2017082322543759.png"></a> 提交完资料后，先对配置文件进行检查，确定是否配置成功 <a target="_blank" rel="noopener" href="https://www.weixing.me/wp-content/uploads/2017/08/2017082322573247.png"><img src="https://www.weixing.me/wp-content/uploads/2017/08/2017082322573247.png"></a> 点击“检查配置”，配置检查返回值为“DNS配置记录证券网，请耐心等待”，说明配置成功。好了，剩下的时间就是等待审核了 <a target="_blank" rel="noopener" href="https://www.weixing.me/wp-content/uploads/2017/08/2017082322591219.png"><img src="https://www.weixing.me/wp-content/uploads/2017/08/2017082322591219.png"></a> 官方审核时间为24小时，但是我提交审核后半小时就收到审核通过证书已签发的邮件。好了，就到这里吧，今天魏星博客提供的<a target="_blank" rel="noopener" href="https://www.weixing.me/uncategorized/https-aliyun-ssl-shenqing/"><strong>HTTPS阿里云免费申请SSL证书</strong></a>的教程就到这里，还有其他问题，欢迎给我留言互动。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://gitee.com/xzweixing/hexo">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://gitee.com/xzweixing/hexo/posts/https-aliyun-ssl-shenqing/">https://gitee.com/xzweixing/hexo/posts/https-aliyun-ssl-shenqing/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://gitee.com/xzweixing/hexo" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/">阿里云</a><a class="post-meta__tags" href="/tags/https/">https</a><a class="post-meta__tags" href="/tags/SSL/">SSL</a><a class="post-meta__tags" href="/tags/%E5%85%8D%E8%B4%B9SSL/">免费SSL</a><a class="post-meta__tags" href="/tags/%E8%AF%81%E4%B9%A6/">证书</a></div><div class="post_share"><div class="social-share" data-image="/img/touxiang.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/xiaohong-chunfengshili-buruni/" title="《小红》春风十里不如你电视剧插曲"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">《小红》春风十里不如你电视剧插曲</div></div></a></div><div class="next-post pull-right"><a href="/posts/tengxun-dawangka-chaojihuiyuan/" title="腾讯大王超级会员卡介绍及申请方法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">腾讯大王超级会员卡介绍及申请方法</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/aliyun-domain-xufei-weifukuan-dingdan-jiejuefangfa/" title="阿里云续费出现“当前存在未付款订单，在未处理前无法进行当前操作”的解决方法"><img class="cover" src="https://i.loli.net/2021/02/24/QlbYIzdfij1uAKZ.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-24</div><div class="title">阿里云续费出现“当前存在未付款订单，在未处理前无法进行当前操作”的解决方法</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">WEIXING.ME</div><div class="author-info__description">衣带渐宽终不悔，为伊消得人憔悴</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">350</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">747</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn"><i class="fa fa-rss"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/love-you/" title="love-you">love-you</a><time datetime="2023-08-26T12:16:08.000Z" title="发表于 2023-08-26 20:16:08">2023-08-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/aliyun-domain-xufei-weifukuan-dingdan-jiejuefangfa/" title="阿里云续费出现“当前存在未付款订单，在未处理前无法进行当前操作”的解决方法">阿里云续费出现“当前存在未付款订单，在未处理前无法进行当前操作”的解决方法</a><time datetime="2021-02-24T05:11:22.000Z" title="发表于 2021-02-24 13:11:22">2021-02-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/my-blog-10-years/" title="开博10年，纪念一下">开博10年，纪念一下</a><time datetime="2020-08-31T08:59:42.000Z" title="发表于 2020-08-31 16:59:42">2020-08-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/wp-rest-api-create-api-posts-meta-field/" title="wp-rest-api添加自定义字段输出">wp-rest-api添加自定义字段输出</a><time datetime="2019-06-16T13:46:08.000Z" title="发表于 2019-06-16 21:46:08">2019-06-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/python-note-can-only-concatenate-str-not-int-to-str/" title="[Python笔记]can only concatenate str (not &quot;int&quot;) to str">[Python笔记]can only concatenate str (not &quot;int&quot;) to str</a><time datetime="2019-06-02T23:50:55.000Z" title="发表于 2019-06-03 07:50:55">2019-06-03</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By WEIXING.ME</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const initValine = () => {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  const loadValine = async () => {
+    if (typeof Valine === 'function') initValine()
+    else {
+      await getScript('https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js')
+      initValine()
+    }
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

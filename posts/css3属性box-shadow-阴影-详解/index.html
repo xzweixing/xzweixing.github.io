@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>CSS3属性box-shadow 阴影 详解 | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="CSS3的box-shadow属性可以让我们轻松实现图层阴影效果。 一. box-shadow属性的浏览器兼容性 1、Opera： 已经支持box-shadow属性。 2、firefox通过私有属性-moz-box-shadow支持。 3、Safari和Chrome通过私有属性-webkit-box-shadow支持。 4、所有IE不支持（不知道IE9是否有所改善）。 二. box-shadow属">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3属性box-shadow 阴影 详解">
+<meta property="og:url" content="https://gitee.com/xzweixing/hexo/posts/css3%E5%B1%9E%E6%80%A7box-shadow-%E9%98%B4%E5%BD%B1-%E8%AF%A6%E8%A7%A3/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="CSS3的box-shadow属性可以让我们轻松实现图层阴影效果。 一. box-shadow属性的浏览器兼容性 1、Opera： 已经支持box-shadow属性。 2、firefox通过私有属性-moz-box-shadow支持。 3、Safari和Chrome通过私有属性-webkit-box-shadow支持。 4、所有IE不支持（不知道IE9是否有所改善）。 二. box-shadow属">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/xzweixing/hexo/img/touxiang.jpg">
+<meta property="article:published_time" content="2010-12-07T16:59:56.000Z">
+<meta property="article:modified_time" content="2023-08-26T14:26:47.029Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="详解">
+<meta property="article:tag" content="css3">
+<meta property="article:tag" content="-moz-box-shadow">
+<meta property="article:tag" content="-webkit-box-shadow">
+<meta property="article:tag" content="box-shadow">
+<meta property="article:tag" content="阴影">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/xzweixing/hexo/img/touxiang.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://gitee.com/xzweixing/hexo/posts/css3%E5%B1%9E%E6%80%A7box-shadow-%E9%98%B4%E5%BD%B1-%E8%AF%A6%E8%A7%A3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'CSS3属性box-shadow 阴影 详解',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-08-26 22:26:47'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">350</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">747</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="WEIXING.ME"><span class="site-name">WEIXING.ME</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">CSS3属性box-shadow 阴影 详解</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2010-12-07T16:59:56.000Z" title="发表于 2010-12-08 00:59:56">2010-12-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-26T14:26:47.029Z" title="更新于 2023-08-26 22:26:47">2023-08-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/webwebdesign/">webwebdesign</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="CSS3属性box-shadow 阴影 详解"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>CSS3</strong>的<strong>box-shadow</strong>属性可以让我们轻松实现图层阴影效果。 一. box-shadow属性的<strong>浏览器兼容性</strong> 1、Opera： 已经支持box-shadow属性。 2、firefox通过私有属性-moz-box-shadow支持。 3、Safari和Chrome通过私有属性-webkit-box-shadow支持。 4、所有IE不支持（不知道IE9是否有所改善）。 二. box-shadow属性的语法 box-shadow有六个可设值： img{box-shadow：阴影类型 X轴位移 Y轴位移 阴影大小 阴影扩展 阴影颜色 } 1、当不设阴影类型时，默认为投影效果。当设为inset时，为内阴影效果。 2、X轴和Y轴位移不等同但类似于photoshop里面的”角度”和”位置。 3、阴影大小、扩展、颜色和Photoshop里面的都同理。 三. 实例解析 让我们通过几个实例来看一个box-shadow的效果，先弄个简单的html供测试：</p>
+<p>以下为引用的内容： <html> <head> <style type="text/css">CSS部份写在这里</style> </head> <body> &lt;img? src&#x3D;”test.jpg” &#x2F;&gt; </body> </html></p>
+<p>请注意：为了省事儿，下面的CSS代码中只写了box-shadow，在实际使用中，你应该把-moz-box-shadow和-webkit-shadow也写上。你需要做的很简，复制两个box-shadow，在它们前面分别加上-moz-和-webkit-。 以下为引用的内容： img { -moz-box-shadow:2px 2px 10px #06C; -webkit-box-shadow:2px 2px 10px #06C; box-shadow:2px 2px 10px #06C; } <strong>(1). 投影，没有位移，10px的阴影大小，没有扩展，颜色#06C</strong></p>
+<p>以下为引用的内容： img{box-shadow:0 0 10px #06C;}</p>
+<p><img src="http://www.blueidea.com/articleimg/2010/05/7594/01.jpg" alt="css3 box shadow 1 CSS3属性box shadow使用教程"> 这里的颜色值是HEX值，我们还可以使用RGBA值，RGBA值的好处是，它多了一个Alpha透明值，你可以控制阴影的透明度。</p>
+<p>以下为引用的内容： img{box-shadow: 0 0 10px rgba(0, 255, 0, .5)}</p>
+<p><strong>(2). 在上面的基础上加上20px的扩展</strong></p>
+<p>以下为引用的内容： img{box-shadow:0 0 10px 20px #06C;}</p>
+<p><img src="http://www.blueidea.com/articleimg/2010/05/7594/02.jpg" alt="css3 box shadow 2 CSS3属性box shadow使用教程"> <strong>(3).? 内阴影，无位移，10px大小，没有扩展，颜色#06C</strong></p>
+<p>以下为引用的内容： img{box-shadow:inset 0 0 10px #06C;}</p>
+<p><img src="http://www.blueidea.com/articleimg/2010/05/7594/03.jpg" alt="css3 box shadow 3 CSS3属性box shadow使用教程"></p>
+<p>如果你需要，你还可以定义多个阴影，使用逗号隔开（例子来自<a target="_blank" rel="noopener" href="http://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/">Markus Stange</a>）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">-moz-box-shadow: 0 0 20px black, 20px 15px 30px yellow, -20px 15px 30px lime,?</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-20px -15px 30px blue, 20px -15px 30px red;</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="http://farm5.static.flickr.com/4020/4262035610_6a7d2a3daf.jpg" title="写博"><img src="http://farm5.static.flickr.com/4020/4262035610_6a7d2a3daf.jpg" alt="写博"></a></p>
+<p>不同的阴影效果非常柔和的融合在一起，您也可能注意到，他们的定义顺序不同产生的效果也不同。因为<code>box-shadow</code>是CSS3的特性，而Firefox 3.5遵循的是CSS3的绘画顺序。也就是说，最先定义的影子显示在_顶端_，所以在设计多阴影的时候需要注意这一点。</p>
+<p><strong>(1). 投影，没有位移，10px的阴影大小，没有扩展，颜色#06C</strong></p>
+<p>以下为引用的内容： img{box-shadow:0 0 10px #06C;}</p>
+<p><img src="http://www.blueidea.com/articleimg/2010/05/7594/01.jpg" alt="css3 box shadow 1 CSS3属性box shadow使用教程"> 这里的颜色值是HEX值，我们还可以使用RGBA值，RGBA值的好处是，它多了一个Alpha透明值，你可以控制阴影的透明度。</p>
+<p>以下为引用的内容： img{box-shadow: 0 0 10px rgba(0, 255, 0, .5)}</p>
+<p><strong>(2). 在上面的基础上加上20px的扩展</strong></p>
+<p>以下为引用的内容： img{box-shadow:0 0 10px 20px #06C;}</p>
+<p><img src="http://www.blueidea.com/articleimg/2010/05/7594/02.jpg" alt="css3 box shadow 2 CSS3属性box shadow使用教程"> <strong>(3).? 内阴影，无位移，10px大小，没有扩展，颜色#06C</strong></p>
+<p>以下为引用的内容： img{box-shadow:inset 0 0 10px #06C;}</p>
+<p><img src="http://www.blueidea.com/articleimg/2010/05/7594/03.jpg" alt="css3 box shadow 3 CSS3属性box shadow使用教程"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://gitee.com/xzweixing/hexo">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://gitee.com/xzweixing/hexo/posts/css3%E5%B1%9E%E6%80%A7box-shadow-%E9%98%B4%E5%BD%B1-%E8%AF%A6%E8%A7%A3/">https://gitee.com/xzweixing/hexo/posts/css3%E5%B1%9E%E6%80%A7box-shadow-%E9%98%B4%E5%BD%B1-%E8%AF%A6%E8%A7%A3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://gitee.com/xzweixing/hexo" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AF%A6%E8%A7%A3/">详解</a><a class="post-meta__tags" href="/tags/css3/">css3</a><a class="post-meta__tags" href="/tags/moz-box-shadow/">-moz-box-shadow</a><a class="post-meta__tags" href="/tags/webkit-box-shadow/">-webkit-box-shadow</a><a class="post-meta__tags" href="/tags/box-shadow/">box-shadow</a><a class="post-meta__tags" href="/tags/%E9%98%B4%E5%BD%B1/">阴影</a></div><div class="post_share"><div class="social-share" data-image="/img/touxiang.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/jquery-%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" title="jQuery 学习（一）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">jQuery 学习（一）</div></div></a></div><div class="next-post pull-right"><a href="/posts/%E3%80%8A%E5%B0%8F%E6%97%A5%E6%9C%AC%E5%90%AC%E7%9D%80%E3%80%8B%E6%AD%8C%E6%9B%B2-mp3-%E8%A7%86%E5%90%AC-%E4%B8%8B%E8%BD%BD-%E6%AD%8C%E8%AF%8D/" title="《小日本听着》歌曲  MP3 视听 下载  歌词"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">《小日本听着》歌曲  MP3 视听 下载  歌词</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/brand-pinpai-anzhuang/" title="Brand品牌空间安装详解，问题集锦"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2012-06-11</div><div class="title">Brand品牌空间安装详解，问题集锦</div></div></a></div><div><a href="/posts/hello-world-2/" title="CSS display:inline 详解"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2010-08-31</div><div class="title">CSS display:inline 详解</div></div></a></div><div><a href="/posts/jquery%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89%E5%AE%9E%E4%BE%8B-jquery%E8%83%8C%E6%99%AF%E8%B7%9F%E9%9A%8F%E7%A7%BB%E5%8A%A8%E5%AF%BC%E8%88%AA%EF%BC%88%E8%AF%A6%E8%A7%A3%EF%BC%89/" title="jQuery学习（三）实例–jQuery背景跟随移动导航（详解）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2010-12-15</div><div class="title">jQuery学习（三）实例–jQuery背景跟随移动导航（详解）</div></div></a></div><div><a href="/posts/masonry-jquery-%E5%B8%83%E5%B1%80%E6%8F%92%E4%BB%B6-%E8%AF%A6%E8%A7%A3/" title="Masonry  jQuery 布局插件 详解"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2010-12-26</div><div class="title">Masonry  jQuery 布局插件 详解</div></div></a></div><div><a href="/posts/win7-microsoft-xps-xuni-printer/" title="win7安装Microsoft XPS虚拟打印机（图文详解）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2016-05-20</div><div class="title">win7安装Microsoft XPS虚拟打印机（图文详解）</div></div></a></div><div><a href="/posts/car-animation-with-css3/" title="css3制作的汽车动画"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2011-03-13</div><div class="title">css3制作的汽车动画</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">WEIXING.ME</div><div class="author-info__description">衣带渐宽终不悔，为伊消得人憔悴</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">350</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">747</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn"><i class="fa fa-rss"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/love-you/" title="love-you">love-you</a><time datetime="2023-08-26T12:16:08.000Z" title="发表于 2023-08-26 20:16:08">2023-08-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/aliyun-domain-xufei-weifukuan-dingdan-jiejuefangfa/" title="阿里云续费出现“当前存在未付款订单，在未处理前无法进行当前操作”的解决方法">阿里云续费出现“当前存在未付款订单，在未处理前无法进行当前操作”的解决方法</a><time datetime="2021-02-24T05:11:22.000Z" title="发表于 2021-02-24 13:11:22">2021-02-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/my-blog-10-years/" title="开博10年，纪念一下">开博10年，纪念一下</a><time datetime="2020-08-31T08:59:42.000Z" title="发表于 2020-08-31 16:59:42">2020-08-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/wp-rest-api-create-api-posts-meta-field/" title="wp-rest-api添加自定义字段输出">wp-rest-api添加自定义字段输出</a><time datetime="2019-06-16T13:46:08.000Z" title="发表于 2019-06-16 21:46:08">2019-06-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/python-note-can-only-concatenate-str-not-int-to-str/" title="[Python笔记]can only concatenate str (not &quot;int&quot;) to str">[Python笔记]can only concatenate str (not &quot;int&quot;) to str</a><time datetime="2019-06-02T23:50:55.000Z" title="发表于 2019-06-03 07:50:55">2019-06-03</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By WEIXING.ME</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const initValine = () => {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  const loadValine = async () => {
+    if (typeof Valine === 'function') initValine()
+    else {
+      await getScript('https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js')
+      initValine()
+    }
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

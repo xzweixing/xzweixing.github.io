@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>wordpress简体繁体中文转换插件 | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="你的网站读者很多，来自不同的语言？你是一个开发者，需要给用户网站增加语言切换功能？业余爱好繁体中文，想自学成才？不论你是什么需求，只要需要将wordpress中的简体中文繁体中文相互转换，只需要一个wordpress插件就能搞定，他就是：Chinese Conversion！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wordpress简体繁体中文转换插件">
+<meta property="og:url" content="https://gitee.com/xzweixing/hexo/posts/wordpress-plug-chinese-conversion/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="你的网站读者很多，来自不同的语言？你是一个开发者，需要给用户网站增加语言切换功能？业余爱好繁体中文，想自学成才？不论你是什么需求，只要需要将wordpress中的简体中文繁体中文相互转换，只需要一个wordpress插件就能搞定，他就是：Chinese Conversion！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/xzweixing/hexo/img/touxiang.jpg">
+<meta property="article:published_time" content="2012-10-08T22:01:18.000Z">
+<meta property="article:modified_time" content="2023-08-26T14:26:47.102Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="wordpress">
+<meta property="article:tag" content="插件">
+<meta property="article:tag" content="Chinese Conversion">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/xzweixing/hexo/img/touxiang.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://gitee.com/xzweixing/hexo/posts/wordpress-plug-chinese-conversion/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'wordpress简体繁体中文转换插件',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-08-26 22:26:47'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">350</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">747</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="WEIXING.ME"><span class="site-name">WEIXING.ME</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">wordpress简体繁体中文转换插件</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2012-10-08T22:01:18.000Z" title="发表于 2012-10-09 06:01:18">2012-10-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-26T14:26:47.102Z" title="更新于 2023-08-26 22:26:47">2023-08-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/wordpress/">wordpress</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="wordpress简体繁体中文转换插件"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><a target="_blank" rel="noopener" href="https://www.weixing.me/wp-content/uploads/2012/10/wordpress-chinese-vision.jpg"><img src="https://www.weixing.me/wp-content/uploads/2012/10/wordpress-chinese-vision.jpg" alt="wordpress简体繁体中文转换插件" title="wordpress-chinese-vision"></a> 你的网站读者很多，来自不同的语言？你是一个开发者，需要给用户网站增加语言切换功能？业余爱好繁体中文，想自学成才？不论你是什么需求，只要需要将wordpress中的简体中文繁体中文相互转换，只需要一个wordpress插件就能搞定，他就是：Chinese Conversion！</p>
+<span id="more"></span>
+<p>插件简介：   这个插件为中文Blogger设计, 提供完整的基于服务器端的中文繁简转换解决方案. 相比用Javascript进行客户端繁简转换, 本插件提供的转换功能更为专业和可靠, 支持六种中文语言: 简体中文(zh-hans), 繁体中文(zh-hant) , 台湾正体(zh-tw), 港澳繁体(zh-hk), 马新简体(zh-sg)和大陆简体(zh-cn); 并且提供更多其它特性. 插件使用的繁简转换表和核心转换技术均来源于Mediawiki, 最早由中文维基的zhengzhu同学发明. 使用方法: 激活插件后到侧边栏添加本插件的Widget即可. 插件将在后台”Options”菜单里增加”Chinese Conversion”子菜单. 你可以到<a target="_blank" rel="noopener" href="https://www.weixing.me/" title="魏星博客">魏星博客</a>查看演示,浏览器中输入“?variant&#x3D;zh-tw”（zh-tw为你想测试的语言） 最新稳定版本: Version 1.1.12</p>
+<ul>
+<li>增加对WP Super Cache的有限兼容支持（见插件管理页面说明，只支持WP Super Cache的”php cache”和”legacy cache”两种模式，不支持”mod_rewrite”模式。）。</li>
+</ul>
+<p>术语定义:</p>
+<ul>
+<li>页面原始版本: 即您博客页面的原始内容, 不进行中文繁简转换, 内容繁简共存. 这个页面URL就是您原来的Permalink.</li>
+<li>中文转换版本: 本插件生成的页面版本, 把数据库中内容进行中文转换后输出. 输出的中文类型共六种: 简体中文(zh-hans), 繁体中文(zh-hant) , 台湾正体(zh-tw), 港澳繁体(zh-hk), 马新简体(zh-sg)和大陆简体(zh-cn).</li>
+</ul>
+<p>特性(Features):</p>
+<ul>
+<li>繁简转换页面URL支持<code>/permalink/to/your/original/post/?variant=zh-xx</code>,<code>/permalink/to/your/original/post/zh-xx/</code>和<code>/zh-xx/permalink/to/your/original/post/</code>三种形式.(zh-xx为语言代码)</li>
+<li>基于词语繁简转换. 如 “网络” 在台湾正体(zh-tw)里会被转换为 “網路”.</li>
+<li>自动在转换后版本页面加上noindex的meta标签, 避免搜索引擎重复索引.</li>
+<li>使用Cookie保存访客语言偏好. 插件将记录浏览者最后一次访问时的页面语言, 在浏览者再次访问显示对应版本. (此功能默认不开启)</li>
+<li>自动识别浏览器语言. 插件将识别用户浏览器首选中文语言, 并显示对应版本页面. (此功能默认不开启)</li>
+<li>中文搜索关键词简繁体通用. 这将增强Wordpress的搜索功能, 使其同时在数据库里搜索关键词的简繁体版本. 例如, 假如访客在浏览您博客页面时通过表单提交了关键词为 “網路” 的搜索, 如果您的文章里有 “网络” 这个词, 则这篇文章也会被放到搜索结果里返回. (此功能默认不开启)</li>
+<li>后台可设置不转换部分HTML标签里中文.</li>
+<li>Self-documented codes, easy to modify base your own needs.</li>
+</ul>
+<p>如果使用缓存插件 (WP Super cache, Hyper Cache, etc), 上面部分功能(识别浏览器语言, 使用Cookie保存访客语言偏好)可能存在兼容性问题。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://gitee.com/xzweixing/hexo">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://gitee.com/xzweixing/hexo/posts/wordpress-plug-chinese-conversion/">https://gitee.com/xzweixing/hexo/posts/wordpress-plug-chinese-conversion/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://gitee.com/xzweixing/hexo" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/wordpress/">wordpress</a><a class="post-meta__tags" href="/tags/%E6%8F%92%E4%BB%B6/">插件</a><a class="post-meta__tags" href="/tags/Chinese-Conversion/">Chinese Conversion</a></div><div class="post_share"><div class="social-share" data-image="/img/touxiang.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/the-origin-of-the-internet-porn-industry/" title="你不知道的事之千亿美元互联网色情行业的由来"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">你不知道的事之千亿美元互联网色情行业的由来</div></div></a></div><div class="next-post pull-right"><a href="/posts/12306-cn-good-today/" title="12306.cn今天很给力"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">12306.cn今天很给力</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/wordpress-chajian-adminimize/" title="wordpress插件Adminimize--不同角色隐藏&#x2F;显示不同的功能"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2016-04-22</div><div class="title">wordpress插件Adminimize--不同角色隐藏&#x2F;显示不同的功能</div></div></a></div><div><a href="/posts/add-back-to-top-for-your-wordpress/" title="给wordpress添加back-to-top按钮"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2011-06-19</div><div class="title">给wordpress添加back-to-top按钮</div></div></a></div><div><a href="/posts/change-wordpress-theme/" title="更换wordpress模板"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2011-07-11</div><div class="title">更换wordpress模板</div></div></a></div><div><a href="/posts/get-article-selected-css-using-javascript/" title="一步步学做wordpress主题--文章标题选中效果"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2011-03-17</div><div class="title">一步步学做wordpress主题--文章标题选中效果</div></div></a></div><div><a href="/posts/give-wordpress-theme-a-choice/" title="一步步学做wordpress主题--给主题添加选项"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2011-03-29</div><div class="title">一步步学做wordpress主题--给主题添加选项</div></div></a></div><div><a href="/posts/learn-to-do-wordpress-theme-1-step-by-step/" title="一步步学做wordpress主题（一）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2011-03-01</div><div class="title">一步步学做wordpress主题（一）</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">WEIXING.ME</div><div class="author-info__description">衣带渐宽终不悔，为伊消得人憔悴</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">350</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">747</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn"><i class="fa fa-rss"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/love-you/" title="love-you">love-you</a><time datetime="2023-08-26T12:16:08.000Z" title="发表于 2023-08-26 20:16:08">2023-08-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/aliyun-domain-xufei-weifukuan-dingdan-jiejuefangfa/" title="阿里云续费出现“当前存在未付款订单，在未处理前无法进行当前操作”的解决方法">阿里云续费出现“当前存在未付款订单，在未处理前无法进行当前操作”的解决方法</a><time datetime="2021-02-24T05:11:22.000Z" title="发表于 2021-02-24 13:11:22">2021-02-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/my-blog-10-years/" title="开博10年，纪念一下">开博10年，纪念一下</a><time datetime="2020-08-31T08:59:42.000Z" title="发表于 2020-08-31 16:59:42">2020-08-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/wp-rest-api-create-api-posts-meta-field/" title="wp-rest-api添加自定义字段输出">wp-rest-api添加自定义字段输出</a><time datetime="2019-06-16T13:46:08.000Z" title="发表于 2019-06-16 21:46:08">2019-06-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/python-note-can-only-concatenate-str-not-int-to-str/" title="[Python笔记]can only concatenate str (not &quot;int&quot;) to str">[Python笔记]can only concatenate str (not &quot;int&quot;) to str</a><time datetime="2019-06-02T23:50:55.000Z" title="发表于 2019-06-03 07:50:55">2019-06-03</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By WEIXING.ME</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const initValine = () => {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  const loadValine = async () => {
+    if (typeof Valine === 'function') initValine()
+    else {
+      await getScript('https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js')
+      initValine()
+    }
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
