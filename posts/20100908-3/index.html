@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>UCD—以用户为中心的设计原则 | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="UCD—以用户为中心的设计原则 Web 1.0是商业，Web 2.0是用户（见图2-1）。 —Ross Mayfield（Socialtext CEO） |   | | （点击查看大图）图2-1? Web 2.0就是用户 | 打开网页，你是否总是希望你关注的消息显示在最醒目的位置？你是否有过这样的经历：你更换了你常用的网上银行，只因为那家新的银行的转账操作比较简单？你又是否有过这样的想法：希望网页">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UCD—以用户为中心的设计原则">
+<meta property="og:url" content="https://www.weixing.me/posts/20100908-3/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="UCD—以用户为中心的设计原则 Web 1.0是商业，Web 2.0是用户（见图2-1）。 —Ross Mayfield（Socialtext CEO） |   | | （点击查看大图）图2-1? Web 2.0就是用户 | 打开网页，你是否总是希望你关注的消息显示在最醒目的位置？你是否有过这样的经历：你更换了你常用的网上银行，只因为那家新的银行的转账操作比较简单？你又是否有过这样的想法：希望网页">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.weixing.me/uploads/2010/09/164655734_2.jpg">
+<meta property="article:published_time" content="2010-09-08T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-31T02:41:24.275Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="UCD">
+<meta property="article:tag" content="用户为中心">
+<meta property="article:tag" content="设计原则">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.weixing.me/uploads/2010/09/164655734_2.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "UCD—以用户为中心的设计原则",
+  "url": "https://www.weixing.me/posts/20100908-3/",
+  "image": "https://www.weixing.me/uploads/2010/09/164655734_2.jpg",
+  "datePublished": "2010-09-08T04:00:00.000Z",
+  "dateModified": "2026-05-31T02:41:24.275Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "WEIXING.ME",
+      "url": "https://www.weixing.me"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/posts/20100908-3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'UCD—以用户为中心的设计原则',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><style>#footer{background-color:#2c3e50!important}</style><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/uploads/2010/09/164655734_2.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a><a class="nav-page-title" href="/"><span class="site-name">UCD—以用户为中心的设计原则</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">UCD—以用户为中心的设计原则</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2010-09-08T04:00:00.000Z" title="发表于 2010-09-08 12:00:00">2010-09-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-31T02:41:24.275Z" title="更新于 2026-05-31 10:41:24">2026-05-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/web%E5%BC%80%E5%8F%91/">web开发</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><strong>UCD—以用户为中心的设计原则</strong></p>
+<p>Web 1.0是商业，Web 2.0是用户（见图2-1）。</p>
+<p>—Ross Mayfield（Socialtext CEO）</p>
+<p>| <a target="_blank" rel="noopener" href="http://images.51cto.com/files/uploadimg/20100830/164655734.jpg"><img src="/uploads/2010/09/164655734_2.jpg"></a> <a target="_blank" rel="noopener" href="http://book.51cto.com/files/uploadimg/20060921/153223104.gif"></a> |</p>
+<p>| （点击查看大图）图2-1? Web 2.0就是用户 |</p>
+<p>打开网页，你是否总是希望你关注的消息显示在最醒目的位置？你是否有过这样的经历：你更换了你常用的网上银行，只因为那家新的银行的转账操作比较简单？你又是否有过这样的想法：希望网页上只出现你想看到的内容？以上三个简单的例子代表了用户的三种特性：懒惰、有想法、喜新厌旧。</p>
+<p>在这样一个用户需求日益变化，而互联网资源极其丰富的时代，如何才能吸引用户，如何才能创造价值？设计时遵循以用户为中心的设计原则是一个不错的思路。何谓以用户为中心的设计（User-Centered Design，UCD）？简单来说，就是以用户为中心进行产品的设计、开发和维护，一切都从用户的感受与需求出发，而不是让用户去适应产品。要做到这一点，就必须时刻关注用户习惯、视觉感受、交互方式等细节。</p>
+<p>UCD的标准流程是从用户调研开始的（见图2-2），根据调研的结果得出用户需求。此后进入设计阶段，经过原型设计、可用性设计、模型设计等一系列步骤，直至最后产出初始版本供用户试用。在用户试用后，将针对试用报告继续完善设计，直至整个产品完成。在这个流程中，用户始终处于主导地位，在部分环节中用户甚至会直接参与。</p>
+<p>| <a target="_blank" rel="noopener" href="http://images.51cto.com/files/uploadimg/20100830/164708108.jpg"><img src="/uploads/2010/09/164708108_2.jpg"></a> <a target="_blank" rel="noopener" href="http://book.51cto.com/files/uploadimg/20060921/153223104.gif"></a> |</p>
+<p>| （点击查看大图）图2-2? UCD的简单流程图 |</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.weixing.me">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.weixing.me/posts/20100908-3/">https://www.weixing.me/posts/20100908-3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.weixing.me" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/UCD/">UCD</a><a class="post-meta__tags" href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">设计原则</a><a class="post-meta__tags" href="/tags/%E7%94%A8%E6%88%B7%E4%B8%BA%E4%B8%AD%E5%BF%83/">用户为中心</a></div><div class="post-share"><div class="social-share" data-image="/uploads/2010/09/164655734_2.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/20100908-1/" title="前端开发常用的工具汇总（1）"><img class="cover" src="/uploads/2010/09/164028698_3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">前端开发常用的工具汇总（1）</div></div><div class="info-2"><div class="info-item-1">“工欲善其事，必先利其器”，现在开发Web应用和前些年相比已经完全不同了。早些年开发ASP应用时，只需要掌握如何应用Dreamweaver就行了；而现在Web应用得越来越成熟，开发语言也更多样化，特别是在Web标准、兼容性、性能、调试、设计等方面得到了广大用户的重视，基于Web的工具应用也越来越多。这些工具能辅助我们在开发效率、思维拓展、协同工作等方面进行改善。下面的小节中将列举一些前端开发人员所必须掌握的工具，相信它们能给我们的工作带来便利。 1、设计类工具Adobe公司旗下的一些软件是我们最常使用的工具集，下面分别介绍其中的一些软件。 Adobe Photoshop作为一款最早用于平面设计的软件，现在也常被视觉设计师应用于Web的视觉原型稿制作。视觉设计师可以根据线框图原型稿进行视觉设计，最终完成真实的Web视觉原型，交付评审。同时Photoshop还可以用于切割图片，将视觉稿切割成小图供编码人员使用，一些背景图、PNG图、CSS精灵的整合图片都离不开Photoshop这款史上功能最强的图像制作软件。 Adobe Flash动画制作软件虽然是制作矢量动画的软件，但是它已成为W...</div></div></div></a><a class="pagination-related" href="/posts/20100907/" title="关于UI设计你需要自问的12个问题"><img class="cover" src="http://www.chinaui.com/UserFile/News/images/0%283%29.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">关于UI设计你需要自问的12个问题</div></div><div class="info-2"><div class="info-item-1">UI 设计的魅力在于，你不仅需要适当的技巧，更要理解用户与程序的关系。一个有效的用户界面关注的是用户目标的实现，包括视觉元素与功能操作在内的所有东西都 需要完整一致。为了实现这个目标，你需要问自己 10 个最基本的问题。 1. 你的 UI 是否高度一致？**  **用户来到你的站点，脑子里会保持着一种思维习惯，你的 UI 需要保持一致，以免用户的思维方向被打乱。比如，如果你的某个品目下的产品可以拖放到购物车，那你站点中所有产品都应该可以这样操作。将按钮放到不同页面 相似的位置，使用相契合的配色，使用一致的语法和书写习惯，同时，让你的页面拥有一致的结构。２．用户能自由掌控自己的操作吗？  你应当分析一下，自己的站点是否容易导航。用户应当可以自由掌控自己的浏览行为，确保他们能从某个地点跳出，能够毫无障碍地退出。那些在用户离开前 弹出窗口的行为是 UI 易用性的一个大问题。３．你知道谁是你的用户群吗？  要设计有效的 UI，必须对你的用户群有所了解，不同的用户阶层对不同的设计元素有不同的理解，1725 岁年龄段的人，和 4055 年龄断的人有不同的喜好。你的 UI 设计必须针对你的用户...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

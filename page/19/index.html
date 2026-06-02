@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>WEIXING.ME - 衣带渐宽终不悔，为伊消得人憔悴</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="魏星博客 - 记录工作、学习、生活">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WEIXING.ME">
+<meta property="og:url" content="https://www.weixing.me/page/19/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="魏星博客 - 记录工作、学习、生活">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.weixing.me/img/touxiang.jpg">
+<meta property="article:author" content="WEIXING.ME">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.weixing.me/img/touxiang.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/page/19/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'WEIXING.ME',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><style>#footer{background-color:#2c3e50!important}</style><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/topt.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">WEIXING.ME</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/20110805-qixi-china-valentines-day-rose/" title="七夕节必备知识&amp;#8211;玫瑰花语"><img class="post-bg" src="/uploads/2011/08/rose311_2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="七夕节必备知识&amp;#8211;玫瑰花语"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/20110805-qixi-china-valentines-day-rose/" title="七夕节必备知识&amp;#8211;玫瑰花语">七夕节必备知识&amp;#8211;玫瑰花语</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2011-08-05T04:00:00.000Z" title="发表于 2011-08-05 12:00:00">2011-08-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></span></div><div class="content">明天就是七夕中国情人节了，打算怎么度过呢，是我在家里，还是和朋友出去疯狂一把，还是和你爱的Ta共度甜蜜的二人世界？ 如果你选择了最后一项，而且你是男生，并且准备送出玫瑰花来表达你的爱意，那么下面的文字也许会对你有用，可能就因为这小小的举动，你的她可能就决定和你牵手到永远…… 玫瑰花语——玫瑰代表爱情 红玫瑰——热情、热爱着您 粉红玫瑰——感动、爱的宣言、铭记于心 白玫瑰——天真、纯洁、尊敬 黄玫瑰——不贞、嫉妒 玫瑰捧花——幸福之爱 橙红玫瑰——初恋的心情 玫瑰花苞——美丽和青春 红玫瑰+白玫瑰——共有 红玫瑰+黄玫瑰——快乐 蓝玫瑰——清纯的爱 敦厚善良  1朵玫瑰代表——我的心中只有你 Only You！ 2朵玫瑰代表—— 这世界只有我俩！ 3朵玫瑰代表—— 我爱你 I Love You！ 4朵玫瑰花语－－－－至死不渝！ 5朵玫瑰花语－－－－由衷欣赏！ 6朵玫瑰花语－－－－互敬互爱互谅！ 7朵玫瑰花语－－－－我偷偷地爱著你！ 8朵玫瑰花语－－－－感谢你的关怀扶持及鼓励！ 9朵玫瑰花语－－－－长久 ALWAYS！ 10朵玫瑰花语－－－－十全十美无懈可击！ 11朵玫瑰花语－－－－...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/20110802-wordpress-get-one-page-content/" title="WordPress获取某一单页页面内容">WordPress获取某一单页页面内容</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2011-08-02T04:00:00.000Z" title="发表于 2011-08-02 12:00:00">2011-08-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/wordpress/">wordpress</a></span></div><div class="content">准备做一个企业站的模版，在首页显示“公司简介”的内容时，需要调用页面“公司简介”的内容，于是找了资料，实现**wordpress首页获取某一页面的内容** Wordpress在生成文章页的时候在各个页面中唯一不变的只有当前的文章ID，所以我们可以根据页面的ID来显示此也面的内容： 代码： &#96; post_content; ?&gt; &#96; 其中的3为你的单页的id 获取其他信息参数：   post_author：(整数）文章作者的编号 post_data：(字符）文章发表的日期和时间（YYYY-MM-DD HH-MM-SS) post_data_gmt：（字符）文章发表的格林尼治标准时间（GMT） （YYYY-MM-DD HH-MM-SS) post_content：（字符）文章内容 post_title：（字符）文章标题 post_category：（整数）文章类别的编号。注意：该值在WordPress 2.1之后的版本总为0。定义文章的类别时可使用 get_the_category()函数。 post_excerpt：（字符）文章摘要 post_status：(字...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/20110731-which-ti-do-you-like/" title="这么多体你爱哪一种,说出你的体"><img class="post-bg" src="/uploads/2011/07/32dacae39fb4d448b8382063-231x300_2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="这么多体你爱哪一种,说出你的体"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/20110731-which-ti-do-you-like/" title="这么多体你爱哪一种,说出你的体">这么多体你爱哪一种,说出你的体</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2011-07-31T04:00:00.000Z" title="发表于 2011-07-31 12:00:00">2011-07-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></span></div><div class="content">近段时间，被大家关注最多的莫过于动车追尾事件了，铁道部发言人的经典语句“……信不信由你，我反正信”也传遍了大街小巷，可以说是妇孺皆知，于是乎，继凡客体、咆哮体等之后又一体出现了–《高铁体》，而且版本颇多，最有代表性的要数下面的一段:  #高铁体#:天朝人 1、读世界上最贵的书。 2、看世界上最贵的病。 3、住世界上最贵的房。 4、吃世界上最毒的食品。 5、干世界上最长的工时。 6、交世界上最多的税。 7、享世界上最少的权利。 8、养世界上最多的官。 9、受世界上最重的剥削。 10、领世界上最离奇的死法。 以上话，至于你信不信，由你，我反正是信了 回顾其他体（不全，待补充） 1）凡客体  2）咆哮体（有木有 伤不起） 《离骚》 屈原 尼玛连诸葛亮都出来咆《出师表》了啊！！！！！！！！！你个做后辈的都出来咆，老子不出来就对不起广大淫民了！！！！！！！！有木有！！！！！！神马？问老子是谁？你们这些人一天到就知道咆哮啊！！豆瓣啊！！人人啊！！语文课有木有好好学过！！！！！！！！！掀桌！！！！！！！！！颛顼知道吧！！！！！伯庸知道吧！！！！！！都特么是老子的先祖！！！！！！！！！出来混容易...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/20110727-chrome-tab-search/" title="chrome浏览器Tab键智能站内搜索"><img class="post-bg" src="/uploads/2011/07/chrome1-1024x43_2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="chrome浏览器Tab键智能站内搜索"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/20110727-chrome-tab-search/" title="chrome浏览器Tab键智能站内搜索">chrome浏览器Tab键智能站内搜索</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2011-07-27T04:00:00.000Z" title="发表于 2011-07-27 12:00:00">2011-07-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A7%91%E6%8A%80%E9%A2%91%E9%81%93/">科技频道</a></span></div><div class="content">今天使用chrome浏览器的时候，发现一个以前没有发现的问题，就是在输入完自己网站域名的时候，chrome浏览器会提示“使用Tab键进行搜索”,如下图，然后我就按了一下Tab键，嘿，出现了新的框框，域名+搜索被框成了一个整体，我紧随其后添加         了“javascript”搜索关键词，回车，网址直接跳到https://www.weixing.me/?s=javascript，然后明白了，这就是相当于站内搜索了，原来chrome居然这么强大啊，用了这么长时间竟然不知道还有如此功能。我又测试了几个站点，如百度，优酷，雅虎这样的大站都可以Tab搜索，但是其他的asp网站，或者一些没有站内搜索的站点，输入域名的时候就没有这种功能，据我分析，应该是chrome能智能分析出这个站点的站内搜索机制，然后根据这个直接跳到相应的搜索链接进行搜索，chrome强大，[google](https://www.weixing.me/tag/google/)产品强大！ </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/20110724-abc-internet-banking-false/" title="Win7农行网银安装证书出错（解决方法）"><img class="post-bg" src="/uploads/2011/07/2-300x139_2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Win7农行网银安装证书出错（解决方法）"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/20110724-abc-internet-banking-false/" title="Win7农行网银安装证书出错（解决方法）">Win7农行网银安装证书出错（解决方法）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2011-07-24T04:00:00.000Z" title="发表于 2011-07-24 12:00:00">2011-07-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A7%91%E6%8A%80%E9%A2%91%E9%81%93/">科技频道</a></span></div><div class="content">今天安装农行的网银U盾（我的是金e顺的）证书，怎么都安装不了，总是出现“-2146893792……未知加密算法……”错误，如下图： 然后我在网上找了很多的资料，说修改注册表什么的，我也都弄了，注册表改了还是一样的错误，于是想了最笨也是最好的方法，在xp的虚拟机里面安装证书，因为证书是安装在U盾里面的，所以和安装时的电脑是谁的一点关系都没有，只要能将证书下载到U盾就行了，所以可以放心的在另一台电脑或者虚拟机里面安装，安装完成后，测试了一下，给自己的支付宝充了1毛钱，看下图，成功，呵呵，so easy ！  </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/20110717/" title="Page Speed Online &amp;#8212; Google网页速度在线检测工具"><img class="post-bg" src="/uploads/2011/07/Page-Speed-weixing.me__2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Page Speed Online &amp;#8212; Google网页速度在线检测工具"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/20110717/" title="Page Speed Online &amp;#8212; Google网页速度在线检测工具">Page Speed Online &amp;#8212; Google网页速度在线检测工具</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2011-07-17T04:00:00.000Z" title="发表于 2011-07-17 12:00:00">2011-07-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/web%E5%BC%80%E5%8F%91/">web开发</a></span></div><div class="content">网站打开速度的快慢直接影响网站用户体验，同时也影响SEO，且不看网站的内容有多好，网站的界面有多么的华丽，如果别人打开你的网站需要超过12分钟的时间，那么他还会继续访问你的网站吗？换为思考，如果是你，你会用12分钟的时间等待打开一个网站页面吗，要是我，我肯定重新再搜索引擎中打开一个类似内容的网站，如果那个网站的内容和我需要的一样，那么这个页面我直接关掉，我想很多人也是这也做的吧，所以网站的打开速度直接影响你的客户访问量，影响你的客户关系，直接影响你的money。  google是出了一个page speed的火狐的插件，想必大家都是知道的，可以很方便的为你测试网站的访问速度，进而给你提出优化的建议，我当时也懒得装，没有测试，最近知道了竟然google的page speed还有在线版的，网址：http://pagespeed.googlelabs.com,测了一下，73分，满分100分，下面还得你提了具体的优化建议，然后你就可以根据他的建议对网站进行优化，但是你愿不愿意听他的，那就有你自己决定了。  下面是我的测试结果：73分，大部分的建议是压缩图片、增加缓存、压缩javascri...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/20110715-xuzhou-fuyangjie/" title="汉皇故里，伏羊欢歌"><img class="post-bg" src="/uploads/2011/07/fuyangjie1_2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="汉皇故里，伏羊欢歌"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/20110715-xuzhou-fuyangjie/" title="汉皇故里，伏羊欢歌">汉皇故里，伏羊欢歌</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2011-07-15T04:00:00.000Z" title="发表于 2011-07-15 12:00:00">2011-07-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></span></div><div class="content">又是一年的三伏天，今天是第一天，今天对于我们徐州人来说是个特殊的日子，不仅是因为是三伏的第一天，更重要的是今天是徐州每年都举办的伏羊节的开幕式，从今天起，伏羊节就开始了，历时近一个月（从初伏的第一天到三伏的第一天），这是我们大开吃戒的时候，哈哈。 采集圣火：   ** ** 今年的开幕式在沛公刘邦的老家–徐州沛县举行，圣火是在徐州汉城采集的（哈哈，我们也采集圣火，徐州汉城，我加附近），在在30名火炬手的护送下，带着徐州人民“和谐安康”的美好祝愿，将历经永城、淮北、宿州、宿迁等淮海经济区11个主要市县，于今天（7月14日）抵达沛县东北国际大酒店开幕式现场。 开幕式：  伏羊节的来历： 伏天吃伏羊”在徐州有悠久历史，最早可追溯到尧舜时期。徐州民间就有“彭城伏羊一碗汤，不用神医开药方”的说法。 徐州伏羊节是于每年入伏之季，即初伏之日开始，持续一个月。按农历的节气推算，“夏至”后第三个庚（一庚九天）日为“初伏”，第四个庚日为中伏，立秋后第一个庚日为“三伏”，即“末伏”。在这一个月里，徐州的人们集中在各个酒店，饭庄以及专门的羊肉馆，烧烤摊，吃羊肉，喝羊肉汤，故曰吃伏羊。 吃伏羊功效： 众所...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/20110713-play-basketball-and-talk/" title="打打篮球聊聊天"><img class="post-bg" src="/uploads/2011/07/2457331_235936283138_2-250x300_2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="打打篮球聊聊天"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/20110713-play-basketball-and-talk/" title="打打篮球聊聊天">打打篮球聊聊天</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2011-07-13T04:00:00.000Z" title="发表于 2011-07-13 12:00:00">2011-07-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></span></div><div class="content">很久没有打篮球了，自从去年大学毕业就不知道打篮球是什么滋味了，不是不喜欢了，是没有时间打，不是没有时间打，而是自己变的懒惰了，今天刚下班，朋友打电话来说要来找我打篮球，我一口就答应了，实在是想感受感受打篮球的滋味。大家换好装备，开始战斗，一开始是真的很累，而且总是三不沾，丢人啊，这就是一年多不摸篮球的下场，不过几场下来还是有不少长进，最后临走之前，罚球线定点投篮竟然5投4中，呵呵，没想到手感如此的好。打打篮球出出汗，虽然感觉累，但是出大汗的感觉比洗澡还要享受，以后有空就多打打球，锻炼锻炼，让自己的身体更健康。  打完球叫朋友去自家加玩，然后喝点酒聊聊天，久违的大学般的生活，让我不禁想起自己的大学时光，想起一起打球、一起洗澡、一起喝酒的那一帮哥们，不知道你们现在怎么样了，希望你们一切都好。 </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/20110711-say-bye-to-ie6/" title="对IE6说再见"><img class="post-bg" src="https://www.weixing.me/wp-content/uploads/2011/07/22_副本.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="对IE6说再见"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/20110711-say-bye-to-ie6/" title="对IE6说再见">对IE6说再见</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2011-07-11T04:00:00.000Z" title="发表于 2011-07-11 12:00:00">2011-07-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A7%91%E6%8A%80%E9%A2%91%E9%81%93/">科技频道</a></span></div><div class="content">最近有个网站比较火，对IE6说再见（http://theie6countdown.cn），应该是微软旗下的网站吧，主要是用来告别IE6的，是该对IE6说再见的时候了，内容讲了IE6的发展史，“”十年之前，一个浏览器诞生了，十年之后，我们是朋友“，对IE6进行评价并颁予”浏览器终身荣誉奖“。  对于一个web前端开发人员来说，这是个莫大的欣慰的意见事情啊，以后可能就不要不厌其烦的试用各种hack来兼容IE6的问题了。微软终于开始自宫了，IE6终于可以荣誉下岗了，我们现在要做的就是要加快IE6的下岗速度，如果你是web开发人员，如果你是站长，那么请将下面一段代码嵌入到您的网站的body部分，当IE6用户浏览您的站点时，就会有以下样式的提示，提示用户升级，这样可以促进IE6的下岗速度。 代码： &#96;   &#96; 提示消息：  提示下载新版本浏览器 最后为了感谢你的支持，只要是添加此段代码并且符合以下要求的网站都可以提交你的网站网址、logo图片，到邮箱：theie6countdown@hotmail.com ，他们会为你的网站加上友情链接。 要求：   1 网站环境安全，不包...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/20110711-change-wordpress-theme/" title="更换wordpress模板">更换wordpress模板</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2011-07-11T04:00:00.000Z" title="发表于 2011-07-11 12:00:00">2011-07-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/wordpress/">wordpress</a></span></div><div class="content">今天终于可以有些空闲时间，于是折腾了一下博客的模板，今天用上了。使用的是wpyou提供的免费主题WPINK，然后header中自己增加了自定义菜单的功能，加了2个，一个是导航菜单，一个是右上角的页面链接，增加了SEO方面的调整，使关键字、描述等和我原来的能一致，但是也有略微的改动，相信度娘以后可能不大喜欢理我了。侧边栏去掉了默认的广告等，我先还不想放关高，所以果断的去掉了，文章页文章首部、尾部的广告同样是果断的去掉，去掉相关文章栏目，用无觅插件代替,增加了社会化分享按钮。 自从上次博客更换主题到现在也就2个多月的时间，虽然时间不短，但是看着我的博客感觉有点沧桑的样子，所以现在也不问对搜索引擎有多大的影响了，只要自己感觉好久行，毕竟博客是自己的，是给人看的，搜索引擎只是一方面罢了，用户体验最重要，希望大家能喜欢这款主题。 </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/18/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/#content-inner">18</a><span class="page-number current">19</span><a class="page-number" href="/page/20/#content-inner">20</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/#content-inner">36</a><a class="extend next" rel="next" href="/page/20/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/SEO/"><span class="card-category-list-name">SEO</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web%E5%BC%80%E5%8F%91/"><span class="card-category-list-name">web开发</span><span class="card-category-list-count">94</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/wordpress/"><span class="card-category-list-name">wordpress</span><span class="card-category-list-count">37</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/"><span class="card-category-list-name">微信开发</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"><span class="card-category-list-name">生活随笔</span><span class="card-category-list-count">150</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A7%91%E6%8A%80%E9%A2%91%E9%81%93/"><span class="card-category-list-name">科技频道</span><span class="card-category-list-count">45</span></a></li>
+          </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">352</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-06-02T11:58:08.312Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@3.0.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["所有的努力都值得期许，每一份梦想都应该灌溉","你只有足够努力，才能看起来毫不费力","身在黑暗，心怀光明，梦想不灭，努力前行","当你足够优秀时，你周围的一切自然都会好起来","星光不问赶路人，时光不负有心人","既然选择了远方，便只顾风雨兼程","你若盛开，蝴蝶自来","人生没有多走的路，脚下的每一步都算数","除了生老病死，人生里真正重要的事，其实没有几件","真正的格局，应该是遇到烂人不计较，碰到破事别纠缠","心中有光，何惧路长；脚下有力，自能翻山越岭","不怕千万人阻挡，只怕自己投降"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["所有的努力都值得期许，每一份梦想都应该灌溉","你只有足够努力，才能看起来毫不费力","身在黑暗，心怀光明，梦想不灭，努力前行","当你足够优秀时，你周围的一切自然都会好起来","星光不问赶路人，时光不负有心人","既然选择了远方，便只顾风雨兼程","你若盛开，蝴蝶自来","人生没有多走的路，脚下的每一步都算数","除了生老病死，人生里真正重要的事，其实没有几件","真正的格局，应该是遇到烂人不计较，碰到破事别纠缠","心中有光，何惧路长；脚下有力，自能翻山越岭","不怕千万人阻挡，只怕自己投降"])
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>JavaScript DOM入门教程 实例 | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="DOM提供的四个方法： ●getElementById()方法 ●getElementsByTagName()方法 ●getAttribute()方法 ●setAttribute()方法 实例代码：   《DOM编程艺术》 第一章 第二章 第三章 第四章 第五章 第六章 var arrayB&#x3D;document.getElementsByTagName(“p”); for(var i&amp;#x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript DOM入门教程 实例">
+<meta property="og:url" content="https://www.weixing.me/posts/20101104/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="DOM提供的四个方法： ●getElementById()方法 ●getElementsByTagName()方法 ●getAttribute()方法 ●setAttribute()方法 实例代码：   《DOM编程艺术》 第一章 第二章 第三章 第四章 第五章 第六章 var arrayB&#x3D;document.getElementsByTagName(“p”); for(var i&amp;#x">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.weixing.me/img/touxiang.jpg">
+<meta property="article:published_time" content="2010-11-04T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-31T02:34:23.052Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="DOM">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="下载">
+<meta property="article:tag" content="代码">
+<meta property="article:tag" content="入门">
+<meta property="article:tag" content="实例">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.weixing.me/img/touxiang.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "JavaScript DOM入门教程 实例",
+  "url": "https://www.weixing.me/posts/20101104/",
+  "image": "https://www.weixing.me/img/touxiang.jpg",
+  "datePublished": "2010-11-04T04:00:00.000Z",
+  "dateModified": "2026-05-31T02:34:23.052Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "WEIXING.ME",
+      "url": "https://www.weixing.me"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/posts/20101104/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'JavaScript DOM入门教程 实例',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><style>#footer{background-color:#2c3e50!important}</style><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/top.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a><a class="nav-page-title" href="/"><span class="site-name">JavaScript DOM入门教程 实例</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">JavaScript DOM入门教程 实例</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2010-11-04T04:00:00.000Z" title="发表于 2010-11-04 12:00:00">2010-11-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-31T02:34:23.052Z" title="更新于 2026-05-31 10:34:23">2026-05-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/web%E5%BC%80%E5%8F%91/">web开发</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><strong>DOM提供的四个方法：</strong></p>
+<p>●getElementById()方法</p>
+<p>●getElementsByTagName()方法</p>
+<p>●getAttribute()方法</p>
+<p>●setAttribute()方法</p>
+<p><strong>实例代码：</strong></p>
+<blockquote>
+</blockquote>
+<p>《DOM编程艺术》</p>
+<p>第一章</p>
+<p>第二章</p>
+<p>第三章</p>
+<p>第四章</p>
+<p>第五章</p>
+<p>第六章</p>
+<p>var arrayB&#x3D;document.getElementsByTagName(“p”);</p>
+<p>for(var i&#x3D;0; i</p>
+<p><strong>DOM提供的几个新属性：</strong></p>
+<p>●childNodes</p>
+<p>●nodeType</p>
+<p>●nodeValue</p>
+<p>●firstChild</p>
+<p>●lastChild</p>
+<p><strong>实例代码：</strong></p>
+<blockquote>
+</blockquote>
+<p>pic1</p>
+<p>pic2</p>
+<p>pic3</p>
+<p>选择一张图片</p>
+<p>function showpics(whichpic)</p>
+<p>{</p>
+<p>var source&#x3D;whichpic.getAttribute(“href”);?? &#x2F;&#x2F;属性“href”要加双引号</p>
+<p>var picid&#x3D;document.getElementById(“imgID”); &#x2F;&#x2F;常量“imgID”要加双引号</p>
+<p>picid.setAttribute(“src”,source); &#x2F;&#x2F;属性“src”要加双引号，变量“source”不要引号</p>
+<p>&#x2F;&#x2F;var b&#x3D;document.body</p>
+<p>&#x2F;&#x2F;var b&#x3D;document.getElementsByTagName(“body”)[0];获得body元素，此举同“var b&#x3D;document.body”相同作用</p>
+<p>&#x2F;&#x2F;var l&#x3D;b.childNodes.length;&#x2F;&#x2F;获得body的子节点数</p>
+<p>&#x2F;&#x2F;alert(l);</p>
+<p>var atitle&#x3D;whichpic.getAttribute(“title”);</p>
+<p>var ptext&#x3D;document.getElementById(“pid”);</p>
+<p>ptext.childNodes[0].nodeValue&#x3D;atitle;</p>
+<p>&#x2F;&#x2F;ptext.firstChild.nodeValue&#x3D;atitle;? &#x2F;&#x2F;显示链接的title</p>
+<p>}</p>
+<p><strong>实例演示</strong>：<a target="_blank" rel="noopener" href="http://happysnail.org/MyWebDesign/js/js-DOM.html">点击进入</a></p>
+<p><strong>实例代码下载</strong>：<a target="_blank" rel="noopener" href="http://www.uudisc.com/user/xingxing/file/3643082">点击下载</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.weixing.me">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.weixing.me/posts/20101104/">https://www.weixing.me/posts/20101104/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.weixing.me" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/javascript/">javascript</a><a class="post-meta__tags" href="/tags/%E4%BB%A3%E7%A0%81/">代码</a><a class="post-meta__tags" href="/tags/%E4%B8%8B%E8%BD%BD/">下载</a><a class="post-meta__tags" href="/tags/%E5%85%A5%E9%97%A8/">入门</a><a class="post-meta__tags" href="/tags/DOM/">DOM</a><a class="post-meta__tags" href="/tags/%E5%AE%9E%E4%BE%8B/">实例</a></div><div class="post-share"><div class="social-share" data-image="/img/touxiang.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/20101107/" title="windows7下IIS的安装配置(图文)"><img class="cover" src="/uploads/2010/11/200909078511252301585460_1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">windows7下IIS的安装配置(图文)</div></div><div class="info-2"><div class="info-item-1">本文讲述了在Windows7下如何安装IIS7，以及IIS7在安装过程中的一些需要注意的设置，以及在IIS7下配置ASP的正确方法。在Windows7下面IIS7的安装方法： 一、进入Windows7的控制面板，选择左侧的打开或关闭Windows功能。   二、现在出现了安装Windows功能的选项菜单，注意选择的项目，我们需要手动选择需要的功能，下面这张图片把需要安装的服务都已经选择了，大家可以按照图片勾选功能。   三、安装完成后，再次进入控制面板，选择管理工具，双击Internet(IIS)管理器选项，进入IIS设置。   四、现在进入到IIS7控制面板。   五、选择DefaultWebSite，并双击ASP的选项，   六、IIS7中ASP父路径是没有启用的，要开启父路径，选择True，搞定父路径选项。   七、配置IIS7的站点。单击右边的高级设置选项，可以设置网站的目录。   八、点击右侧的绑定&#8230;，设置网站的端口。   九、点击默认文档，设置网站的默认文档。   至此，Windows7的IIS7设置已经基本完成了 本文转自：http://www.haoa...</div></div></div></a><a class="pagination-related" href="/posts/20101103/" title="歌曲 老男孩-筷子兄弟  （含下载地址）"><img class="cover" src="http://happysnail.org/wp-content/uploads/2010/11/laonanhai.gif" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">歌曲 老男孩-筷子兄弟  （含下载地址）</div></div><div class="info-2"><div class="info-item-1">老男孩–筷子兄弟 下****载地址：点击下载****歌词： 感动所有80后的一首歌。 那是我日夜思念深深爱着的人呐 到底我该如何表达 她会接受我吗 也许永远都不会跟他说出那句话 注定我要浪迹天涯 怎么能有牵挂 梦想总是遥不可及 是不是应该放弃 花开花落又是雨季 春天啊你在哪里 青春如同奔流的江河 一去不回来不及道别 只剩下麻木的我没有了当年的热血 看那漫天飘零的花朵 在最美丽的时刻凋谢 有谁会记得这世界她来过 转眼过去多年时间多少离合悲欢 曾经志在四方少年羡慕南飞的燕 各自奔前程的身影匆匆渐行渐远 未来在哪里平凡啊谁给我答案 那时陪伴我的人啊你们如今在何方 我曾经爱过的人啊现在是什么模样 当初的愿望实现了吗 事到如今只好祭奠吗 任岁月风干理想再也找不回真的我 抬头仰望着满天星河 那时候陪伴我的那颗 这里的故事你是否还记得 生活像一把无情刻刀 改变了我们模样 未曾绽放就要枯萎吗 我有过梦想 青春如同奔流的江河 一去不回来不及道别 只剩下麻木的我没有了当年的热血 看那满天飘零的花朵 在最美丽的时刻凋谢 有谁会记得这世界它曾经来过 当初的愿望实现了吗 事到如今只好祭奠吗 任岁月风干理想...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/20101220/" title="简单的asp.net  WebService例子"><img class="cover" src="/uploads/2010/12/web8_1.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-12-20</div><div class="info-item-2">简单的asp.net  WebService例子</div></div><div class="info-2"><div class="info-item-1">今天经理告诉我说看一下webservice，马上有个网站要做，要做一个接口， 然后我就赶紧找资料，因为我对这不懂，囧！！找了很多，下面的感觉最好， 好理解，容易上手！！ 点击下载实例源码： 第一，?新建网站，选择类型为asp.net web 服务。 系统自动为你建立了个文件service.asmx.这就是一个最简单的web service服务。你可以直接运行查看效果。 第二，我们需要的是修改service.cs中的代码，来满足我们的要求。 修改后的Service.cs中的代码为： using System; using System.Web; using System.Web.Services; using System.Web.Services.Protocols; [WebService(Namespace &#x3D; “http://127.0.0.1/“)]??? &#x2F;&#x2F;调用此web service的地址 [WebServiceBinding(ConformsTo &#x3D; WsiProfiles.BasicProfile1_1)] public ...</div></div></div></a><a class="pagination-related" href="/posts/20110922-get-select-value-and-text-width-js/" title="javascript获得select的value以及text值"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-09-22</div><div class="info-item-2">javascript获得select的value以及text值</div></div><div class="info-2"><div class="info-item-1">使用javascript获得select选中后的value以及text的值 方法如下： &#96;  请选择客户客户11客户22 function copyValue() { var selectId &#x3D; document.getElementById(‘select’);	 document.getElementById(‘titleValue’).value&#x3D;selectId.value;	 document.getElementById(‘titleText’).value&#x3D;selectId.options[selectId.selectedIndex].text; } &#96; 在使用此段javascript代码的时候有个小插曲，当option 的value不存在时，Firefox和Chrome浏览器的value值显示就是text的值，而IE不显示任何值！此处的说明是为了让新手不要把value和text弄混了，不然会出现意想不到的错误，但是对于高手来说可以通过这个hack实现意想不到的效果。 </div></div></div></a><a class="pagination-related" href="/posts/20110403-song-yezaiyao-sunnan/" title="《夜在摇》&#8211;孙楠（戒烟不戒酒片尾曲）"><img class="cover" src="/uploads/2011/04/2011220125446144-215x300_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-04-03</div><div class="info-item-2">《夜在摇》&#8211;孙楠（戒烟不戒酒片尾曲）</div></div><div class="info-2"><div class="info-item-1">刚刚看了《戒烟不戒酒》这部电影，感觉不错，最的后片尾曲《夜在摇》也很好听，其**中的一句“管他天王老子爱谁谁”**很是霸气，所以就想下载来这首歌，以后慢慢欣赏，找了很久也没找到下载地址，而且发现网上很多人都在找这首歌的下载地址，于是就通过各种方法寻找下载，终于找到了，现在共享一下下载地址，希望要的童鞋可以找到，下载到！ 视听：（流量太大，已取消，更新于2011-04-17） 下载地址：http://www.uudisc.com/user/woallf/file/3976679 歌词： 夜在摇演唱：孙楠 夜在摇 楼梯夸张的舞蹈风解嘲 数不清第几次跌倒脚在飘 回家的路怎么找下一个 拐角有没有我熟悉的门牌号听得到 谁和谁争吵不重要 我走掉 没有什么大不了烟点着 眼前一片虚无缥缈梦可笑 总是自己做主角寂寞太难熬 习惯了依赖酒精做解药干一杯 无所谓生活总有太多的误会各种滋味 尝上一遍才美再一杯 别理会 管他天王老子爱谁谁统统快快喝醉 无论快乐伤悲 本文来自：魏星博客 </div></div></div></a><a class="pagination-related" href="/posts/20190422-wp-all-export-pro-2xml-csv-excel-download/" title="WP All Export  Pro 导出数据为XML&#x2F;CSV&#x2F;Excel格式，附下载地址"><img class="cover" src="/uploads/2019/04/2019042214532772-300x133_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-22</div><div class="info-item-2">WP All Export  Pro 导出数据为XML&#x2F;CSV&#x2F;Excel格式，附下载地址</div></div><div class="info-2"><div class="info-item-1">今日需要做导出数据为Excel，找了好久终于找到这款插件，本款为WP All Export专业版的破解版，有很多高级功能都可以使用，需要的朋友可以下载使用，文章最后有下载地址。  下载地址： https://pan.baidu.com/s/1izRHwvbO1UFHzEXOojWhfA 提取码: dvpa </div></div></div></a><a class="pagination-related" href="/posts/20100913-3/" title="HTML5，CSS3 参考手册Chm版下载"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-09-13</div><div class="info-item-2">HTML5，CSS3 参考手册Chm版下载</div></div><div class="info-2"><div class="info-item-1">  HTML5?参考手册 ??下载地址 ：http://vleugel.googlecode.com/files/html5_manual.chmCSS3 ?参考手册 ?下载地址： ?http://vleugel.googlecode.com/files/css3.0_manual.chm</div></div></div></a><a class="pagination-related" href="/posts/20110316-get-url-address-and-parameter-using-javascript/" title="javascript获得网页URl地址及参数"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-03-16</div><div class="info-item-2">javascript获得网页URl地址及参数</div></div><div class="info-2"><div class="info-item-1">今天做wordpress主题，需要获得url的值，查了资料，如下： 使用javascript获得网页的url地址以及参数等 获得URL信息： &#96;  document.write(“location.host&#x3D;”+location.host+”“); document.write(“location.hostname&#x3D;”+location.hostname+”“); document.write(“location.href&#x3D;”+location.href+”“); document.write(“location.pathname&#x3D;”+location.pathname+”“); document.write(“location.protocol&#x3D;”+location.protocol+”“); &#96; **显示效果： **   location.host&#x3D;weixing.me  location.hostname&#x3D;weixing.me  location.href&#x3D;https://www...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

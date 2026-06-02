@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>CentOS、Ubuntu、Debian三个linux系统对比 | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Linux有非常多的发行版本，从性质上划分，大体分为由商业公司维护的商业版本与由开源社区维护的免费发行版本。 商业版本以Redhat为代表，开源社区版本则以debian为代表。这些版本各有不同的特点，在不同的应用领域发挥着不同的作用，不能一概而论。而绝大多数VPS上只提供开源社区维护的发行版本。下面就这些不同的linux发行版进行简单的分析。 Ubuntu Ubuntu近些年的粉丝越来越多，Ubu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS、Ubuntu、Debian三个linux系统对比">
+<meta property="og:url" content="https://www.weixing.me/posts/20180503-centos-ubuntu-debian-linux-os/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="Linux有非常多的发行版本，从性质上划分，大体分为由商业公司维护的商业版本与由开源社区维护的免费发行版本。 商业版本以Redhat为代表，开源社区版本则以debian为代表。这些版本各有不同的特点，在不同的应用领域发挥着不同的作用，不能一概而论。而绝大多数VPS上只提供开源社区维护的发行版本。下面就这些不同的linux发行版进行简单的分析。 Ubuntu Ubuntu近些年的粉丝越来越多，Ubu">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.weixing.me/uploads/2018/05/2018050313460118-300x158_2.jpg">
+<meta property="article:published_time" content="2018-05-03T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-31T02:08:34.657Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="CentOS">
+<meta property="article:tag" content="Debian">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="对比">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.weixing.me/uploads/2018/05/2018050313460118-300x158_2.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "CentOS、Ubuntu、Debian三个linux系统对比",
+  "url": "https://www.weixing.me/posts/20180503-centos-ubuntu-debian-linux-os/",
+  "image": "https://www.weixing.me/uploads/2018/05/2018050313460118-300x158_2.jpg",
+  "datePublished": "2018-05-03T04:00:00.000Z",
+  "dateModified": "2026-05-31T02:08:34.657Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "WEIXING.ME",
+      "url": "https://www.weixing.me"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/posts/20180503-centos-ubuntu-debian-linux-os/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'CentOS、Ubuntu、Debian三个linux系统对比',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><style>#footer{background-color:#2c3e50!important}</style><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/uploads/2018/05/2018050313460118-300x158_2.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a><a class="nav-page-title" href="/"><span class="site-name">CentOS、Ubuntu、Debian三个linux系统对比</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">CentOS、Ubuntu、Debian三个linux系统对比</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-05-03T04:00:00.000Z" title="发表于 2018-05-03 12:00:00">2018-05-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-31T02:08:34.657Z" title="更新于 2026-05-31 10:08:34">2026-05-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A7%91%E6%8A%80%E9%A2%91%E9%81%93/">科技频道</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><strong>Linux</strong>有非常多的发行版本，从性质上划分，大体分为由商业公司维护的商业版本与由开源社区维护的免费发行版本。</p>
+<p>商业版本以Redhat为代表，开源社区版本则以debian为代表。这些版本各有不同的特点，在不同的应用领域发挥着不同的作用，不能一概而论。而绝大多数VPS上只提供开源社区维护的发行版本。下面就这些不同的linux发行版进行简单的分析。</p>
+<p><strong>Ubuntu</strong></p>
+<p>Ubuntu近些年的粉丝越来越多，Ubuntu有着漂亮的用户界面，完善的包管理系统，强大的软件源支持，丰富的技术社区，Ubuntu还对大多数硬件有着良好的兼容性，包括最新的图形显卡等等。这一切让Ubuntu越来越向大众化方向发展。但别忘了：你所需要的只是一个简约、稳定、易用的服务器系统而已！</p>
+<p>Ubuntu的图形界面固然漂亮，但这也决定了它最佳的应用领域是桌面操作系统而非服务器操作系统。如何你希望在学习Linux的过程中有个沉浸式的环境，那么Ubuntu的确不错：仅仅安装在自己的电脑中而非服务器中。从这一点来讲，Ubuntu并没有在VPS安装的操作系统选择之列，相信你也不会为了那数百M的驱动与宝贵的内存买单。</p>
+<p><strong>CentOS</strong></p>
+<p>你会发现非常多的商业公司部署在生产环境上的服务器都是使用的CentOS系统，CentOS是从RHEL源代码编译的社区重新发布版。CentOS简约，命令行下的人性化做得比较好，稳定，有着强大的英文文档与开发社区的支持。与Redhat有着相同的渊源。虽然不单独提供商业支持，但往往可以从Redhat中找到一丝线索。相对debian来说，CentOS略显体积大一点。是一个非常成熟的Linux发行版。</p>
+<p><strong>Debian</strong></p>
+<p>一般来说Debian作为适合于服务器的操作系统，它比Ubuntu要稳定得多。可以说稳定得无与伦比了。debian整个系统，只要应用层面不出现逻辑缺陷，基本上固若金汤，是个常年不需要重启的系统（当然，这是夸张了点，但并没有夸大其稳定性）。debian整个系统基础核心非常小，不仅稳定，而且占用硬盘空间小，占用内存小。128M的VPS即可以流畅运行Debian，而CentOS则会略显吃力。但是由于Debian的发展路线，使它的帮助文档相对于CentOS略少，技术资料也少一些。</p>
+<p>由于其优秀的表现与稳定性，Debian非常受VPS用户的欢迎。</p>
+<p>此外还有Arch Linxu、Gentoo、Slackware等一系列的Linux和FreeBSD、Unix等系统，由于其涉及领域更加专业，很少在VPS中出现，因此不作介绍。</p>
+<p>对于初学者，我们建议采用CentOS或Debian，这两种系统都能在配置较低的VPS上流畅运行。但是如果VPS配置太低（OPENVZ内存在128M以下，或者XEN架构内存在192M以下），建议采用Debian；否则建议采用CentOS，以获取更多的在线帮助与支持，让自己入门更轻松。</p>
+<p><img src="/uploads/2018/05/2018050313460118-300x158_2.jpg"></p>
+<p><img src="/uploads/2018/05/2018050313460221-300x78_2.jpg"></p>
+<p><img src="/uploads/2018/05/2018050313460267-300x131_2.jpg"></p>
+<p><strong>CentOS、Ubuntu、Debian三个linux都是非常优秀的系统，开源的系统，也分付费的商业版和free免费版本，下面简单比较这三种系统。</strong></p>
+<p>CentOS系统</p>
+<p>很多网站站长一般都选择centOS系统，CentOS是从redhat源代码编译重新发布版。CentOS去除很多与服务器功能无关的应用，系统简单但非常稳定，命令行操作可以方便管理系统和应用，并且有帮助文档和社区的支持。</p>
+<p>Ubuntu系统</p>
+<p>Ubuntu有亮丽的用户界面，完善的包管理系统，强大的软件源支持，丰富的技术社区，并且Ubuntu对计算机硬件的支持好于centos和debian，兼容性强，Ubuntu应用非常多，但对于服务器系统来说，个人感觉并不需要太多的各种应用程序，需要的是稳定，操作方便，维护简单的系统。如果你需要在服务器端使用图形界面，ubuntu是一个不错的选择，你需要注意的是，图形界面占用的内存非常大，而内存越大的vps价格也越高。</p>
+<p>Debian系统</p>
+<p>Debian也非常适合做服务器操作系统，与Ubuntu比较，它没有太多的花哨，稳定压倒一切，对于服务器系统来说是一条不变的真理，debian这个linux系统，底层非常稳定，内核和内存的占用都非常小，在小内存的VPS就可以流畅运行Debian，比如128m的内存，但debian的帮助文档和技术资料比较少。对于小内存，首选debian，对于非常熟悉linux系统的vps高手，首选debian。</p>
+<p>在系统的选择上，属于新手，首选CentOS，并不是centos比Debian和ubuntu好，而是centos是初学者安装vps的首选，它既稳定，占用资源又少，在网络上能方便搜索到安装配置的文档，自身的帮助文档也非常强大；如果你是linux高手，高手的境界一般都选择debian，因为高手能在低配的vps上稳定运行系统；而ubuntu，系统虽然免费，但它适合有钱人玩，它占用的资源是比前面两种系统更高，而vps基本就是卖内存，内存越高，价格越贵。</p>
+<p>[su_label]转自：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhihui1017/article/details/76280653[/su_label]">https://blog.csdn.net/zhihui1017/article/details/76280653[/su_label]</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.weixing.me">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.weixing.me/posts/20180503-centos-ubuntu-debian-linux-os/">https://www.weixing.me/posts/20180503-centos-ubuntu-debian-linux-os/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.weixing.me" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Ubuntu/">Ubuntu</a><a class="post-meta__tags" href="/tags/Linux/">Linux</a><a class="post-meta__tags" href="/tags/Debian/">Debian</a><a class="post-meta__tags" href="/tags/%E5%AF%B9%E6%AF%94/">对比</a><a class="post-meta__tags" href="/tags/CentOS/">CentOS</a></div><div class="post-share"><div class="social-share" data-image="/uploads/2018/05/2018050313460118-300x158_2.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/20180521-super-simple-songs-all-download/" title="super simple songs 合集下载"><img class="cover" src="/uploads/2018/05/2018052120561385_2.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">super simple songs 合集下载</div></div><div class="info-2"><div class="info-item-1">super simple songs被很多家长视为英语启蒙最佳材料，我也不例外的这样认为，于是乎给自家闺女在网上找了super simple songs的全部音频，现分享给大家，总共3个CD盘！  CD1  CD2  CD3 下载地址：链接：https://pan.baidu.com/s/1iPORsaQHEByd1R7k8PjRBQ 密码：vzur &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;2019-3-31更新地址，永久有效&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 链接: https://pan.baidu.com/s/1FJbFzuMD1q2RFXbQahKlMw 提取码: v5gs </div></div></div></a><a class="pagination-related" href="/posts/20180502-cvm-baota-lnmp-lamp/" title="腾讯云CVM安装宝塔面板及LNMP/LAMP环境配置"><img class="cover" src="/uploads/2018/05/2018050212133799-300x288_2.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">腾讯云CVM安装宝塔面板及LNMP/LAMP环境配置</div></div><div class="info-2"><div class="info-item-1">前几天新购腾讯的CVM云服务器一台，安装了宝塔的管理面板以及LNMP&#x2F;LAMP环境，现在将安装方法分享给大家，其实阿里云的ECS的安装方式也是一样的，下面是详细步骤： 1、使用远程登录软件连接我们的服务器。 采用密码登录 Linux 实例（本例中选择使用** PUTTY**，大家也可以选择其他类型的登录软件，推荐下载地址：https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html）。  登录默认账户为root，密码为你之前设置的密码（此时输入密码是不显示任何内容的，但你确实已经输入）  2、使用命令行安装宝塔面板 [su_highlight]yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install.sh &amp;&amp; sh install.sh[&#x2F;su_highlight] 你可以直接复制上面代码，然后鼠标右击就直接粘贴上去了，点击y开始安装  安装完毕后给出登录账户密码...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

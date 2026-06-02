@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>wordpress（php）汉字转换成拼音的方法 | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="昨天研究iphoto这个主题，想实现一个功能：根据标题的汉语拼音的首字母顺序排序，网上找到了排序的方法，那是英文的，于是想到汉字转汉语拼音，下面是网上找的资料，能用，我已经测试成功！ 代码： 1、汉字转拼音函数： &#96; &#x3D; ‘5.0’) ? array_combine($_TDataKey, $_TDataValue) : _Array_Combine($_TDataKey, $_">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wordpress（php）汉字转换成拼音的方法">
+<meta property="og:url" content="https://www.weixing.me/posts/20120506-wordpress-or-php-hanzizhuanpinyin/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="昨天研究iphoto这个主题，想实现一个功能：根据标题的汉语拼音的首字母顺序排序，网上找到了排序的方法，那是英文的，于是想到汉字转汉语拼音，下面是网上找的资料，能用，我已经测试成功！ 代码： 1、汉字转拼音函数： &#96; &#x3D; ‘5.0’) ? array_combine($_TDataKey, $_TDataValue) : _Array_Combine($_TDataKey, $_">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.weixing.me/img/touxiang.jpg">
+<meta property="article:published_time" content="2012-05-06T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-31T02:15:07.199Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="wordpress">
+<meta property="article:tag" content="汉字转拼音">
+<meta property="article:tag" content="源码下载">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.weixing.me/img/touxiang.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "wordpress（php）汉字转换成拼音的方法",
+  "url": "https://www.weixing.me/posts/20120506-wordpress-or-php-hanzizhuanpinyin/",
+  "image": "https://www.weixing.me/img/touxiang.jpg",
+  "datePublished": "2012-05-06T04:00:00.000Z",
+  "dateModified": "2026-05-31T02:15:07.199Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "WEIXING.ME",
+      "url": "https://www.weixing.me"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/posts/20120506-wordpress-or-php-hanzizhuanpinyin/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'wordpress（php）汉字转换成拼音的方法',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><style>#footer{background-color:#2c3e50!important}</style><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/top.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a><a class="nav-page-title" href="/"><span class="site-name">wordpress（php）汉字转换成拼音的方法</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">wordpress（php）汉字转换成拼音的方法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2012-05-06T04:00:00.000Z" title="发表于 2012-05-06 12:00:00">2012-05-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-31T02:15:07.199Z" title="更新于 2026-05-31 10:15:07">2026-05-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/wordpress/">wordpress</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>昨天研究iphoto这个主题，想实现一个功能：根据标题的汉语拼音的首字母顺序排序，网上找到了排序的方法，那是英文的，于是想到汉字转汉语拼音，下面是网上找的资料，能用，我已经测试成功！</p>
+<p>代码：</p>
+<p>1、汉字转拼音函数：</p>
+<p>&#96;</p>
+<p>&#x3D; ‘5.0’) ? array_combine($_TDataKey, $_TDataValue) : _Array_Combine($_TDataKey, $_TDataValue);</p>
+<p> arsort($_Data);</p>
+<p> reset($_Data);</p>
+<p> if ($_Code !&#x3D; ‘gb2312’)</p>
+<p> $_String &#x3D; _U2_Utf8_Gb($_String);</p>
+<p> $_Res &#x3D; ‘’;</p>
+<p> for ($i &#x3D; 0; $i 160) {</p>
+<p> $_Q &#x3D; ord(substr($_String, ++$i, 1));</p>
+<p> $_P &#x3D; $_P * 256 + $_Q - 65536;</p>
+<p> }</p>
+<p> $_Res .&#x3D; _Pinyin($_P, $_Data);</p>
+<p> }</p>
+<p> return preg_replace(“&#x2F;[^a-z0-9]*&#x2F;“, ‘’, $_Res);</p>
+<p>}</p>
+<p>function _Pinyin($_Num, $_Data) {</p>
+<p> if ($_Num &gt; 0 &amp;&amp; $_Num -10247)</p>
+<p> return ‘’;</p>
+<p> else {</p>
+<p> foreach ($_Data as $k &#x3D;&gt; $v) {</p>
+<p> if ($v &gt; 6);</p>
+<p> $_String .&#x3D; chr(0x80 | $_C &amp; 0x3F);</p>
+<p> } elseif ($_C &gt; 12);</p>
+<p> $_String .&#x3D; chr(0x80 | $_C &gt;&gt; 6 &amp; 0x3F);</p>
+<p> $_String .&#x3D; chr(0x80 | $_C &amp; 0x3F);</p>
+<p> } elseif ($_C &gt; 18);</p>
+<p> $_String .&#x3D; chr(0x80 | $_C &gt;&gt; 12 &amp; 0x3F);</p>
+<p> $_String .&#x3D; chr(0x80 | $_C &gt;&gt; 6 &amp; 0x3F);</p>
+<p> $_String .&#x3D; chr(0x80 | $_C &amp; 0x3F);</p>
+<p> }</p>
+<p> return iconv(‘UTF-8’, ‘GB2312’, $_String);</p>
+<p>}</p>
+<p>function _Array_Combine($_Arr1, $_Arr2) {</p>
+<p> for ($i &#x3D; 0; $i </p>
+<p>&#96;</p>
+<p>2、调用方法：</p>
+<p>看你的php编码是什么的，要是GB2312编码,就使用方法一，如果是UTF-8的就使用方法二</p>
+<p>&#96;</p>
+<p>&#x2F;&#x2F;第二个参数留空则为gb2312编码</p>
+<p>echo cn2pinyin(‘我要转换’);</p>
+<p>&#x2F;&#x2F;第二个参数随意设置则为utf-8编码</p>
+<p>echo cn2pinyin(‘我要转换’,1);</p>
+<p>&#96;</p>
+<p>源码下载地址：</p>
+<p><a target="_blank" rel="noopener" href="http://yfdisk.com/file/woallf/6c03ce00/">点击下载： 中文转换为拼音源码.rar</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.weixing.me">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.weixing.me/posts/20120506-wordpress-or-php-hanzizhuanpinyin/">https://www.weixing.me/posts/20120506-wordpress-or-php-hanzizhuanpinyin/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.weixing.me" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/wordpress/">wordpress</a><a class="post-meta__tags" href="/tags/%E6%B1%89%E5%AD%97%E8%BD%AC%E6%8B%BC%E9%9F%B3/">汉字转拼音</a><a class="post-meta__tags" href="/tags/%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/">源码下载</a></div><div class="post-share"><div class="social-share" data-image="/img/touxiang.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/20120508-union-163-ad/" title="网易网站联盟，站长赚钱首选"><img class="cover" src="/uploads/2012/05/union-163_2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">网易网站联盟，站长赚钱首选</div></div><div class="info-2"><div class="info-item-1">今天邮箱收到一封邮件，网易联盟发的，不知道他们是怎么知道我的邮箱号码的，而且还是QQ邮箱，但是确确实实发过来了，我看了一下网易联盟的内容，感觉还不错，毕竟网易有很多的自己的游戏产品，做他们的网站推广就是做他们自己的产品，感觉还是很有前途的，而且网易是大站，放心！！！  网易联盟的广告方式有4中：CPC、CPS、CPA、CPM 。我自己看了一下，价格还都蛮高的，于是推荐给大家，感兴趣的可以自己去官网看看，直接百度搜索“网易联盟”或者 ?点击链接进入&#x3D;&gt; </div></div></div></a><a class="pagination-related" href="/posts/20120503-so-much-spam-message/" title="大量的垃圾留言信息"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">大量的垃圾留言信息</div></div><div class="info-2"><div class="info-item-1">我就纳了闷了，为什么我的博客留言板中会有这么多了垃圾留言，而且都是关于卖衣服评价的留言，什么“衣服不错”，“衣服比想像中好，全5分！”晕死啊，这是怎么了？我觉得不是手动留的言，是用软件写入的，所以将那些IP地址全部加入黑名单了，不知道这样作用大不大，观察几天试试，看效果，如果还是不行就得使用一些特殊的方法了！还有一个问题就是有莫名的注册用户，就在笔者写这篇文章的时候又有一位注册用户，不知道这个注册者和这么多的垃圾邮件之间有没有什么关系，是不是注册了以后就能使用它们的软件来群发留言到我的博客了？？好吧，取消用户注册这个功能，看看一个星期之后是什么样子的！！ 不知道各位博友是怎么实现垃圾留言这块的，我这边垃圾留言时奇多无比，每个星期都有好几百条要清理，哎，烦人…… </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/20101026/" title="wordpress 更换路径 &#x2F;blog&#x2F;wp-admin&#x2F;"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-10-26</div><div class="info-item-2">wordpress 更换路径 &#x2F;blog&#x2F;wp-admin&#x2F;</div></div><div class="info-2"><div class="info-item-1">想把WordPress放在Blog目录下，以前是放在根目录下的，现在想改了！ 刚开始先是直接将程序转移，然后修改数据库的配置，但是最终未成功。 后来在Blog文件夹下又装了一个WordPress Blog 程序，配置好，成功！ 导出元数据库的数据，位置：后台&#x3D;&#x3D;》工具&#x3D;&#x3D;》导出&#x3D;&#x3D;》导出所有的数据 在新安装好的WordPress里倒入先前导出的数据！OK！ 然后将原WordPress里的插件、主题、uploads 等上传到Blog文件夹相应的 位置下，OK，大功告成！！ 中间出现的问题： 登录的时候无法跳转到&#x2F;wp-admin&#x2F;页面，只是显示空白，什么都没有，转到前台 可以看到自己已登录，但是无法管理网站。上网找资料，都说是插件的问题，但是我是 新装的网站，还没有装插件，所以排除此问题。 前台可以进入，登录正确知识不能跳转到&#x2F;wp-admin&#x2F;页面，所以很有可能是wp-admin文件 的问题，或是相关文件的问题，所以最笨的方法就是用好的Blog的wp-admin文件夹替换现有 的w...</div></div></div></a><a class="pagination-related" href="/posts/20110324-add-wordpress-sys-tools/" title="一步步学做wordpress主题&#8211;添加后台小工具"><img class="cover" src="/uploads/2011/03/wordpress-150x150_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-03-24</div><div class="info-item-2">一步步学做wordpress主题&#8211;添加后台小工具</div></div><div class="info-2"><div class="info-item-1">今天学做主题，需要给网站后台添加小工具，是用户可以自己添加想要的东西， 本以为会很难，然后看了一下wordpress3.0默认主题的sidebar.php的代码,发现了源头， 然后顺藤摸瓜，哈哈，秘密被我发现了！闲话不多说，下面上代码： 1、function注册sidebar小工具（thems&#x3D;&gt;your theme&#x3D;&gt;functions.php） &#96; function twentyten_widgets_init() { register_sidebar( array(  	&#39;name&#39; =&gt; __( &#39;Primary Widget Area&#39;, &#39;twentyten&#39; ),  	&#39;id&#39; =&gt; &#39;primary-widget-area&#39;,  	&#39;description&#39; =&gt; __( &#39;The primary widget area&#39;, &#39;twentyten&#39; ),  	&#39;before...</div></div></div></a><a class="pagination-related" href="/posts/20110802-wordpress-get-one-page-content/" title="WordPress获取某一单页页面内容"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-08-02</div><div class="info-item-2">WordPress获取某一单页页面内容</div></div><div class="info-2"><div class="info-item-1">准备做一个企业站的模版，在首页显示“公司简介”的内容时，需要调用页面“公司简介”的内容，于是找了资料，实现**wordpress首页获取某一页面的内容** Wordpress在生成文章页的时候在各个页面中唯一不变的只有当前的文章ID，所以我们可以根据页面的ID来显示此也面的内容： 代码： &#96; post_content; ?&gt; &#96; 其中的3为你的单页的id 获取其他信息参数：   post_author：(整数）文章作者的编号 post_data：(字符）文章发表的日期和时间（YYYY-MM-DD HH-MM-SS) post_data_gmt：（字符）文章发表的格林尼治标准时间（GMT） （YYYY-MM-DD HH-MM-SS) post_content：（字符）文章内容 post_title：（字符）文章标题 post_category：（整数）文章类别的编号。注意：该值在WordPress 2.1之后的版本总为0。定义文章的类别时可使用 get_the_category()函数。 post_excerpt：（字符）文章摘要 post_status：(字...</div></div></div></a><a class="pagination-related" href="/posts/20111115-wordpress-qiye-theme-down/" title="wordpress企业主题模板提供下载"><img class="cover" src="/uploads/2011/11/screenshot1_2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-11-15</div><div class="info-item-2">wordpress企业主题模板提供下载</div></div><div class="info-2"><div class="info-item-1">今天这款wordpress企业模板终于可以放出来了，这款主题本来是一个朋友定制的，做玻璃瓶生意的网站，上次介绍的时候很多朋友都很喜欢，让我分享出来，我当时也承诺过要分享的，今天分享出来，其实早就想拿出来了，可是由于种种原因（最主要的是懒了），没能及时拿出来，喜欢的朋友你们久等了！！ 发布之前还请小星在啰嗦一下，这款wordpress主题的前台来自一个网页模板站，经过自己的修改后成现在的样子，后台是是根据twentyten的代码来写的，所以当你看到php源码的时候会出现类似functoin(XXX, &#8216;twentyten’ ),这样的函数代码，小工具部分是根据知更鸟的HotNews修改而来，还有一些函数也是从不同的wordpress主题模板里抠出来的，小星在此声明一下！！ 截图：  下面是下载地址和演示地址 查看演示 点击下载 下面是对此wordpress企业主题功能应用以及配置时的一些说明 1、导航支持自定义菜单，支持二级菜单。 2、有主题选项设置，包括模块的显示隐藏，首页幻灯片设置，关键字、描述、统计代码 3、经过SEO优化，支持自定义链接 4、产品分类配置： 我这...</div></div></div></a><a class="pagination-related" href="/posts/20110301-learn-to-do-wordpress-theme-1-step-by-step/" title="一步步学做wordpress主题（一）"><img class="cover" src="/uploads/2011/03/oCmQ5bOYLTgefRs1-1024x862_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-03-01</div><div class="info-item-2">一步步学做wordpress主题（一）</div></div><div class="info-2"><div class="info-item-1">一直都想做一个自己的wordpress主题，以前改过别人的主题，但都没有完全的完成， 都在中途夭折了，所以从现在开始，一步步学做wordpress主题。 我的思路是这样的，先找一个网页的图片模板，将其做成静态页面，然后往里面填写 wordpress的函数代码，先将首页完成，然后再做single页，然后其他的页面。 今天将静态页面做好了，因为赶时间，做的有些粗糙，下面是截图，计划明天将header 与footer页面模板完成。  我不是设计师、不是工程师，我只是一个小职员，只是喜欢玩wordpress，希望有相同爱好的 朋友可以一起交流! 演示地址：https://www.weixing.me/demo/woallf-blue/ </div></div></div></a><a class="pagination-related" href="/posts/20110405-tencent-cdc-wordpress-theme/" title="仿腾讯CDCwordpress主题"><img class="cover" src="/uploads/2011/04/woallf-cdc_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-04-05</div><div class="info-item-2">仿腾讯CDCwordpress主题</div></div><div class="info-2"><div class="info-item-1">今天将仿腾讯CDCwordpress主题做的差不多了，基本功能是实现了，但是还有很多细节上的东西要修改，还有功能上的东西要加，我只是通过默认主题 twenty ten 将其样式修改成腾讯CDC博客的样子，有些功能还需要插件的支持，比如列表页的分页需要Pagebar2插件的支持，文章浏览次数需要插件PostViews的支持。而且有些方面不是全部按照腾讯CDC做的，比如cdc列表页标题前面有avatar头像，我做的时候就没加，因为人家那是多人用一个博客，这样看起来比较好看，而我们的博客就一个作者我们自己，没必要显示（个人想法），还有一些其他的地方也是凭着感觉做的。下面是效果图：  想下载下来玩玩我仿的这款主题的朋友请点击下面的按钮下载，本主题还有缺陷，想用的朋友自己最好先改下在用，因为里面有些是直接写的HTML代码，是按照自己的弄的。第一次做wordpress主题，难免出现很多问题，见谅！ uushare下载本地下载 本文来自魏星博客，原文链接：https://www.weixing.me/wordpress/tencent-cdc-wordpress-theme/ </div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

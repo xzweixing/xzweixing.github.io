@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>前端开发所需掌握的技术（1） | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="?前端开发所需掌握的技术（1）  也许你对前端开发所要掌握的技术不是特别的了解，下面我们再来看一下下面这段招聘信息： 网站前端工程师（Front-end Web developer） 工作职责： 负责网站前端设计及开发。 职位要求： 计算机相关专业，本科以上学历。 精通Java&#x2F;Ajax&#x2F;JavaScript&#x2F;XML&#x2F;CSS，有至少3年相关工作经验。 了解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端开发所需掌握的技术（1）">
+<meta property="og:url" content="https://www.weixing.me/posts/20100905-1/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="?前端开发所需掌握的技术（1）  也许你对前端开发所要掌握的技术不是特别的了解，下面我们再来看一下下面这段招聘信息： 网站前端工程师（Front-end Web developer） 工作职责： 负责网站前端设计及开发。 职位要求： 计算机相关专业，本科以上学历。 精通Java&#x2F;Ajax&#x2F;JavaScript&#x2F;XML&#x2F;CSS，有至少3年相关工作经验。 了解">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.weixing.me/uploads/2010/09/163555598_2.jpg">
+<meta property="article:published_time" content="2010-09-05T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-31T02:42:10.045Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="UE">
+<meta property="article:tag" content="XML">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="业内标准">
+<meta property="article:tag" content="前端开发">
+<meta property="article:tag" content="技术">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.weixing.me/uploads/2010/09/163555598_2.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "前端开发所需掌握的技术（1）",
+  "url": "https://www.weixing.me/posts/20100905-1/",
+  "image": "https://www.weixing.me/uploads/2010/09/163555598_2.jpg",
+  "datePublished": "2010-09-05T04:00:00.000Z",
+  "dateModified": "2026-05-31T02:42:10.045Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "WEIXING.ME",
+      "url": "https://www.weixing.me"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/posts/20100905-1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '前端开发所需掌握的技术（1）',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><style>#footer{background-color:#2c3e50!important}</style><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/uploads/2010/09/163555598_2.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a><a class="nav-page-title" href="/"><span class="site-name">前端开发所需掌握的技术（1）</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">前端开发所需掌握的技术（1）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2010-09-05T04:00:00.000Z" title="发表于 2010-09-05 12:00:00">2010-09-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-31T02:42:10.045Z" title="更新于 2026-05-31 10:42:10">2026-05-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/web%E5%BC%80%E5%8F%91/">web开发</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><ol>
+<li>?前端开发所需掌握的技术（1）</li>
+</ol>
+<p>也许你对前端开发所要掌握的技术不是特别的了解，下面我们再来看一下下面这段招聘信息：</p>
+<p>网站前端工程师（Front-end Web developer）</p>
+<p>工作职责：</p>
+<p>负责网站前端设计及开发。</p>
+<p>职位要求：</p>
+<p>计算机相关专业，本科以上学历。</p>
+<p>精通Java&#x2F;Ajax&#x2F;JavaScript&#x2F;XML&#x2F;CSS，有至少3年相关工作经验。</p>
+<p>了解不同浏览器之间的差异，写出的代码具有良好的兼容性。</p>
+<p>熟悉页面架构和布局，对Web标准和标签语有深入了解。</p>
+<p>对用户体验、交互操作流程及用户需求有深入了解。</p>
+<p>能根据设计效果图严谨落实界面，精确到像素意识。</p>
+<p>有丰富的网站前端工作经验。</p>
+<p>笔者认为上面这段招聘信息仅仅列出了一些基本的要求，一个优秀的前端工程师需要掌握很多与之相关的技术，绝大部分的团队都需要一个真正理解及应用这些技术的人才。正确地深入理解前端所应用到的各项技术和技能，并且能做到有的放矢，这对于个人及团队都是有利的。下面我们进行整体的概括。</p>
+<p>2.1. 业内标准</p>
+<p>关于业内标准，首先必须了解的是W3C的一系列标准，前面的章节中已经详细地介绍了，这里不再赘述，需要重点关注的有：HTML、XHTML、XML、CSS、JavaScript。</p>
+<p>其次，根据你所归属的阵营熟悉一些标准，比如需要Java EE的相关标准或者是.NET的相关标准。</p>
+<p>最后，需要掌握一些常用的前端设计的思路以及最佳实践。</p>
+<p>2.2. 语言</p>
+<p>在众多的开发语言中，属于前端技术的语言并不多，除了W3C所发布的HTML、CSS、XML等描述性语言外，还包括客户端脚本语言JavaScript等。另外还有一种语言也是非常重要的，即ActionScript，它是开发Adobe RIA的基础语言，Flex、Flash和AIR都采用它作为脚本语言。为什么这里要提到Flash？Flash并不是W3C标准，但它在目前的互联网领域中扮演着非常重要的角色。相比以前，如今声音、图像、动画、视频已遍布大大小小的网站，不管它们是以JavaScript实现的还是以Flash为基础实现的，今后的互联网都将是RIA的天下。而且目前90％的计算机都已安装Flash Player，基于Flash的应用将会越来越丰富。即使不知道如何设计一个Flash广告，你也要知道如何修改里面的字体，它与后台数据层如何交互。它的ActionScript编程是非常有趣的，它也是基于EMACScript这一标准的脚本语言，与JavaScript相似。本书不详细介绍Flash，有兴趣的读者可以关注Adobe实验室网站：<a target="_blank" rel="noopener" href="http://labs.adobe.com/">http://labs.adobe.com</a>。</p>
+<p>2.3. 视觉设计</p>
+<p>视觉设计最早被应用于印刷宣传，电影海报、报刊杂志等传播媒体都可以理解为平面设计或图形设计，它们是利用视觉符号来传递各种信息的。随着科技的日新月异和互联网的发展，视觉设计在互联网这个大媒体中的作用越来越重要。不管是静态的网页还是画面炫丽的Flash动画或魔兽世界中的游戏画面，它们都离不开视觉设计。在软件系统领域中一般称视觉设计为UI（User-Inteface）设计。如果仅从UI来理解，那么它就是指界面设计，即在网页上看到的效果。抛开Web的话题，回到传统C&#x2F;S模式的应用系统，那它要做哪些事情呢？我们先来看一下图1-9所示的苹果操作系统Xcode软件的界面。</p>
+<p>| <a target="_blank" rel="noopener" href="http://images.51cto.com/files/uploadimg/20100830/163555598.jpg"><img src="/uploads/2010/09/163555598_2.jpg"></a><a target="_blank" rel="noopener" href="http://book.51cto.com/files/uploadimg/20060921/153223104.gif"></a> |</p>
+<p>| （点击查看大图）图1-9? 苹果操作系统Xcode软件 |</p>
+<p>无论是软件的工具栏还是菜单等，Mac都为其提供了相应的接口调用，操作时只需要执行文本及命令即可。同样的，开发VB应用时，开发库已为你提供了丰富的UI组件，那开发这样的应用软件需要视觉设计师吗？回答是需要，因为视觉设计师的工作不仅是将控件美化，为其加上一些色彩，对于Web视觉设计师来说，他还要将信息架构的内容友好且美观地表现在浏览器上或是PS工作区中，就像传统的海报设计一样，它还需要应用排版和字体。</p>
+<p>我们常常会发现，UI设计师设计出来的稿子无法进行HTML编码，有些背景根本无法实现，或者只能像十年前的网页一样，通过先使用Photoshop画界面，然后转换到Firework切片，再自动导出为HTML这样一个工作流程来实现，得到的网页中全是图片，这样的效果是不符合目前的Web标准的。</p>
+<p>所以，在了解色彩设计的同时，我们还需要了解Web的排版艺术及交互艺术。对于Web应用的视觉设计，不仅需要了解诸如Photoshop这类画图工具，还需要了解设计Web应用的一些方法，如布局、排版、色彩、字体、表单等的设计方法，能迅速将PSD文件内的要素或PNG图片的特殊效果通过HTML、CSS等代码来实现，比如，需要将相册内的所有图片都加上属于自己的印章，则首先应该想到要将印章制作成PNG格式的透明图片，再使用CSS的一些技术给相册图片加上印章。</p>
+<p>视觉设计是前端开发的一项基础技能，前端开发的一个重要意义就是给予用户良好的视觉体验。</p>
+<ol start="4">
+<li>交互设计</li>
+</ol>
+<p>一般做UE的人都会强调可用性的概念，将可用性视作产品设计的最高层次。软件是人与机器的交互，这是软件所体现的“能力”。在ISO中这样定义可用性：某一事物的可用性应当可以以效力、效率、满意度三个维度进行衡量。效力即用户可以完成任务，效率即用户完成任务的快慢，满意度即衡量用户是否很享受完成任务的这个过程。不管是Web软件还是桌面软件，在可用性方面都必须遵守这三个标准。网站的可用性在很大程度上反映了其产品的人性化操作，这是交互设计中的一个部分。人机交互中包含的具体理论及技术如图1-10所示。</p>
+<p>| <a target="_blank" rel="noopener" href="http://images.51cto.com/files/uploadimg/20100830/163623105.jpg"><img src="/uploads/2010/09/163623105_2.jpg"></a><a target="_blank" rel="noopener" href="http://book.51cto.com/files/uploadimg/20060921/153223104.gif"></a> |</p>
+<p>| 图1-10? 交互设计概念图 |</p>
+<p>从图1-10可以看出，从比较基础的界面设计开始到概念表达，都能够完整地贯穿整个软件交互设计过程。交互设计必须以用户为中心，应用“以目标为导向的设计”方法。从用户角度来说，交互设计是一种如何让产品易用、有效且让人感到愉悦的技术，它致力于了解目标用户和他们的期望，了解用户在与产品交互时彼此的行为，了解人的心理和行为特点。交互设计体现在小到一个链接的设计，大到一个大的操作流程等的过程都应受到重视。这些年人们对于用户体验及可用性等的研究也越来越多。最后我们要明白，交互设计是一个过程设计，不管是开发DVD播放机还是开发互联网应用，都需要交互设计。</p>
+<p>转自：<a target="_blank" rel="noopener" href="http://book.51cto.com/art/201008/222599.htm">http://book.51cto.com/art/201008/222599.htm</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.weixing.me">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.weixing.me/posts/20100905-1/">https://www.weixing.me/posts/20100905-1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.weixing.me" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/css/">css</a><a class="post-meta__tags" href="/tags/javascript/">javascript</a><a class="post-meta__tags" href="/tags/XML/">XML</a><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a><a class="post-meta__tags" href="/tags/%E4%B8%9A%E5%86%85%E6%A0%87%E5%87%86/">业内标准</a><a class="post-meta__tags" href="/tags/UE/">UE</a><a class="post-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a></div><div class="post-share"><div class="social-share" data-image="/uploads/2010/09/163555598_2.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/20100905-3/" title="web前端设计师–令人望而却步的学习曲线"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">web前端设计师–令人望而却步的学习曲线</div></div><div class="info-2"><div class="info-item-1"> 令人望而却步的学习曲线  我们先来看看作为一名合格的前端人员应该掌握或具备哪些技能： 首先就得熟悉HTML，掌握W3C的标准，要学就得学最规范的标准。浏览器最少也要了解四五种，如IE、Firefox、Chrome等。样式也得掌握，以CSS2为主，多看看欧美牛人的风格DIV布局，特简约的那种。可用性也很重要，甭管有事没事总把用户放在心里，再买本工艺美术理论方面的书，有事没事就翻翻，设计个按钮就得花个七八天的时间。交互更重要，现在不是Ajax，就是RIA的，你要是用alert弹框啊，你都不好意思跟人家说去，这样学下去，得学多少年啊？两年时间？那是入门。四年以上？你还别嫌多，就是复杂。认真掂量下这些技术，学好其中的任何一门都要花好几年工夫。什么叫成功的前端开发人员？就是不但代码写得好，还要懂设计，懂美学。所以，前端开发的口号就是：不求最好，但求最全。 2.1. 角色的特殊性 也许有人会问：“为什么一个做页面的人要掌握这么多知识？”前端设计师这个职位有其特殊性：前端作为与用户直接接触的一层，与用户的相关度高，需求变化频繁。用户不会关心数据库是MySQL还是Oracle，也不会关心你是用...</div></div></div></a><a class="pagination-related" href="/posts/20100904/" title="Google搜索的黄金法则"><img class="cover" src="/uploads/2010/09/1610180_2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Google搜索的黄金法则</div></div><div class="info-2"><div class="info-item-1">1. 建立Google查询 Google查询的建立是一个过程。并没有所谓的不正确的查询。你有可能会创建一个效率低下的查询，但是，随着互联网的飞速发展以及Google缓 存大小的不断增大，今天一个效率低下的查询可能会在明天–或者下个月或者下一年提供好的搜索结果。有效的Google搜索需要扎实地掌握基本搜索语法， 需要很好地掌握有效的精确检索技术。Google的查询语法是很简单的，而有效的精确检索技术的学习则需要多花一些时间和一些实践。最终，你将了解它，并 且它将成为”鸡蛋里挑骨头”之举。 2. Google搜索的黄金法则 在我们讨论Google搜索之前，首先要理解一些基本法则： Google查询是不区分大小写的。Google不管你的查询是小写的（hackers），大写的（HACKERS），大小写混合的 （hAcKeR）还是乱写的（haCKeR）–Google都同样对待它们。当你在进行类似搜索源代码列表的时候，字母的大小写对程序员来讲具有不同的 意义，那么此时这种处理就非常重要。其中，值得注意的一个例外是单词or。当它作为布尔操作符时，or必须为大写，即OR。 Google通配符。G...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/20110823-in-css-use-js/" title="css文件内使用js"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-08-23</div><div class="info-item-2">css文件内使用js</div></div><div class="info-2"><div class="info-item-1">这个是我的一个同事使用的方法，之前自己没有用过，看了他写的代码，我震惊了一下，原来css内部竟然也可以使用javascript代码，真实长见识了，学习了…… 下面是其中的一段代码，考了过来，留着以后自己查看使用。 &#96; #carousel_photo_container #pre { width: expression(document.getElementById(&quot;carousel_photo&quot;).width/2 600 ? &quot;600px&quot; : this.width);  } &#96; 这单代码主要作用是根据图片的宽度来实现显示时候图片的宽度！ </div></div></div></a><a class="pagination-related" href="/posts/20110316-get-url-address-and-parameter-using-javascript/" title="javascript获得网页URl地址及参数"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-03-16</div><div class="info-item-2">javascript获得网页URl地址及参数</div></div><div class="info-2"><div class="info-item-1">今天做wordpress主题，需要获得url的值，查了资料，如下： 使用javascript获得网页的url地址以及参数等 获得URL信息： &#96;  document.write(“location.host&#x3D;”+location.host+”“); document.write(“location.hostname&#x3D;”+location.hostname+”“); document.write(“location.href&#x3D;”+location.href+”“); document.write(“location.pathname&#x3D;”+location.pathname+”“); document.write(“location.protocol&#x3D;”+location.protocol+”“); &#96; **显示效果： **   location.host&#x3D;weixing.me  location.hostname&#x3D;weixing.me  location.href&#x3D;https://www...</div></div></div></a><a class="pagination-related" href="/posts/20100913/" title="基于DIV和CSS的布局结构（1）"><img class="cover" src="/uploads/2010/09/211619887_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-09-13</div><div class="info-item-2">基于DIV和CSS的布局结构（1）</div></div><div class="info-2"><div class="info-item-1">  基于DIV和CSS的布局结构（1） DIV在HTML中是一个块级元素，所以它很适合用来建设网页的结构。2000年互联网泡沫之后，CSS流行起来。虽然距离CSS发布已经有很长的一段时间，但它有限的浏览器支持使得开发人员害怕使用它。相对于表格结构，它有相对更高的学习曲线，开发人员必须了解CSS并且清楚地知道CSS间的块级元素和内联元素、何时使用相对定位、何时使用绝对定位来解决浏览器的定位问题，还需了解每个CSS特性在不同浏览器中的不同表现（这点在3.1节中已经提到过）。我们重新审视一下关于Web标准的三个部分：结构(Structure)、表现(Presentation)、行为(Behavior)，见图3-12。 |   | | 图3-12? Web标准的三个核心元素 | 我们需要还原HTML最初的面貌，用它来描述文档的结构，并且掌握CSS的布局技术来实现页面的排版布局。在设计这种标准的网页时，我们应该先抛去外观，外观在这个时候并不是最重要的，一个结构良好的HTML结构页面可以以任何外观表现出来。如果认真地思考网页所包含的内容，你会发现，你规划的页面结构会包含类似以下几点内容： 标...</div></div></div></a><a class="pagination-related" href="/posts/20110317-get-article-selected-css-using-javascript/" title="一步步学做wordpress主题&#8211;文章标题选中效果"><img class="cover" src="/uploads/2011/03/1-300x161_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-03-17</div><div class="info-item-2">一步步学做wordpress主题&#8211;文章标题选中效果</div></div><div class="info-2"><div class="info-item-1">学做wordpress主题过程中，想新建一个页面，用来显示某个分类下的文章，文章不多，用来展示用的， 文章的标题做列表，点击实现选中效果，同时查看这篇文章的内容（展示的内容）。 我对wordpress中的结构不是很清楚，所以只有使用笨方法，思路是使用javascript获得网页URL地址，根据文章的URL来判断现在显示的是那篇文章，然后使用javascript给相应的文章的标题的li标签样式，获得想要的效果。  代码： &#96;  “&gt;               [&quot;&gt;]()                                                      var articleid=&quot;article_&quot;+location.href;           document.getElementById(articleid).className=&quot;menu_on&quot;;    &#96; 效果图：  这是很笨的方法，不知有没有好的方法，高手看到了请指教一二，O(∩_∩)O谢谢！ </div></div></div></a><a class="pagination-related" href="/posts/20100908-2/" title="前端开发常用的工具汇总（2）"><img class="cover" src="/uploads/2010/09/164313782_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-09-08</div><div class="info-item-2">前端开发常用的工具汇总（2）</div></div><div class="info-2"><div class="info-item-1">调试类工具（2）4．Microsoft Expression Web SuperPreview Expression Web SuperPreview支持开发人员在不同的浏览器中模拟呈现Web页以检测布局问题。SuperPreview既有独立的安装版本，也可以集成到Expression Web。如今的浏览器除了Firefox和IE，还有Safari、Opera和Chrome的跨平台版本，以及大量的手机浏览器。除此之外，这些浏览器又有多个版本，它们又有很多不同的呈现特性（如IE 6、IE 7和IE 8）。 当今的Web开发人员面临着如下困境： 大多浏览器的不同版本不能同时存在，应以新版本替换旧版本。所以，在同一台机器上不能同时安装IE 6和IE 7（除非使用虚拟机或者不稳定的注册表技巧）。 很多浏览器同时支持Mac和Windows。开发人员至少要在Mac Safari中进行测试，而Windows版的Safari中呈现的内容却有所不同。 浏览器的人体工学测试则更加糟糕。大多数开发人员要加载他们的网站到演示服务器上，而服务器上却运行着不同的浏览器，他们不得不在每一台机器上手动加载，然后...</div></div></div></a><a class="pagination-related" href="/posts/20110313-car-animation-with-css3/" title="css3制作的汽车动画"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-03-13</div><div class="info-item-2">css3制作的汽车动画</div></div><div class="info-2"><div class="info-item-1">今天看到一位国外高手用css3制作的汽车动画，感觉很好，于是就看了一下， 主要使用的是css3里面的：nth-of-type(n),-webkit-transform 现在好像只有Firefox3.5+? Chrome Safari3.1+ 支持，IE6、7、8都不支持，IE9不清楚 下面是演示地址，可以看一下： 查看演示 注：只有Chrome、Safari浏览器可以看到效果！ </div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

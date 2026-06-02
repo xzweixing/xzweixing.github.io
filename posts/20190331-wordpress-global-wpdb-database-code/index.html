@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>wordpress通过global $wpdb操作数据库 | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="有时候我们用wordpress实现一些功能的时候，wordpress自带的一些函数可能不能直接满足我们的需求，这就要求我们直接对数据库进行操作，wordpress中我们可以通过global $wpdb对象来操作，它是封装好的数据库操作类，通过它我们可以省去连接数据库的步骤（连接使用的是WordPress配置中的数据库），直接进行查询操作。 要使用$wpdb对象进行数据库查询时，需要先拿到全局变量，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wordpress通过global $wpdb操作数据库">
+<meta property="og:url" content="https://www.weixing.me/posts/20190331-wordpress-global-wpdb-database-code/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="有时候我们用wordpress实现一些功能的时候，wordpress自带的一些函数可能不能直接满足我们的需求，这就要求我们直接对数据库进行操作，wordpress中我们可以通过global $wpdb对象来操作，它是封装好的数据库操作类，通过它我们可以省去连接数据库的步骤（连接使用的是WordPress配置中的数据库），直接进行查询操作。 要使用$wpdb对象进行数据库查询时，需要先拿到全局变量，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.weixing.me/img/touxiang.jpg">
+<meta property="article:published_time" content="2019-03-31T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-31T02:08:18.264Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="global $wpdb">
+<meta property="article:tag" content="wordpress">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.weixing.me/img/touxiang.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "wordpress通过global $wpdb操作数据库",
+  "url": "https://www.weixing.me/posts/20190331-wordpress-global-wpdb-database-code/",
+  "image": "https://www.weixing.me/img/touxiang.jpg",
+  "datePublished": "2019-03-31T04:00:00.000Z",
+  "dateModified": "2026-05-31T02:08:18.264Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "WEIXING.ME",
+      "url": "https://www.weixing.me"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/posts/20190331-wordpress-global-wpdb-database-code/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'wordpress通过global $wpdb操作数据库',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><style>#footer{background-color:#2c3e50!important}</style><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/top.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a><a class="nav-page-title" href="/"><span class="site-name">wordpress通过global $wpdb操作数据库</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">wordpress通过global $wpdb操作数据库</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-03-31T04:00:00.000Z" title="发表于 2019-03-31 12:00:00">2019-03-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-31T02:08:18.264Z" title="更新于 2026-05-31 10:08:18">2026-05-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/wordpress/">wordpress</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>有时候我们用wordpress实现一些功能的时候，wordpress自带的一些函数可能不能直接满足我们的需求，这就要求我们直接对数据库进行操作，wordpress中我们可以通过global $wpdb对象来操作，它是封装好的数据库操作类，通过它我们可以省去连接数据库的步骤（连接使用的是WordPress配置中的数据库），直接进行查询操作。</p>
+<p>要使用$wpdb对象进行数据库查询时，需要先拿到全局变量，在你需要查询的地方使用如下声明即可：</p>
+<p>global $wpdb;</p>
+<p>下面的例子就是我进行的一个简单的查询：</p>
+<p> get_var($wpdb-&gt;prepare(“SELECT count(*) FROM $wpdb-&gt;postmeta where meta_key&#x3D;%d and meta_value&#x3D;%s”,’identityNo’,$cidentityNo));<br>echo $IsHave;<br>?&gt;</p>
+<p>其他操作详见官方资料：<a target="_blank" rel="noopener" href="https://codex.wordpress.org/zh-cn:Class_Reference/wpdb">https://codex.wordpress.org/zh-cn:Class_Reference/wpdb</a></p>
+<p>更多数据库查询函数</p>
+<p>$wpdb -&gt; get_results(‘query’);<br>$wpdb-&gt;query(‘query’);<br>$wpdb-&gt;get_var(‘query’,column_offset,row_offset);<br>$wpdb-&gt;get_row(‘query’, output_type, row_offset);<br>$wpdb-&gt;get_col(‘query’,column_offset);<br>$wpdb-&gt;get_results(‘query’, output_type);<br>$wpdb-&gt;insert( $table, $data, $format );<br>$wpdb-&gt;update( $table, $data, $where, $format &#x3D; null, $where_format &#x3D; null );<br>$wpdb-&gt;prepare( ‘query’ [, value_parameter, value_parameter … ] );<br>$wpdb-&gt;show_errors();<br>$wpdb-&gt;hide_errors();<br>$wpdb-&gt;print_error();<br>$wpdb-&gt;get_col_info(‘type’, offset);<br>$wpdb-&gt;flush();</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.weixing.me">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.weixing.me/posts/20190331-wordpress-global-wpdb-database-code/">https://www.weixing.me/posts/20190331-wordpress-global-wpdb-database-code/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.weixing.me" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/wordpress/">wordpress</a><a class="post-meta__tags" href="/tags/global-wpdb/">global $wpdb</a></div><div class="post-share"><div class="social-share" data-image="/img/touxiang.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/20190331-wordpress-warning-missing-argument-2-for-wpdbprepare-solution/" title="wordpress解决Warning: Missing argument 2 for wpdb::prepare()方法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">wordpress解决Warning: Missing argument 2 for wpdb::prepare()方法</div></div><div class="info-2"><div class="info-item-1">在使用global $wpdb时，对数据进行查询，举个栗子  get_var($wpdb-&gt;prepare(“SELECT count(*) FROM $wpdb-&gt;postmeta where meta_key&#x3D;’key_price’ and meta_value&#x3D;’100’”));echo $IsHave;?&gt; 上面的代码输出后就会报Warning: Missing argument 2 for wpdb::prepare()的错误。 使用$wpdb-&gt;prepare是因为mysql语句中可能含有单引号双引号这样的字符，如果不加 处理直接送给mysql，可能会导致错误。于是这里通过一个prepare来对mysql语句进行预处理。prepare的语法是： $sql &#x3D; $wpdb-&gt;prepare( ‘query’ [, value_parameter, value_parameter … ] ); 在query中可以包含%d,%S,%f，分别表示后面参数的类型是整数，字符和浮点。所以我们将代码改成这样： $IsHav...</div></div></div></a><a class="pagination-related" href="/posts/20190331-ajax-success-function-date-return-undefined-solution/" title="ajax  success: function (date)获取返回值undefined的解决方法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">ajax  success: function (date)获取返回值undefined的解决方法</div></div><div class="info-2"><div class="info-item-1">近期用wordpress为朋友搭建个网站，其中有个模块需要实现类似于报名的功能，其中根据身份证信息，确定该信息是否已提交，通过ajax实现实时验证，过程中后台返回值出现undefined，折腾了很长时间，最终解决。 function blur_checkidentityNo() {		if ($(“#identityNo”).val()&#x3D;&#x3D;””) {			$(“#identityNomsg”).text(“请输入身份证号”).addClass(“errorc”); 	} else { 		$.ajax({ 		type: &quot;POST&quot;, 		url: &quot;c&quot; , 		async:false, 		data: $(&#39;#lqiuzhi&#39;).serialize(), 		success: function (date) { 			if(date==1){$(&quot;#identityNomsg&quot;).text(&quot;您已登记过信息，如需帮助请联系管理员&quot;).addClass(&quo...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/20110905-wordpress-one-article-many-pages/" title="wordpress无插件实现单篇文章分页显示"><img class="cover" src="/uploads/2011/09/fenyefu_2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-09-05</div><div class="info-item-2">wordpress无插件实现单篇文章分页显示</div></div><div class="info-2"><div class="info-item-1">今天需要实现一个功能，wordpress实现一篇较长的文章分页显示，于是乎找了很多资料，找了很久才找到，大部分都是3.0之前的实现方法，所以都不成功，后来终于找到了，也知道了之前的不能实现的原因。下面魏星博客就分享一下我实现的过程以及代码。  找到**wp-includes&#x2F;js&#x2F;quicktags.js **，在其中找到下面这个javascript代码：  edButtons[edButtons.length]=new edButton(“ed_more”,”more”,””,”&quot;,”t”,-1); 在这个代码的后面加上如下代码： edButtons[edButtons.length]=new edButton(“ed_next”,”page”,””,”&quot;,”p”,-1);  继续在wp-includes&#x2F;js&#x2F;quicktags.js 中找到如下代码：  j.Buttons[j.Buttons.length]=new edButton(a+”_more”,”more”,””,”&quot;,”t”,-1); 在后面加...</div></div></div></a><a class="pagination-related" href="/posts/20110301-learn-to-do-wordpress-theme-1-step-by-step/" title="一步步学做wordpress主题（一）"><img class="cover" src="/uploads/2011/03/oCmQ5bOYLTgefRs1-1024x862_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-03-01</div><div class="info-item-2">一步步学做wordpress主题（一）</div></div><div class="info-2"><div class="info-item-1">一直都想做一个自己的wordpress主题，以前改过别人的主题，但都没有完全的完成， 都在中途夭折了，所以从现在开始，一步步学做wordpress主题。 我的思路是这样的，先找一个网页的图片模板，将其做成静态页面，然后往里面填写 wordpress的函数代码，先将首页完成，然后再做single页，然后其他的页面。 今天将静态页面做好了，因为赶时间，做的有些粗糙，下面是截图，计划明天将header 与footer页面模板完成。  我不是设计师、不是工程师，我只是一个小职员，只是喜欢玩wordpress，希望有相同爱好的 朋友可以一起交流! 演示地址：https://www.weixing.me/demo/woallf-blue/ </div></div></div></a><a class="pagination-related" href="/posts/20160422-wordpress-chajian-adminimize/" title="wordpress插件Adminimize&#8211;不同角色隐藏&#x2F;显示不同的功能"><img class="cover" src="/uploads/2016/04/11_2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2016-04-22</div><div class="info-item-2">wordpress插件Adminimize&#8211;不同角色隐藏&#x2F;显示不同的功能</div></div><div class="info-2"><div class="info-item-1"> 今天用wordpress给朋友做一个企业网站，主题基本做好，由于朋友不懂wordpress，后台很多东西都不知道是干嘛用的，为了简化后台显示的内容，在网上找到了一款名叫“Adminimize”的插件，果然是很强大，可以把后台的所有的模块都可以根据不同的角色隐藏&#x2F;显示不同的功能，如果你不想让“编辑”角色的账号显示“标签”功能，就直接在“编辑”角色的“标签”功能的前面打钩，提交后，该角色就没有此功能了，其他的不多说了，功能强大谁用谁知道。后台插件安装直接搜索Adminimize就可以了！！ </div></div></div></a><a class="pagination-related" href="/posts/20110831-wordpress-differ-category-differ-theme/" title="wordpress不同分类调用不同的模板"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-08-31</div><div class="info-item-2">wordpress不同分类调用不同的模板</div></div><div class="info-2"><div class="info-item-1">今天发现一个好的方法解决wordpress不同分类调用不同的模板的方法，刚开始想到的方法就是用if(&#8230;) else .. 的方法，后来看到一个比较简单的方法，真是佩服Wp的开发人员啊，下面是具体的操作方法。 1、建立分类，比如我建立的分类为news 2、复制“category.php”模板，重命名为“category-news.php”，就是在原名字后面加上“-news”（news）为分类 3、编辑“category.php”文件内容为你想要的不同的模板的内容 OK ， 搞定了，就这么的简单，当你点击news分类的时候，wp会自动识别模板，并调用category.php”模板，其余的没有分类的，就是用默认的模板。 通过这个经验，我在想single单页能不能这样子做，即，不同分类也使用不同的的单页，要是可以的话，那以后做这样的模板就太简单了，回去试试！！ </div></div></div></a><a class="pagination-related" href="/posts/20110711-change-wordpress-theme/" title="更换wordpress模板"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-07-11</div><div class="info-item-2">更换wordpress模板</div></div><div class="info-2"><div class="info-item-1">今天终于可以有些空闲时间，于是折腾了一下博客的模板，今天用上了。使用的是wpyou提供的免费主题WPINK，然后header中自己增加了自定义菜单的功能，加了2个，一个是导航菜单，一个是右上角的页面链接，增加了SEO方面的调整，使关键字、描述等和我原来的能一致，但是也有略微的改动，相信度娘以后可能不大喜欢理我了。侧边栏去掉了默认的广告等，我先还不想放关高，所以果断的去掉了，文章页文章首部、尾部的广告同样是果断的去掉，去掉相关文章栏目，用无觅插件代替,增加了社会化分享按钮。 自从上次博客更换主题到现在也就2个多月的时间，虽然时间不短，但是看着我的博客感觉有点沧桑的样子，所以现在也不问对搜索引擎有多大的影响了，只要自己感觉好久行，毕竟博客是自己的，是给人看的，搜索引擎只是一方面罢了，用户体验最重要，希望大家能喜欢这款主题。 </div></div></div></a><a class="pagination-related" href="/posts/20100916/" title="WordPress淘宝客插件"><img class="cover" src="http://img.alimama.cn/cms/images/1284432272863.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-09-16</div><div class="info-item-2">WordPress淘宝客插件</div></div><div class="info-2"><div class="info-item-1">很多不懂得技术的普通淘宝客们苦于自己不会建站或是找不到很好的推广工具，使得推广举步艰难。为了帮助淘宝客更方便的推广，淘宝联盟会在这里开始一期一期的向各位淘宝客推荐一些比较适合使用的淘宝客推广工具，包括淘宝客网站的建站，好用的推广插件等等。希望这些工具能给淘宝客们带来帮助并赚到自己的财富！ 淘宝客推广工具—WordPress淘宝客插件简要介绍：如果你是独立博客主，是自豪的wordpress用户。你想赚钱，但是广告点击率太低，收入太少，所以你选择了投靠“淘宝客”的怀抱。但是每次登陆登出淘宝客网站选择商品，选择活动，都很麻烦。更麻烦的是，不会改代码，即使会改每次嵌入淘宝客的商品代码也很烦，怎么办？ 淘宝客插件的出现，帮你解决了这个难题。你不需要登录淘宝客网站，在你的wordpress博客后台你就可以浏览淘宝的商品分类，就可以搜索销量最好的商品，点点鼠标，就能将你喜欢并且销量最好的商品发布到你的博客侧边栏，甚至淘宝客插件可以自动帮你自动发布到你的博文中。 功能特点：效果样图： 效果图一： 丰富的设置选项，你可以根据自己的喜好随意设置：   效果图二：通过淘宝客后台，你可以搜索淘宝的商品，...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>WEIXING.ME - 衣带渐宽终不悔，为伊消得人憔悴</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="魏星博客 - 记录工作、学习、生活">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WEIXING.ME">
+<meta property="og:url" content="https://www.weixing.me/page/13/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="魏星博客 - 记录工作、学习、生活">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.weixing.me/img/touxiang.jpg">
+<meta property="article:author" content="WEIXING.ME">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.weixing.me/img/touxiang.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/page/13/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'WEIXING.ME',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><style>#footer{background-color:#2c3e50!important}</style><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/topt.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">WEIXING.ME</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/20120506-wordpress-or-php-hanzizhuanpinyin/" title="wordpress（php）汉字转换成拼音的方法">wordpress（php）汉字转换成拼音的方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2012-05-06T04:00:00.000Z" title="发表于 2012-05-06 12:00:00">2012-05-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/wordpress/">wordpress</a></span></div><div class="content">昨天研究iphoto这个主题，想实现一个功能：根据标题的汉语拼音的首字母顺序排序，网上找到了排序的方法，那是英文的，于是想到汉字转汉语拼音，下面是网上找的资料，能用，我已经测试成功！ 代码： 1、汉字转拼音函数： &#96; &#x3D; ‘5.0’) ? array_combine($_TDataKey, $_TDataValue) : _Array_Combine($_TDataKey, $_TDataValue);  arsort($_Data);  reset($_Data);  if ($_Code !&#x3D; ‘gb2312’)  $_String &#x3D; _U2_Utf8_Gb($_String);  $_Res &#x3D; ‘’;  for ($i &#x3D; 0; $i 160) {  $_Q &#x3D; ord(substr($_String, ++$i, 1));  $_P &#x3D; $_P * 256 + $_Q - 65536;  }  $_Res .&#x3D; _Pinyin($_P, $_Data);  }  return pr...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/20120503-so-much-spam-message/" title="大量的垃圾留言信息">大量的垃圾留言信息</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2012-05-03T04:00:00.000Z" title="发表于 2012-05-03 12:00:00">2012-05-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></span></div><div class="content">我就纳了闷了，为什么我的博客留言板中会有这么多了垃圾留言，而且都是关于卖衣服评价的留言，什么“衣服不错”，“衣服比想像中好，全5分！”晕死啊，这是怎么了？我觉得不是手动留的言，是用软件写入的，所以将那些IP地址全部加入黑名单了，不知道这样作用大不大，观察几天试试，看效果，如果还是不行就得使用一些特殊的方法了！还有一个问题就是有莫名的注册用户，就在笔者写这篇文章的时候又有一位注册用户，不知道这个注册者和这么多的垃圾邮件之间有没有什么关系，是不是注册了以后就能使用它们的软件来群发留言到我的博客了？？好吧，取消用户注册这个功能，看看一个星期之后是什么样子的！！ 不知道各位博友是怎么实现垃圾留言这块的，我这边垃圾留言时奇多无比，每个星期都有好几百条要清理，哎，烦人…… </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/20120414-baidu-mobile-web-free/" title="百度无线，免费建手机站点"><img class="post-bg" src="/uploads/2012/04/mobile-web_2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="百度无线，免费建手机站点"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/20120414-baidu-mobile-web-free/" title="百度无线，免费建手机站点">百度无线，免费建手机站点</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2012-04-14T04:00:00.000Z" title="发表于 2012-04-14 12:00:00">2012-04-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A7%91%E6%8A%80%E9%A2%91%E9%81%93/">科技频道</a></span></div><div class="content">今天看到百度无线–移动开放平台可以免费建设自己的手机站点，而且是很傻瓜的方法，十分钟就能搞定，于是乎给我的博客建了一个手机站点。  其实原理很简单，就是自己创建一个网站的二级域名，然后cname到百度的yizhan.com，百度通过自己的技术将你的网站转换成手机能访问的网站，就是这样，同时百度还提供手机站点的优化方法，请看百度的手机版页面效果优化（点击下载）。 下面是百度对手机网站建设的一些解释：   百度移动建站服务，致力于推动传统PC 站点的移动化工作，希望 不第三方PC 站点一起共同建设丰富的移动互联网世界。 百度标注协议（即Open TC 网页标注协议）是提供给第三方PC 站 点的开放协议。目的是让支持该协议的第三方PC 页面获得更好的移劢 建站效果，迚而提升手机版页面在百度移动搜索的展现效果和排名。 百度标注协议通过网站主动在PC 网页的源文件中的特定位置嵌入 百度标注协议标记，通过解析这些标记所含的诧义信息，百度移劢建站 服务对源PC 网页的处理过程会按照第三方网站的意愿迚行，实现其对 转码生成的手机版页面可控。 该协议采用HTML 标注的形式，非侵入式，丌会对原页面...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/20120405/" title="谷歌发布AR眼镜Project Glass"><img class="post-bg" src="/uploads/2012/04/Project-Glass_2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="谷歌发布AR眼镜Project Glass"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/20120405/" title="谷歌发布AR眼镜Project Glass">谷歌发布AR眼镜Project Glass</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2012-04-05T04:00:00.000Z" title="发表于 2012-04-05 12:00:00">2012-04-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A7%91%E6%8A%80%E9%A2%91%E9%81%93/">科技频道</a></span></div><div class="content">4月5日，Google正式宣布其在开发一个叫Project Glass 的增强现实眼镜。这是Google X 实验室的一个秘密项目。你可以通过这副基于Android的眼镜来执行智能手机上能做的事情。 从Google 在YouTube 上公开的视频可以看出，你可以通过语音来操作，也可以通过眼睛进行操作。带上眼镜后，佩戴者的眼前会有一些控制按键，你可以通过眼睛来控制，并执行智能手机上能够执行的事情，如发短信、查看天气、查看交通路线等。  下面是优酷上展示的Project Glass的视频《One day》 </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/20120404-qingmingjie2012/" title="2012清明节"><img class="post-bg" src="/uploads/2012/04/qingming_2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2012清明节"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/20120404-qingmingjie2012/" title="2012清明节">2012清明节</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2012-04-04T04:00:00.000Z" title="发表于 2012-04-04 12:00:00">2012-04-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></span></div><div class="content">这是自从高中毕业后第一次在家里面过清明节，5年了，第一次，昨晚折了柳枝，今早煮了鸡蛋，这种感觉既陌生又熟悉，只记得这些在小时候有过，感觉自己大了以后就没有过过清明节似的，清明了，逝去的我怀念的人，希望你们在另一个世界一切安好！  </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/20120402-berlin-boombox-iphone-speaker/" title="Berlin Boombox&amp;#8212;收音机造型iPhone扬声器">Berlin Boombox&amp;#8212;收音机造型iPhone扬声器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2012-04-02T04:00:00.000Z" title="发表于 2012-04-02 12:00:00">2012-04-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A7%91%E6%8A%80%E9%A2%91%E9%81%93/">科技频道</a></span></div><div class="content">在一博友网站上看到 Berlin Boombox的介绍，真实太帅了，自己看了后很是振奋啊，都想现在就弄一台来玩玩。 这个是用硬纸加上一些零件做成的，将iphone放在卡槽处，插上喇叭接口就OK了，可以直接调节音量，看着很好很环保。 下面是视频介绍。 </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/20120321-zhiyixingtuofa-zhiliao/" title="脂溢性脱发预防与治疗"><img class="post-bg" src="/uploads/2012/03/maocun_2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="脂溢性脱发预防与治疗"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/20120321-zhiyixingtuofa-zhiliao/" title="脂溢性脱发预防与治疗">脂溢性脱发预防与治疗</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2012-03-21T04:00:00.000Z" title="发表于 2012-03-21 12:00:00">2012-03-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></span></div><div class="content">今天去理发了，发型：毛寸，之前一直是长发，今天朋友说我以前高中的时候理的毛寸蛮好看的，显得精神，于是我立马决定剪毛寸，因为我也想剪短点，让自己精神精神，于是剪了，发型极像吴彦祖的发型，如下图。  理发的时候理发师告诉我说我有脱发的迹象，因为额头的两侧的发线开始慢慢往后走了，其实我也知道，但是不知道怎么回事，理发师很好，教我用侧柏叶洗头，等等，反正不少知识，回到家后自己百度了一下，原来我这种情况叫脂溢性脱发，于是我赶紧又找了一些预防治疗的方法，让自己的头发变得粗点、硬点、多点。 下面是百度的结果： 预防与保健正确护理可以防止脂溢性脱发。头发养护的目的在于维护头发的健康，同时可以克服头皮屑或掉发等。 防止脂溢性脱发要从日常的头发护理开始，下面的是介绍头发护理的基本方法 头发的清洁是发质健康的基础，而正确的洗涤方法是养护头发的重要因素。 干性发皮脂分泌量少，洗发周期可略长，一般7～10天洗一次。 油性发皮脂分泌多，洗发周期略短，一般3～5天洗一次。 中性发皮脂分泌量适中，一般5～7天洗一次。 干性发选择温和营养性的洗发护发用品，油性发选择去污力略强的洗发用品。 正确的洗涤方法对头发的养...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/20120319-input-click-font-clear/" title="搜索文本框带提示点击消失解决方法">搜索文本框带提示点击消失解决方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2012-03-19T04:00:00.000Z" title="发表于 2012-03-19 12:00:00">2012-03-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/web%E5%BC%80%E5%8F%91/">web开发</a></span></div><div class="content">直接上代码： 搜索文本框带提示点击消失解决方法（js方法） &#96;&#96; </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/20120313-aliwangwang-online-en-code/" title="阿里旺旺国际站在线客服代码"><img class="post-bg" src=" http://amos.us.alitalk.alibaba.com/online.aw?v=1&amp;#038;uid=]( http://amos.us.alitalk.alibaba.com/msg.aw?v=1&amp;#038;uid=&amp;site=cnalichn&amp;s=4&quot; &gt;
+
+![点击这里给我发消息](http://amos.im.alisoft.com/online.aw?v=2&amp;#038;uid=jsly188&amp;#038;site=cnalichn&amp;#038;s=4" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="阿里旺旺国际站在线客服代码"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/20120313-aliwangwang-online-en-code/" title="阿里旺旺国际站在线客服代码">阿里旺旺国际站在线客服代码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2012-03-13T04:00:00.000Z" title="发表于 2012-03-13 12:00:00">2012-03-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/web%E5%BC%80%E5%8F%91/">web开发</a></span></div><div class="content">阿里旺旺国际站在线客服代码 这是国际站的哦！！ 直接上代码： &#96;[&amp;site&#x3D;enaliint&amp;s&#x3D;5”&gt; ![]( http://amos.us.alitalk.alibaba.com/online.aw?v=1&#038;uid=]( http://amos.us.alitalk.alibaba.com/msg.aw?v=1&#038;uid=&amp;site=cnalichn&amp;s=4“ &gt;  &#96; MSN在线代码： 这个需要从官网获得：http://settings.messenger.live.com/applications/CreateHtml.aspx 进入后点击主页，选项打钩  然后点击创建HTML代码 有三种模式，选择你喜欢的  然后复制下面的HTML代码  OK，搞定了，祝你成功！ </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/20120313-need-your-help/" title="紧急求助">紧急求助</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2012-03-13T04:00:00.000Z" title="发表于 2012-03-13 12:00:00">2012-03-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></span></div><div class="content">紧急求助,王思诺，女，一个多月的可爱女孩，徐州泉山火花史庄村人，得了重病肺炎，引起三凹症和喉软骨发育不良，现在钱已经花光了，家里的东西能卖的都卖了，现已无钱治疗，希望好心人献出自己的一份爱心救助这位可爱的小天使的生命，住院号00271358，床号9037王思诺，医生号码85583735刁敏，儿童医院7楼重症监护室，患者家属电话：王友旺 18086772575，交通银行：323900856848000011202吕敬 ， 孩子太小没有照片，徐州志愿者俱乐部已核实。希望好心人可以去奉献自己的一份爱心，徐州志愿者俱乐部会见证的，我代表徐州支援者谢谢大家了！！ http://item.taobao.com/item.htm?id=14752939955 1元捐献 http://item.taobao.com/item.htm?id=14109670602 10元捐献 或者加入徐州志愿者俱乐部总群，帮助更多的人，群号：133360494 </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/12/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/#content-inner">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/#content-inner">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/#content-inner">36</a><a class="extend next" rel="next" href="/page/14/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/SEO/"><span class="card-category-list-name">SEO</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web%E5%BC%80%E5%8F%91/"><span class="card-category-list-name">web开发</span><span class="card-category-list-count">94</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/wordpress/"><span class="card-category-list-name">wordpress</span><span class="card-category-list-count">37</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/"><span class="card-category-list-name">微信开发</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"><span class="card-category-list-name">生活随笔</span><span class="card-category-list-count">150</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A7%91%E6%8A%80%E9%A2%91%E9%81%93/"><span class="card-category-list-name">科技频道</span><span class="card-category-list-count">45</span></a></li>
+          </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">352</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-06-02T11:58:08.312Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@3.0.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["所有的努力都值得期许，每一份梦想都应该灌溉","你只有足够努力，才能看起来毫不费力","身在黑暗，心怀光明，梦想不灭，努力前行","当你足够优秀时，你周围的一切自然都会好起来","星光不问赶路人，时光不负有心人","既然选择了远方，便只顾风雨兼程","你若盛开，蝴蝶自来","人生没有多走的路，脚下的每一步都算数","除了生老病死，人生里真正重要的事，其实没有几件","真正的格局，应该是遇到烂人不计较，碰到破事别纠缠","心中有光，何惧路长；脚下有力，自能翻山越岭","不怕千万人阻挡，只怕自己投降"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["所有的努力都值得期许，每一份梦想都应该灌溉","你只有足够努力，才能看起来毫不费力","身在黑暗，心怀光明，梦想不灭，努力前行","当你足够优秀时，你周围的一切自然都会好起来","星光不问赶路人，时光不负有心人","既然选择了远方，便只顾风雨兼程","你若盛开，蝴蝶自来","人生没有多走的路，脚下的每一步都算数","除了生老病死，人生里真正重要的事，其实没有几件","真正的格局，应该是遇到烂人不计较，碰到破事别纠缠","心中有光，何惧路长；脚下有力，自能翻山越岭","不怕千万人阻挡，只怕自己投降"])
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

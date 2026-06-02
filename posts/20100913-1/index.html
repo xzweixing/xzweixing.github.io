@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>基于DIV和CSS的布局结构（2） | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="** 基于DIV和CSS的布局结构（2）** 2．使用语义化的标签及命名标识 在所有的结构中都应该使用具有语义的标签及命名标识，如，为标题、为段落、为列表等。标识元素也应尽量使用如id&#x3D;”header”、id&#x3D;”footer”等易读懂的语义标识。下面的代码使用的就是具有语义的标签及命名标识。  ?  标题?标题?  内容?…内容  ?  坏的?好的   3．尽量减少使用DI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于DIV和CSS的布局结构（2）">
+<meta property="og:url" content="https://www.weixing.me/posts/20100913-1/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="** 基于DIV和CSS的布局结构（2）** 2．使用语义化的标签及命名标识 在所有的结构中都应该使用具有语义的标签及命名标识，如，为标题、为段落、为列表等。标识元素也应尽量使用如id&#x3D;”header”、id&#x3D;”footer”等易读懂的语义标识。下面的代码使用的就是具有语义的标签及命名标识。  ?  标题?标题?  内容?…内容  ?  坏的?好的   3．尽量减少使用DI">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.weixing.me/img/touxiang.jpg">
+<meta property="article:published_time" content="2010-09-13T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-31T02:40:28.627Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="div">
+<meta property="article:tag" content="html5">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.weixing.me/img/touxiang.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "基于DIV和CSS的布局结构（2）",
+  "url": "https://www.weixing.me/posts/20100913-1/",
+  "image": "https://www.weixing.me/img/touxiang.jpg",
+  "datePublished": "2010-09-13T04:00:00.000Z",
+  "dateModified": "2026-05-31T02:40:28.627Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "WEIXING.ME",
+      "url": "https://www.weixing.me"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/posts/20100913-1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '基于DIV和CSS的布局结构（2）',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><style>#footer{background-color:#2c3e50!important}</style><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/top.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a><a class="nav-page-title" href="/"><span class="site-name">基于DIV和CSS的布局结构（2）</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">基于DIV和CSS的布局结构（2）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2010-09-13T04:00:00.000Z" title="发表于 2010-09-13 12:00:00">2010-09-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-31T02:40:28.627Z" title="更新于 2026-05-31 10:40:28">2026-05-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A7%91%E6%8A%80%E9%A2%91%E9%81%93/">科技频道</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+</blockquote>
+<p>** 基于DIV和CSS的布局结构（2）**</p>
+<p><strong>2．使用语义化的标签及命名标识</strong></p>
+<p>在所有的结构中都应该使用具有语义的标签及命名标识，如，为标题、为段落、为列表等。标识元素也应尽量使用如id&#x3D;”header”、id&#x3D;”footer”等易读懂的语义标识。下面的代码使用的就是具有语义的标签及命名标识。</p>
+<ul>
+<li><p>?</p>
+</li>
+<li><p>标题?标题?</p>
+</li>
+<li><p>内容?…内容</p>
+</li>
+<li><p>?</p>
+</li>
+<li><p>坏的?好的</p>
+</li>
+</ul>
+<p><strong>3．尽量减少使用DIV标记</strong></p>
+<p>和表结构一样，深度嵌套的DIV也会给编辑及调试带来麻烦，如少了一个结束会使所有的结构混乱，所以应尽量少使用DIV。</p>
+<p>示例1：</p>
+<p>在面包屑导航的标签的使用上，可以使用“p”标签而不是DIV。</p>
+<ul>
+<li><p>?</p>
+</li>
+<li><p>首页&#x2F;服务?&#x3D;?首页&#x2F;服务</p>
+</li>
+<li><p>?</p>
+</li>
+</ul>
+<p>示例2：</p>
+<p>在一些博客的文章日期显示上，也可以做到简单的结构。</p>
+<ul>
+<li><p>?</p>
+</li>
+<li><p>7?&#x3D;?710</p>
+</li>
+<li><p>10?</p>
+</li>
+<li></li>
+</ul>
+<p><strong>4．格式化代码</strong></p>
+<p>作为开发人员，应养成良好的编程习惯，把代码进行格式化（缩进），使得阅读源代码更方便。</p>
+<p><strong>5．在布局结尾加上注释</strong></p>
+<p>在一个较复杂的结构中，你可能会迷失方向，不清楚哪个标记在哪个位置结束，调试混乱的布局往往可能少了一个结束的标记，所以应该在布局结构结尾时加上注释，如：</p>
+<p>- 
+	</p>
+<ul>
+<li><p>…</p>
+</li>
+<li></li>
+</ul>
+<p>直到今天，基于DIV和CSS的布局结构仍是标准网页的核心衡量标准，我们需要更多的实践来把握这些技术的应用。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.weixing.me">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.weixing.me/posts/20100913-1/">https://www.weixing.me/posts/20100913-1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.weixing.me" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/css/">css</a><a class="post-meta__tags" href="/tags/html5/">html5</a><a class="post-meta__tags" href="/tags/div/">div</a></div><div class="post-share"><div class="social-share" data-image="/img/touxiang.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/20100913-2/" title="FCKeditor,客户端（FCKeditor1=……）检测到潜在危险"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">FCKeditor,客户端（FCKeditor1=……）检测到潜在危险</div></div><div class="info-2"><div class="info-item-1">  *从客户端(FCKeditor1&#x3D;”方法二、 在.aspx页面中添加： 如： </div></div></div></a><a class="pagination-related" href="/posts/20100910/" title="中秋祝福语&amp;#8211;经典"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">中秋祝福语&#8211;经典</div></div><div class="info-2"><div class="info-item-1">  天苍苍，野茫茫，今年奖金太渺茫！水弯弯，路长长，没钱的日子太漫长！楼高高，人忙忙，今夜能否与你结伴抢银行……暗号：中秋****快乐！ 中秋之际，我谨代表党中央、国务院、以及拉登兄和基地全体勇士、布什、普京、布莱尔，向你并通过你向全家人致以最真挚的问候：中秋快乐！ 对你的思念是一天又一天，孤单的我还是没有改变，美丽的梦何时才能出现，亲爱的好想再见你一面！可我就是找不到你被关在哪个猪圈！ 流星划过天际，我错过了许愿；浪花拍上岩石，我错过了祝福；故事讲了一遍，我错过了聆听；人生只有一回，我庆幸没有错过你这个朋友！祝你中秋快乐！ 就知道中秋那天你会被铺天盖地的短信包围，英明的我今天就让祝福跨过高山越过高楼大厦穿过大街小巷，闪过卖茶叶蛋的老太太，钻进你的手机：中秋快乐！ 关掉你的手机，慢慢闭上眼睛，想想我，想想月饼，你会发现我和月饼一样可爱！嘻嘻！中秋节快乐！ 天气变得好快，凉风悄悄袭来，因为你的可爱，所以给你关怀，晚上毯子要盖，别把脚丫冻坏，没事叨根骨头，那样可以补钙，不要再骂我坏，祝你中秋愉快。 滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚滚...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/20100913/" title="基于DIV和CSS的布局结构（1）"><img class="cover" src="/uploads/2010/09/211619887_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-09-13</div><div class="info-item-2">基于DIV和CSS的布局结构（1）</div></div><div class="info-2"><div class="info-item-1">  基于DIV和CSS的布局结构（1） DIV在HTML中是一个块级元素，所以它很适合用来建设网页的结构。2000年互联网泡沫之后，CSS流行起来。虽然距离CSS发布已经有很长的一段时间，但它有限的浏览器支持使得开发人员害怕使用它。相对于表格结构，它有相对更高的学习曲线，开发人员必须了解CSS并且清楚地知道CSS间的块级元素和内联元素、何时使用相对定位、何时使用绝对定位来解决浏览器的定位问题，还需了解每个CSS特性在不同浏览器中的不同表现（这点在3.1节中已经提到过）。我们重新审视一下关于Web标准的三个部分：结构(Structure)、表现(Presentation)、行为(Behavior)，见图3-12。 |   | | 图3-12? Web标准的三个核心元素 | 我们需要还原HTML最初的面貌，用它来描述文档的结构，并且掌握CSS的布局技术来实现页面的排版布局。在设计这种标准的网页时，我们应该先抛去外观，外观在这个时候并不是最重要的，一个结构良好的HTML结构页面可以以任何外观表现出来。如果认真地思考网页所包含的内容，你会发现，你规划的页面结构会包含类似以下几点内容： 标...</div></div></div></a><a class="pagination-related" href="/posts/20110624-float-div-zishiyingwenti/" title="子标签float父标签div高度自适应问题（4种解决方法）"><img class="cover" src="/uploads/baishao.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-06-24</div><div class="info-item-2">子标签float父标签div高度自适应问题（4种解决方法）</div></div><div class="info-2"><div class="info-item-1">经常出现子标签浮动（float），父div不能自适应的问题，如下面的代码，li是float：left，外面div高度自适应 &#96; -   白芍 -   丹参 -   红景天 -   姜黄 &#96; 解决方法： 1）在子标签的最后加上清除浮动的标签 可以在ul的下面加上以下代码，清除浮动 &#96; &#96; 2)给div加css属性 &#96; .product  {  overflow:auto;  zoom:1; } &#96; overflow:auto;是让高度自适应， zoom:1;是为了兼容IE6，也可以用height:1%;的方式来解决。 3)使用after伪类 &#96;  .product:after {  content:”.”;  height:0;  visibility:hidden;  display:block;  clear:both; } &#96; 4)浮动外部元素，float-in-float 这种做法就是让父容器也浮动，这利用到了浮动元素的一个特性——浮动元素会闭合浮动元素。这种方式在 IE&#x2F;Win 和标准兼容浏览器中都...</div></div></div></a><a class="pagination-related" href="/posts/20101021-1/" title="CSS vertical-align 属性"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-10-21</div><div class="info-item-2">CSS vertical-align 属性</div></div><div class="info-2"><div class="info-item-1">CSS vertical-align 属性定义和用法vertical-align 属性设置元素的垂直对齐方式。 说明该属性定义行内元素的基线相对于该元素所在行的基线的垂直对齐。允许指定负长度值和百分比值。这会使元素降低而不是升高。在表单元格中，这个属性会设置单元格框中的单元格内容的对齐方式。 | 默认值： || baseline | | 继承性： || no | | 版本： || CSS1 | | JavaScript 语法： || object.style.verticalAlign&#x3D;”bottom” | 实例垂直对齐一幅图像： img { vertical-align:text-top; } 浏览器支持所有浏览器都支持 vertical-align 属性。 注释：任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。 可能的值| 值 || 描述 | | baseline || 默认。元素放置在父元素的基线上。 | | sub || 垂直对齐文本的下标。 | | super || 垂直对齐文本的上标 | | top ||...</div></div></div></a><a class="pagination-related" href="/posts/20190406-css-youxianji/" title="CSS 样式优先级"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-06</div><div class="info-item-2">CSS 样式优先级</div></div><div class="info-2"><div class="info-item-1">当创建的样式表越来越复杂时，一个标签的样式将会受到越来越多的影响，这种影响可能来自周围的标签，也可能来自其自身。下面我们从这两方面去看看 CSS 样式的优先级。 CSS 的继承性CSS 的继承特性指的是应用在一个标签上的那些 CSS 属性被传到其子标签上。看下面的 HTML 结构： 如果  有个属性 color: red，则这个属性将被  继承，即  也拥有属性 color: red。 由上可见，当网页比较复杂， HTML 结构嵌套较深时，一个标签的样式将深受其祖先标签样式的影响。影响的规则是： CSS 优先规则1： 最近的祖先样式比其他祖先样式优先级高。 例1： 如果我们把一个标签从祖先那里继承来的而自身没有的属性叫做”祖先样式”，那么”直接样式”就是一个标签直接拥有的属性。又有如下规则： CSS 优先规则2：“直接样式”比”祖先样式”优先级高。 例2： 选择器的优先级上面讨论了一个标签从祖先继承来的属性，现在讨论标签自有的属性。在讨论 CSS 优先级之前，先说说 CSS 7 种基础的选择器：  ID 选择器， 如 #id{}  类选择器， 如 .class{}  属性选择器，...</div></div></div></a><a class="pagination-related" href="/posts/20120620-liebao-chrome/" title="6月19日，金山发布猎豹浏览器正式版"><img class="cover" src="/uploads/2012/06/liebao_2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2012-06-20</div><div class="info-item-2">6月19日，金山发布猎豹浏览器正式版</div></div><div class="info-2"><div class="info-item-1">今天使用上了猎豹浏览器正式版，感觉还不错，速度确实快，和一直用的chrome确实有一拼，据说是集成了chrome和IE的双引擎浏览器，而且对chrome进行了优化，速度比chrome更快，于是自己下载安装使用了，确实很好，感兴趣的朋友可以下来试试看，官网网址：猎豹浏览器—liebao.cn。下面是百度百科的介绍，大家参考下！    猎豹浏览器是由金山网络历时半年多开发、推出的主打安全与极速特性的浏览器，界面炫酷，采用Trident和WebKit双渲染引擎，并整合金山自家的BIPS进行安全防护。猎豹浏览器对Chrome的Webkit内核进行了超过100项的技术优化，使访问网页的速度更快。其具有首创的智能切换引擎，动态选择内核匹配不同网页，并且完美支持HTML5新国际网页标准。 产品特点：1、快速——比Chrome速度更快； 2、安全——杀毒软件级别的安全防护能力； 3、炫酷——顶级设计团队倾心打造； </div></div></div></a><a class="pagination-related" href="/posts/20101012-3/" title="css背景图片定位（含实例下载）"><img class="cover" src="/uploads/2010/10/bg2008050701_2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-10-12</div><div class="info-item-2">css背景图片定位（含实例下载）</div></div><div class="info-2"><div class="info-item-1">在CSS中，背景图片的定位方位有3种：   1）关键字：background-position: top right; 2）像素：background-position: 0px 0px; 3）百分比：background-position: 0% 0%; 上面这三句语句，都将图片定位在背景的左上角，表面上看效果是一样的，实际上第三种定位机制与前两种完全不同。 前两种定位，都是将背景图片左上角的原点，放置在规定的位置。请看下面这张图，规定的位置是“20px 10px”和”60px 50px”，都是图片的原点在那个位置上，图中用X表示。  但是第三种定位，也就是百分比定位，不是这样。它的放置规则是，图片本身（x%,y%）的那个点，与背景区域的（x%,y%）的那个点重合。比如，如果放置位置是“20% 10%”，实际结果如下图，可以看到这个点是在图片本身的“20% 10%”的位置上。  下面是一个有趣的例子。 背景图片是四个边长为100px的方块叠在一起：  请问怎样才能将其横过来：  答案是，在网页中先设置四个div区域：   然后，这样编写CSS：   .box1, .box2, ...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

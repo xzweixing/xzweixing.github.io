@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>css背景图片定位（含实例下载） | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="在CSS中，背景图片的定位方位有3种：   1）关键字：background-position: top right; 2）像素：background-position: 0px 0px; 3）百分比：background-position: 0% 0%; 上面这三句语句，都将图片定位在背景的左上角，表面上看效果是一样的，实际上第三种定位机制与前两种完全不同。 前两种定位，都是将背景图片左上角的原">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css背景图片定位（含实例下载）">
+<meta property="og:url" content="https://www.weixing.me/posts/20101012-3/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="在CSS中，背景图片的定位方位有3种：   1）关键字：background-position: top right; 2）像素：background-position: 0px 0px; 3）百分比：background-position: 0% 0%; 上面这三句语句，都将图片定位在背景的左上角，表面上看效果是一样的，实际上第三种定位机制与前两种完全不同。 前两种定位，都是将背景图片左上角的原">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.weixing.me/uploads/2010/10/bg2008050701_2.png">
+<meta property="article:published_time" content="2010-10-12T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-31T02:36:29.211Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="背景定位">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.weixing.me/uploads/2010/10/bg2008050701_2.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "css背景图片定位（含实例下载）",
+  "url": "https://www.weixing.me/posts/20101012-3/",
+  "image": "https://www.weixing.me/uploads/2010/10/bg2008050701_2.png",
+  "datePublished": "2010-10-12T04:00:00.000Z",
+  "dateModified": "2026-05-31T02:36:29.211Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "WEIXING.ME",
+      "url": "https://www.weixing.me"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/posts/20101012-3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'css背景图片定位（含实例下载）',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><style>#footer{background-color:#2c3e50!important}</style><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/uploads/2010/10/bg2008050701_2.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a><a class="nav-page-title" href="/"><span class="site-name">css背景图片定位（含实例下载）</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">css背景图片定位（含实例下载）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2010-10-12T04:00:00.000Z" title="发表于 2010-10-12 12:00:00">2010-10-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-31T02:36:29.211Z" title="更新于 2026-05-31 10:36:29">2026-05-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/web%E5%BC%80%E5%8F%91/">web开发</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>在CSS中，背景图片的定位方位有3种：</p>
+<blockquote>
+</blockquote>
+<p>1）关键字：background-position: top right;</p>
+<p>2）像素：background-position: 0px 0px;</p>
+<p>3）百分比：background-position: 0% 0%;</p>
+<p>上面这三句语句，都将图片定位在背景的左上角，表面上看效果是一样的，实际上第三种定位机制与前两种完全不同。</p>
+<p>前两种定位，都是将背景图片左上角的原点，放置在规定的位置。请看下面这张图，规定的位置是“20px 10px”和”60px 50px”，都是图片的原点在那个位置上，图中用X表示。</p>
+<p><img src="/uploads/2010/10/bg2008050701_2.png" alt="CSS背景图片定位 - 如此褪色世界 - 如此褪色世界.天空曾有这样的微笑..."></p>
+<p>但是第三种定位，也就是百分比定位，不是这样。它的放置规则是，图片本身（x%,y%）的那个点，与背景区域的（x%,y%）的那个点重合。比如，如果放置位置是“20% 10%”，实际结果如下图，可以看到这个点是在图片本身的“20% 10%”的位置上。</p>
+<p><img src="http://www.ruanyifeng.com/blog/2008/05/bg2008050702.gif" alt="CSS背景图片定位 - 如此褪色世界 - 如此褪色世界.天空曾有这样的微笑..."></p>
+<p>下面是一个有趣的例子。</p>
+<p>背景图片是四个边长为100px的方块叠在一起：</p>
+<p><img src="/uploads/2010/10/bg2008050703_2.png" alt="CSS背景图片定位 - 如此褪色世界 - 如此褪色世界.天空曾有这样的微笑..."></p>
+<p>请问怎样才能将其横过来：</p>
+<p><img src="/uploads/2010/10/bg2008050704_2.png" alt="CSS背景图片定位 - 如此褪色世界 - 如此褪色世界.天空曾有这样的微笑..."></p>
+<p>答案是，在网页中先设置四个div区域：</p>
+<blockquote>
+</blockquote>
+<p>然后，这样编写CSS：</p>
+<blockquote>
+</blockquote>
+<p>.box1, .box2, .box3, .box4 {</p>
+<p>float:left;</p>
+<p>width:100px;</p>
+<p>height:100px;</p>
+<p>position:relative;</p>
+<p>background: #F3F2E2 url(1234.png) no-repeat;</p>
+<p>}</p>
+<p>.box1 {</p>
+<p>background-position:0% 0%;</p>
+<p>}</p>
+<p>.box2 {</p>
+<p>background-position:0% 33.33333%;</p>
+<p>}</p>
+<p>.box3 {</p>
+<p>background-position:0% 66.66666%;</p>
+<p>}</p>
+<p>.box4 {</p>
+<p>background-position:0% 100%;</p>
+<p>}</p>
+<p>点击<a target="_blank" rel="noopener" href="http://www.sitepoint.com/examples/jquery/test.php">这里</a>查看最后的效果。可以看到第二和第三个方块的设置，并不是一般想象中的“0% 25%”和“0% 75%”。</p>
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;–比较实质性的东西在这里&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p>
+<p>我们知道在用图片作为背景的时候，css要这样写，以div容器举例子，也可以是body、td、p等的背景，道理一样。</p>
+<p>| 代码：</p>
+<p>div{ background:#FFF url(image) no-repeat fixed x y;} |</p>
+<p>这里的background的属性值依次为：</p>
+<p>#FFF 背景色：（颜色值，背景图片没有覆盖的地方，或者没有背景图片时表现的背景色）</p>
+<p>image 背景图片：（这里是图片的地址）</p>
+<p>no-repeat 是否重复：（图片小于容器的大小时，默认会重复排列图片以填满容器，no-repeat表示不重复，只有这个时候后面的定位坐标才有用。）</p>
+<p>fixed 背景是否随容器滚动：（有两个可选值，scroll滚动，fixed不滚动，默认是scroll）</p>
+<p>x y 背景图像的定位：（注意，只有在no-repeat下定位才有意义。这个就是今天要讲的重点）</p>
+<p>背景图像定位中我们要明确的几点：</p>
+<p>1、两个值前面一个是横向的定位，我们称为x轴方向定位。后面一个值是纵向的定位，我们称为y轴方向定位。如果只有一个值，那默认的就是x轴方向，这时y轴方向就默认的是上下居中对齐，也就是center。</p>
+<p>2、坐标轴的原点就是对应容器的左顶点。</p>
+<p>3、这个坐标的y轴箭头朝下，也就是右下方（容器内部）x y的值才都为正。</p>
+<p>4、x y值分别表示背景图片的左顶点相对于坐标原点（也就是容器的左顶点）的值。</p>
+<p>5、x y的值可以用百分比或者px来表示。</p>
+<p>6、x y也可以用“left、right、top、bottom、center”这五个对齐方式来表示，但注意：用“left、right、top、 bottom、center”来表示的时候，应用的是对齐规则，而不是坐标规则。x为left是表示图片的左边和容器的左边对齐，为right的时候表示 图片的右边和容器的右边对其，y为top的时候表示图片的顶部和容器的顶部对齐，为bottom时表示图片的底部和容器的底部对齐，x y等于center的时候表示居中对齐。</p>
+<p>7、x y用百分比或者px表示的时候，其值可以为负数。我们应用坐标规则就很容易理解负数表示的意义，x为负数时候表示图片左顶点在容器左顶点的左侧，y为负数时表示图片的左顶点在容器的左定点的上方。也就是向左和向上超出容器的范围。</p>
+<p>下面我用几个图示来说明一下几种情况，蓝色块表示图片，虚线框表示容器（可以div，td，或者直接就是body），注意只有背景图片在容器内我们才能看见，我用白色表示可见部分，而且超出容器范围的是看不见的，我用灰色表示。容器的左定点的坐标就是（0，0）。</p>
+<p><img src="http://s1.knowsky.com/20081221/20090315112558503.gif" alt="CSS背景图片定位 - 如此褪色世界 - 如此褪色世界.天空曾有这样的微笑..."></p>
+<p>第一张，背景图片和容的左上对齐，0px 0px 也可以写成left top</p>
+<p><img src="http://s1.knowsky.com/20081221/20090315112558856.gif" alt="CSS背景图片定位 - 如此褪色世界 - 如此褪色世界.天空曾有这样的微笑..."></p>
+<p>第二张，背景图在容器中间，定点坐标为正值</p>
+<p><img src="http://s1.knowsky.com/20081221/20090315112601105.gif" alt="CSS背景图片定位 - 如此褪色世界 - 如此褪色世界.天空曾有这样的微笑..."></p>
+<p>第三张，背景图部分在容器左上，定点坐标为负值</p>
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p>
+<p>到此我们可能就明白了如何用background里的定位值来准确定位一个背景图片，返回去我们看一下开始的时候介绍的两个图片，我们就是可以用：背景定位和容器内才可见这两个性质来随意的调用整张图片的某一部分。</p>
+<p>但是我们为了调用方便，在排列这些小图片的时候要讲究一点规则，比如：小图之间的距离通常是调用小图的容器的大小，或者距离更大一点，这样就可以避免在容器内显示出我们不愿意显示的图片！</p>
+<p>补充一点，如果定位用的是百分比话，算法比较特殊。我举个例子：</p>
+<p>| 代码：</p>
+<p>background:#FFF url(image) no-repeat fixed 50% -30%; |</p>
+<p>这个时候图片应该在容器的什么位置呢,算法公式如下：</p>
+<p>图片左顶点距容器左顶点的坐标位置为</p>
+<p>x：（容器的宽度-图片的宽度）x50%</p>
+<p>y：（容器的高度-图片的高度）x（-30%）</p>
+<p>得到的结果应用坐标法则，差值如果为负数，百分比为正那么运算结果是负值。如果差值为负数，百分比也为负数，那么运算结果就是正数。总而言之就是这里的运算符合运算法则。把运算的结果带入坐标法则就能得到图片的位置。</p>
+<p>比如：容器是width：600px；height：600px；而图片是width：200px；height：200px；</p>
+<p>我们用上面的样式，可以得到图片位置为：</p>
+<p>x：(600px-200px)*50%</p>
+<p>y：(600px-200px)*(-30%)</p>
+<p>如下图：</p>
+<p><img src="http://s1.knowsky.com/20081221/20090315112602237.gif" alt="CSS背景图片定位 - 如此褪色世界 - 如此褪色世界.天空曾有这样的微笑..."></p>
+<p>实例下载：<a target="_blank" rel="noopener" href="http://www.uudisc.com/user/woallf/file/3605401">http://www.uudisc.com/user/woallf/file/3605401</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.weixing.me">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.weixing.me/posts/20101012-3/">https://www.weixing.me/posts/20101012-3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.weixing.me" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/css/">css</a><a class="post-meta__tags" href="/tags/%E8%83%8C%E6%99%AF%E5%AE%9A%E4%BD%8D/">背景定位</a></div><div class="post-share"><div class="social-share" data-image="/uploads/2010/10/bg2008050701_2.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/20101012/" title="温家宝受CNN记者专访谈政改 让每个人活得有尊严"><img class="cover" src="/uploads/2010/10/00114320c9e60e1de60514_3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">温家宝受CNN记者专访谈政改 让每个人活得有尊严</div></div><div class="info-2"><div class="info-item-1">[提要] 最新一期的美国《时代》周刊亚洲版的封面上，，这是温家宝总理首次成为《时代》封面人物。对于人民币汇率问题，温家宝总理谈到三点：首先，中国不会主动寻求贸易顺差，中国对外贸易的目标是和他国维持平衡可持续的贸易关系。   温家宝总理首上《时代》封面 最新一期的美国《时代》周刊亚洲版的封面上，，这是温家宝总理首次成为《时代》封面人物。该杂志在封面文章中呼吁美国政府客观理性看待人民币汇率问题，指出在汇率上做文章不会提升美国产品的竞争力。 人民币升值对美国企业无益 《时代》的网站上已提前公布了将于10月18日正式出版的周刊内容，封面文章由曾两次专访温家宝总理的美国有线电视新闻网（CNN）资深记者法里德?扎卡里亚撰写。 文章称，9月29日，美国国会众议院以压倒性的票数，通过了一项针对人民币汇率的法案，其主要目的是为打击人民币汇率过低，美国将对从中国进口的商品课征平衡税。 “虽然所有人都认为，目前是应对人民币低汇率问题的最好时机，但实则不然。”扎卡里亚对国会的做法驳斥道：“该法案不过是毫无疑义的装腔作势，甚至可能 煽动民众情绪。它不能解决问题，更令人担忧的是，它是美国国内不断高涨的反华情...</div></div></div></a><a class="pagination-related" href="/posts/20101012-option-selected/" title="option selected"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">option selected</div></div><div class="info-2"><div class="info-item-1">   value&#x3D;””&gt;请选择排序方式  value&#x3D;”&gt;按时间新到旧  value&#x3D;””&gt;按面积大到小  value&#x3D;””&gt;按面积小到大 </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/20190406-css-youxianji/" title="CSS 样式优先级"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-06</div><div class="info-item-2">CSS 样式优先级</div></div><div class="info-2"><div class="info-item-1">当创建的样式表越来越复杂时，一个标签的样式将会受到越来越多的影响，这种影响可能来自周围的标签，也可能来自其自身。下面我们从这两方面去看看 CSS 样式的优先级。 CSS 的继承性CSS 的继承特性指的是应用在一个标签上的那些 CSS 属性被传到其子标签上。看下面的 HTML 结构： 如果  有个属性 color: red，则这个属性将被  继承，即  也拥有属性 color: red。 由上可见，当网页比较复杂， HTML 结构嵌套较深时，一个标签的样式将深受其祖先标签样式的影响。影响的规则是： CSS 优先规则1： 最近的祖先样式比其他祖先样式优先级高。 例1： 如果我们把一个标签从祖先那里继承来的而自身没有的属性叫做”祖先样式”，那么”直接样式”就是一个标签直接拥有的属性。又有如下规则： CSS 优先规则2：“直接样式”比”祖先样式”优先级高。 例2： 选择器的优先级上面讨论了一个标签从祖先继承来的属性，现在讨论标签自有的属性。在讨论 CSS 优先级之前，先说说 CSS 7 种基础的选择器：  ID 选择器， 如 #id{}  类选择器， 如 .class{}  属性选择器，...</div></div></div></a><a class="pagination-related" href="/posts/20110823-in-css-use-js/" title="css文件内使用js"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-08-23</div><div class="info-item-2">css文件内使用js</div></div><div class="info-2"><div class="info-item-1">这个是我的一个同事使用的方法，之前自己没有用过，看了他写的代码，我震惊了一下，原来css内部竟然也可以使用javascript代码，真实长见识了，学习了…… 下面是其中的一段代码，考了过来，留着以后自己查看使用。 &#96; #carousel_photo_container #pre { width: expression(document.getElementById(&quot;carousel_photo&quot;).width/2 600 ? &quot;600px&quot; : this.width);  } &#96; 这单代码主要作用是根据图片的宽度来实现显示时候图片的宽度！ </div></div></div></a><a class="pagination-related" href="/posts/20100913/" title="基于DIV和CSS的布局结构（1）"><img class="cover" src="/uploads/2010/09/211619887_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-09-13</div><div class="info-item-2">基于DIV和CSS的布局结构（1）</div></div><div class="info-2"><div class="info-item-1">  基于DIV和CSS的布局结构（1） DIV在HTML中是一个块级元素，所以它很适合用来建设网页的结构。2000年互联网泡沫之后，CSS流行起来。虽然距离CSS发布已经有很长的一段时间，但它有限的浏览器支持使得开发人员害怕使用它。相对于表格结构，它有相对更高的学习曲线，开发人员必须了解CSS并且清楚地知道CSS间的块级元素和内联元素、何时使用相对定位、何时使用绝对定位来解决浏览器的定位问题，还需了解每个CSS特性在不同浏览器中的不同表现（这点在3.1节中已经提到过）。我们重新审视一下关于Web标准的三个部分：结构(Structure)、表现(Presentation)、行为(Behavior)，见图3-12。 |   | | 图3-12? Web标准的三个核心元素 | 我们需要还原HTML最初的面貌，用它来描述文档的结构，并且掌握CSS的布局技术来实现页面的排版布局。在设计这种标准的网页时，我们应该先抛去外观，外观在这个时候并不是最重要的，一个结构良好的HTML结构页面可以以任何外观表现出来。如果认真地思考网页所包含的内容，你会发现，你规划的页面结构会包含类似以下几点内容： 标...</div></div></div></a><a class="pagination-related" href="/posts/20101021-1/" title="CSS vertical-align 属性"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-10-21</div><div class="info-item-2">CSS vertical-align 属性</div></div><div class="info-2"><div class="info-item-1">CSS vertical-align 属性定义和用法vertical-align 属性设置元素的垂直对齐方式。 说明该属性定义行内元素的基线相对于该元素所在行的基线的垂直对齐。允许指定负长度值和百分比值。这会使元素降低而不是升高。在表单元格中，这个属性会设置单元格框中的单元格内容的对齐方式。 | 默认值： || baseline | | 继承性： || no | | 版本： || CSS1 | | JavaScript 语法： || object.style.verticalAlign&#x3D;”bottom” | 实例垂直对齐一幅图像： img { vertical-align:text-top; } 浏览器支持所有浏览器都支持 vertical-align 属性。 注释：任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。 可能的值| 值 || 描述 | | baseline || 默认。元素放置在父元素的基线上。 | | sub || 垂直对齐文本的下标。 | | super || 垂直对齐文本的上标 | | top ||...</div></div></div></a><a class="pagination-related" href="/posts/20100913-1/" title="基于DIV和CSS的布局结构（2）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-09-13</div><div class="info-item-2">基于DIV和CSS的布局结构（2）</div></div><div class="info-2"><div class="info-item-1">  ** 基于DIV和CSS的布局结构（2）** 2．使用语义化的标签及命名标识 在所有的结构中都应该使用具有语义的标签及命名标识，如，为标题、为段落、为列表等。标识元素也应尽量使用如id&#x3D;”header”、id&#x3D;”footer”等易读懂的语义标识。下面的代码使用的就是具有语义的标签及命名标识。  ?  标题?标题?  内容?…内容  ?  坏的?好的   3．尽量减少使用DIV标记 和表结构一样，深度嵌套的DIV也会给编辑及调试带来麻烦，如少了一个结束会使所有的结构混乱，所以应尽量少使用DIV。 示例1： 在面包屑导航的标签的使用上，可以使用“p”标签而不是DIV。  ?  首页&#x2F;服务?&#x3D;?首页&#x2F;服务  ?   示例2： 在一些博客的文章日期显示上，也可以做到简单的结构。  ?  7?&#x3D;?710  10?    4．格式化代码 作为开发人员，应养成良好的编程习惯，把代码进行格式化（缩进），使得阅读源代码更方便。 5．在布局结尾加上注释 在一个较复杂的结构中，你可能会迷失方向，不清楚哪个标记在哪个位置结束，调试混乱的布局...</div></div></div></a><a class="pagination-related" href="/posts/20100831-css-display-inline/" title="CSS display:inline 详解"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-08-31</div><div class="info-item-2">CSS display:inline 详解</div></div><div class="info-2"><div class="info-item-1">display:inline 它可以让行内显示为块的元素，变为行内显示，例如  DIV1   DIV2  这里DIV1和DIV2分别占一行，但是你给他们加上属性后变了  DIV1   DIV2  DIV1和DIV2这时候显示在同一行了，试试看吧 和 display:inline 对应的是 display:block，block 会让应用了该 CSS 属性的 HTML 标记变成块级别元素，例如 SPAN 是行内显示的，但是你加了 display:block 属性就不一样了  SPAN1   SPAN2  block一般一个块占一行，除非float inline是自动排为一行，就象段内的文字一样，可成为多行。 display:inline比较经典的用法是用在 下的 中 display:inline 对应不显示为 display:none display:block 对应不显示为 hidden 说通俗点 样式为none的元素不占位置,而样式为hidden的元素虽然不显示但还是占地方 在使用CSS实现表现的时候，会经常接触到display:inline-block这一属性，无论是初接触W...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>网页设计应急小技巧 | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="工作中，网页设计师经常会遇见这些状况：时间这么短又要出彩、又是要大气要有气氛、风格不明确很难把握、栏目这么多页面又这么长…… 突然觉得束手无策，脑袋里一片空白，没想法了，怎么办？ 下面简浅的归纳了几个快速让页面出彩的小技巧： ** 1.旋转法** – 将页面的主体或局部进行旋转  我们一般的页面版式都是方方正正，四平八稳，有点呆板。如果将局部或整体适当的旋转，打破稳定的构图，画面就会动感有趣一些">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网页设计应急小技巧">
+<meta property="og:url" content="https://www.weixing.me/posts/20111009-web-design-skill/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="工作中，网页设计师经常会遇见这些状况：时间这么短又要出彩、又是要大气要有气氛、风格不明确很难把握、栏目这么多页面又这么长…… 突然觉得束手无策，脑袋里一片空白，没想法了，怎么办？ 下面简浅的归纳了几个快速让页面出彩的小技巧： ** 1.旋转法** – 将页面的主体或局部进行旋转  我们一般的页面版式都是方方正正，四平八稳，有点呆板。如果将局部或整体适当的旋转，打破稳定的构图，画面就会动感有趣一些">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://uedc.163.com/wp-content/uploads/2011/09/UEDC_qbj2.png">
+<meta property="article:published_time" content="2011-10-09T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-31T02:21:21.285Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="网页设计技巧">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://uedc.163.com/wp-content/uploads/2011/09/UEDC_qbj2.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "网页设计应急小技巧",
+  "url": "https://www.weixing.me/posts/20111009-web-design-skill/",
+  "image": "http://uedc.163.com/wp-content/uploads/2011/09/UEDC_qbj2.png",
+  "datePublished": "2011-10-09T04:00:00.000Z",
+  "dateModified": "2026-05-31T02:21:21.285Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "WEIXING.ME",
+      "url": "https://www.weixing.me"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/posts/20111009-web-design-skill/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '网页设计应急小技巧',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><style>#footer{background-color:#2c3e50!important}</style><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(http://uedc.163.com/wp-content/uploads/2011/09/UEDC_qbj2.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a><a class="nav-page-title" href="/"><span class="site-name">网页设计应急小技巧</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">网页设计应急小技巧</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2011-10-09T04:00:00.000Z" title="发表于 2011-10-09 12:00:00">2011-10-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-31T02:21:21.285Z" title="更新于 2026-05-31 10:21:21">2026-05-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/web%E5%BC%80%E5%8F%91/">web开发</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><a href="https://www.weixing.me/?attachment_id=7782"><img src="http://uedc.163.com/wp-content/uploads/2011/09/UEDC_qbj2.png"></a></p>
+<p>工作中，网页设计师经常会遇见这些状况：时间这么短又要出彩、又是要大气要有气氛、风格不明确很难把握、栏目这么多页面又这么长……</p>
+<p>突然觉得束手无策，脑袋里一片空白，没想法了，怎么办？</p>
+<p>下面简浅的归纳了几个快速让页面出彩的小技巧：</p>
+<p>**</p>
+<p>1.旋转法** – 将页面的主体或局部进行旋转</p>
+<p><a href="https://www.weixing.me/?attachment_id=7783"><img src="http://uedc.163.com/wp-content/uploads/2011/09/1.png"></a></p>
+<p>我们一般的页面版式都是方方正正，四平八稳，有点呆板。如果将局部或整体适当的旋转，打破稳定的构图，画面就会动感有趣一些。</p>
+<p>对于上图，这种基调轻松活泼又恰好内容比较少的页面来说，主体整个旋转后，画面马上轻松活泼起来，看过现在这个画面，真是无法想象未旋转前的平淡。同时，相比大块的方形空白，不规则的余白也不会显得空洞。</p>
+<p><a href="https://www.weixing.me/?attachment_id=7784"><img src="http://uedc.163.com/wp-content/uploads/2011/09/1-2.png"></a></p>
+<p>上图，将背景旋转后，大面积的斜面产生了很强的速度感，赛车急速飞驰着，好像下一秒就要从电脑中冲出来一样，倾斜的大标题和旋转后的背景交叉配合，使画面整个都运动起来。这种方法可以应用到很多运动的主题上。</p>
+<p>**</p>
+<p>2.黄金分割法** – 灵活运用黄金比例分割的办法将页面“切”开</p>
+<p><a href="https://www.weixing.me/?attachment_id=7785"><img src="http://uedc.163.com/wp-content/uploads/2011/09/22.png"></a></p>
+<p>黄金比率被认为是最理想的矩形比例，在过去的文化遗产中也有很多这样的遗存。将这个比率应用到版式设计中，也能够设计出容易为用户所喜欢的构图。但不要被这些比例所束缚，很多是靠自己的感觉去应用。</p>
+<p>上图，除去背景无非就是一个排版清晰的页面，将背景分割后，对比的色块使画面产生纵深感，页面的丰富性和视觉冲击力迅速增强。人物也好像着陆了一样，平稳的站在画面中。</p>
+<p><a href="https://www.weixing.me/?attachment_id=7786"><img src="http://uedc.163.com/wp-content/uploads/2011/09/2-2.png"></a></p>
+<p>上图，用反差强烈的色块进行分割，强调了版块的划分，即使有很多地方需要强调，也能让用户迅速清楚各版块的重点，不用像以往一样1、2、3…… 将内容依次竖排下来，鼠标都已经拖到第三屏了还没完没了，又没什么新鲜感。</p>
+<p>**</p>
+<p>3.曲线法** – 将曲线用于背景或版块分割，消除矩形分割的生硬感。</p>
+<p><a href="https://www.weixing.me/?attachment_id=7788"><img src="http://uedc.163.com/wp-content/uploads/2011/09/3.png"></a></p>
+<p>与直线相比，曲线具有圆润的特点，让人感觉轻松、愉悦。增强视觉感的同时也能够营造活跃的气氛。</p>
+<p>上图中，大众的logo和焦点图中的机器人产品，全部由曲线组成，这种情况下，用曲线来分割背景和焦点就显得理所当然了，画面中曲线合理的运用也提高了层次感，机器人和红色标题都更突出。</p>
+<p><a href="https://www.weixing.me/?attachment_id=7789"><img src="http://uedc.163.com/wp-content/uploads/2011/09/3-2.png"></a></p>
+<p>仿照球的运动轨迹，贯穿着整个页面的曲线，将用户直观的带入了正在激烈进行的棒球比赛现场。看似随意，其实用曲线精当的将标题、焦点图和新闻等版块按重点进行了不同比例的分割。</p>
+<p>**</p>
+<p>4.借用法** – 借用现实中的东西，将实物抽象化，提炼出大形轮廓用于背景</p>
+<p><a href="https://www.weixing.me/?attachment_id=7790"><img src="http://uedc.163.com/wp-content/uploads/2011/09/4.png"></a></p>
+<p>现实中的东西也可以应用到网页设计中？当然可以，只要想的到。</p>
+<p>如图，信封是我们生活中常用的东西，如此生活化的东西借用到网页上，展开在用户面前，好像邮寄给您的信一样，立马让人眼前一亮，亲切感油然而生。作为游戏活动的通告页，用白色的信纸来盛放主体内容也再合适不过。</p>
+<p><a href="https://www.weixing.me/?attachment_id=7791"><img src="http://uedc.163.com/wp-content/uploads/2011/09/4-2.png"></a></p>
+<p>上图，将赛车在赛道上疾驰的场面置放到页面上作为背景，虚化的大城市，放大的赛道，飞奔的赛车……就像此刻坐在电脑前玩赛车，左手正紧紧按着W、A、S、D键一样。让用户身临其境，完全抓住了对方眼球。</p>
+<p>以此类推，生活中很多东西都可以借用，例如:写满粉笔字的黑板、电脑的屏幕、写日记的本子、老古董的地图，空旷的足球场……</p>
+<p>**</p>
+<p>5.三角拼贴法** – 像做手工一样，将裁剪好的三角形打乱，重新拼贴</p>
+<p><a href="https://www.weixing.me/?attachment_id=7792"><img src="http://uedc.163.com/wp-content/uploads/2011/09/5.png"></a></p>
+<p>不同的几何形状有不同的性格，圆形是活泼可爱的，方形是平稳整齐的，三角形就是尖锐动感的。</p>
+<p>三角形的不平衡性及其尖锐性能够增强视觉上的刺激，快速吸引用户，可以用于科技和时尚这种风格同样比较“锋利”的网页。</p>
+<p>上图，将同色系小三角形均匀的拼贴起来，马上就营造出一种钻石璀璨般的时尚感。但实践的时候要注意加减法，不能乱堆一通，点到为止即可。</p>
+<p><a href="https://www.weixing.me/?attachment_id=7793"><img src="http://uedc.163.com/wp-content/uploads/2011/09/5-2.png"></a></p>
+<p>上图，用艳丽的三角形对页面进行划分、拼贴。大小的组合，色块的对比，能够带给用户强烈的视觉冲击力。在搭配的时候，注意主次，以一个大的形状为主，给内容摆放留下足够空间，与其他辅助的小形状相区别。</p>
+<p>**</p>
+<p>6.色块分割法** – 将各版块用不同颜色来区别</p>
+<p><a href="https://www.weixing.me/?attachment_id=7794"><img src="http://uedc.163.com/wp-content/uploads/2011/09/6.png"></a></p>
+<p>经常面对需求方这里是重点、那也是重点、那那那也挺重要，统统需要突出的要求，对于主题比较明快的页面 可以考虑将版块用不同颜色来区别，通过色块来强化页面版式和布局，难度较大的是在色彩搭配上要取得平衡。</p>
+<p>上图，版式在页面都以块来体现，没有什么效果，为了突出重点，在重要区域选择了饱和度较高的红黄绿三个颜色，产生明确的视觉中心，让用户能够按照我们希望的那样阅读下去。但对比色调容易造成不和谐，红黄绿之间加上灰底的中性色来调和一下就显得不会突兀了。</p>
+<p><a href="https://www.weixing.me/?attachment_id=7795"><img src="http://uedc.163.com/wp-content/uploads/2011/09/6-2.png"></a></p>
+<p>当使用四到五种纯色进行搭配的时候，注意只要色相、纯度、明度三个属性中有一个属性是基本相同或者接近，搭配起来基本上都不会觉得太牵强。</p>
+<p>—————————————————————-</p>
+<p>以上几个小技巧可以在情况紧急时参考，大家也可以用类似的方法总结出更多的小技巧自用。</p>
+<p>转自：<a target="_blank" rel="noopener" href="http://uedc.163.com/7779.html">http://uedc.163.com/7779.html</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.weixing.me">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.weixing.me/posts/20111009-web-design-skill/">https://www.weixing.me/posts/20111009-web-design-skill/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.weixing.me" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/web/">web</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7/">网页设计技巧</a></div><div class="post-share"><div class="social-share" data-image="http://uedc.163.com/wp-content/uploads/2011/09/UEDC_qbj2.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/20111013-wordpress-dropdown-links/" title="wordpress代码实现下拉友情链接"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">wordpress代码实现下拉友情链接</div></div><div class="info-2"><div class="info-item-1">很多企业网站的左下方都有一个下拉的友情链接，这个该怎么实现呢？其实很简单，在主题的function.php文件中添加以下代码： &#96; function dropdown_links(){ global $wpdb; $sql &#x3D; “SELECT link_url, link_name, link_description FROM $wpdb-&gt;links WHERE link_visible &#x3D; ‘Y’ Order By link_name”; $results &#x3D; $wpdb-&gt;get_results($sql); if (!$results) { return; } $output &#x3D;’ Select … ‘; foreach ($results as $row) { $the_link &#x3D; ‘#’; if (!empty($row-&gt;link_url)){ $the_link &#x3D; wp_specialchars($row-&gt;link_url); } $desc &#x3D; wp_sp...</div></div></div></a><a class="pagination-related" href="/posts/20111009-get-data-from-differ-category/" title="获取数据库表中不同分类的最新一条（几条）数据"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">获取数据库表中不同分类的最新一条（几条）数据</div></div><div class="info-2"><div class="info-item-1">今天遇到一个问题，从产品数据库表中读出每个产品分类的最新的那一条产品的图片作为封皮，比如：产品中有分类 TypeA 、TypeB、TypeC，其中有很多的数据，如： id ? ? ? ?Type 1 ? ? ? ? ?TypeA 2 ? ? ? ? TypeA 3 ? ? ? ? TypeB 4 ? ? ? ? TypeA 5 ? ? ? ? TypeC 6 ? ? ? ??TypeC 也就是获得id分别为2、3、6的3条数据，于是乎出现了下面的**sql语句**   select ? id , Type from ?product a ?where ?( select ?count(1) ?from product b where a.Type &#x3D; b.Type? and b.id &gt;&#x3D; a.id )  select ? id , Type from ?product a ?where ?( select ?count(1) ?from product b where a.Type &#x3D; b.Type? and b.id &gt;&#x3D; ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/20100905-3/" title="web前端设计师–令人望而却步的学习曲线"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-09-05</div><div class="info-item-2">web前端设计师–令人望而却步的学习曲线</div></div><div class="info-2"><div class="info-item-1"> 令人望而却步的学习曲线  我们先来看看作为一名合格的前端人员应该掌握或具备哪些技能： 首先就得熟悉HTML，掌握W3C的标准，要学就得学最规范的标准。浏览器最少也要了解四五种，如IE、Firefox、Chrome等。样式也得掌握，以CSS2为主，多看看欧美牛人的风格DIV布局，特简约的那种。可用性也很重要，甭管有事没事总把用户放在心里，再买本工艺美术理论方面的书，有事没事就翻翻，设计个按钮就得花个七八天的时间。交互更重要，现在不是Ajax，就是RIA的，你要是用alert弹框啊，你都不好意思跟人家说去，这样学下去，得学多少年啊？两年时间？那是入门。四年以上？你还别嫌多，就是复杂。认真掂量下这些技术，学好其中的任何一门都要花好几年工夫。什么叫成功的前端开发人员？就是不但代码写得好，还要懂设计，懂美学。所以，前端开发的口号就是：不求最好，但求最全。 2.1. 角色的特殊性 也许有人会问：“为什么一个做页面的人要掌握这么多知识？”前端设计师这个职位有其特殊性：前端作为与用户直接接触的一层，与用户的相关度高，需求变化频繁。用户不会关心数据库是MySQL还是Oracle，也不会关心你是用...</div></div></div></a><a class="pagination-related" href="/posts/20130628-web-native-hybrid-app/" title="Native和Web以及Hybrid App的开发之路"><img class="cover" src="/uploads/2013/06/web-native-hybrid1.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2013-06-28</div><div class="info-item-2">Native和Web以及Hybrid App的开发之路</div></div><div class="info-2"><div class="info-item-1"> 现在越来越多的企业开始做手机APP，Native开发成本较高，web表现太差，现在又衍生出Hybrid，他们3者有什么区别呢？什么时候该用什么开发呢？还是专注于一种最好的开发方式去开发所有的App？ 一、Native开发方法的场景 现有的Native开发技能——反对Native开发方法的主要理由之一是，它缺少对多种平台的支持。要求为多种移动平台开发App的企业需要招聘新员工，或者对内部开发者进行众多Native语言方面的培训。内部拥有这种Native开发技能的企业不需要大笔新的投入，就能够充分利用这些技能。 单一移动操作系统——在一些情况下，企业旨在向有限的目标群体发布移动App——这个群体已知使用单一移动操作系统。比如说，考虑这种场景：向员工发放黑莓设备的企业分发内部App。在这种情况下，支持多种平台也许不是优先事项：由于开发单一的Native App只需要一套有限的技能和工具，所以这种方法很有意义。 Native功能——有些App是围绕某一项功能开发的。就拿Skype来说，VOIP和访问用户的联系人信息是App的两大关键要素；考虑到现有的技术，只能采用Native方法来开发...</div></div></div></a><a class="pagination-related" href="/posts/20110311-foreign-designer-web-page-appreciate/" title="国外设计师经典web设计赏析"><img class="cover" src="/uploads/2011/03/erotic_lingerie_by_b3rko-d32w0es1_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-03-11</div><div class="info-item-2">国外设计师经典web设计赏析</div></div><div class="info-2"><div class="info-item-1">1、情色内衣网站  2、慈善机构网站  3、主题网站-微笑  4、汽车零件购物网站  5、企业站–e米卡光  6、美食网站  </div></div></div></a><a class="pagination-related" href="/posts/20100906/" title="国外关于web设计的优秀网站搜集"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-09-06</div><div class="info-item-2">国外关于web设计的优秀网站搜集</div></div><div class="info-2"><div class="info-item-1">国外关于设计的优秀网站： 1、http://www.csszengarden.com&#x2F; 禅意花园，web设计师必去的地方。 2、http://ui-patterns.com/ UI设计 收集展示了一些改进过的设计模型，比如验证码、帐户注册、导航标签等 3、http://patterntap.com&#x2F; 学习有效用户界面的设计，最好的办法是看看其他设计师是如何做的。你可以从Pattern Tap的设计模型展示中获得灵感。这儿收藏了表单设计、登录界面、二级导航、按钮等资源。 4、http://architectures.danlockton.co.uk/ Design with Intent 是 Dan Lockton 的博客，主题是理解和影响用户交互 5、Yahoo! Design Pattern Library Yahoo开发网络有一个日渐丰富的设计模型库Yahoo! Design Pattern Library。这里展示了用户界面设计方面的通用设计模型。一些广为讨论的模型包括模块标签、拖放操作和评级评论。 6、Welie.com的交互设计模型库提供了各种交互设...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

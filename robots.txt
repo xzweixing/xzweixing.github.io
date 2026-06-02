@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.weixing.me/sitemap.xml
+Sitemap: https://www.weixing.me/baidusitemap.xml

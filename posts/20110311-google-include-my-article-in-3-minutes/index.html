@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>google秒收我的文章 | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="上午发了一篇名为国外设计师经典web设计赏析的文章，下午查询的时候 google已经收录，然后使用代理，查看了一下google收录的快照时间， 不看不知道，看了吓一跳，我是上午11:25发的文章，google收录的时间 11：28，My God，第一次知道我的网站也能被秒收，太不可思议了， 这让我很是兴奋，同时也对自己的博客充满了信心，虽然现在刚开始， 没什么人访问，但是我相信会变得越来越好的！?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="google秒收我的文章">
+<meta property="og:url" content="https://www.weixing.me/posts/20110311-google-include-my-article-in-3-minutes/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="上午发了一篇名为国外设计师经典web设计赏析的文章，下午查询的时候 google已经收录，然后使用代理，查看了一下google收录的快照时间， 不看不知道，看了吓一跳，我是上午11:25发的文章，google收录的时间 11：28，My God，第一次知道我的网站也能被秒收，太不可思议了， 这让我很是兴奋，同时也对自己的博客充满了信心，虽然现在刚开始， 没什么人访问，但是我相信会变得越来越好的！?">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.weixing.me/img/touxiang.jpg">
+<meta property="article:published_time" content="2011-03-11T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-31T02:27:01.829Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="google">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.weixing.me/img/touxiang.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "google秒收我的文章",
+  "url": "https://www.weixing.me/posts/20110311-google-include-my-article-in-3-minutes/",
+  "image": "https://www.weixing.me/img/touxiang.jpg",
+  "datePublished": "2011-03-11T04:00:00.000Z",
+  "dateModified": "2026-05-31T02:27:01.829Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "WEIXING.ME",
+      "url": "https://www.weixing.me"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/posts/20110311-google-include-my-article-in-3-minutes/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'google秒收我的文章',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><style>#footer{background-color:#2c3e50!important}</style><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/top.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a><a class="nav-page-title" href="/"><span class="site-name">google秒收我的文章</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">google秒收我的文章</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2011-03-11T04:00:00.000Z" title="发表于 2011-03-11 12:00:00">2011-03-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-31T02:27:01.829Z" title="更新于 2026-05-31 10:27:01">2026-05-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>上午发了一篇名为<a href="https://www.weixing.me/webdesign/foreign-designer-web-page-appreciate/">国外设计师经典web设计赏析</a>的文章，下午查询的时候</p>
+<p>google已经收录，然后使用代理，查看了一下google收录的快照时间，</p>
+<p>不看不知道，看了吓一跳，我是上午11:25发的文章，google收录的时间</p>
+<p>11：28，My God，第一次知道我的网站也能被秒收，太不可思议了，</p>
+<p>这让我很是兴奋，同时也对自己的博客充满了信心，虽然现在刚开始，</p>
+<p>没什么人访问，但是我相信会变得越来越好的！? ↖(^ω^)↗</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.weixing.me">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.weixing.me/posts/20110311-google-include-my-article-in-3-minutes/">https://www.weixing.me/posts/20110311-google-include-my-article-in-3-minutes/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.weixing.me" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/google/">google</a></div><div class="post-share"><div class="social-share" data-image="/img/touxiang.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/20110312-creat-your-domain-email/" title="免费创建自己的个性化域名邮箱"><img class="cover" src="/uploads/2011/03/domain-email01-300x156_2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">免费创建自己的个性化域名邮箱</div></div><div class="info-2"><div class="info-item-1">看到很多站长都有自己的域名邮箱，由于买域名企业邮箱还得花钱，于是今天就利用QQ邮箱， 免费创建了一个自己的个性化域名邮箱。我的邮箱为i@weixing.me，酷吧！下面分享一下我 创建的方法，互联网就是要分享互联嘛，呵呵！废话不多说，看下面的步骤！ 1、首先你必须有一个域名，而且对这个域名有管理的权利。 2、登录自己的QQ邮箱，点击最上方的“设置”按钮，进入后点击“账号选项卡”找到“域名邮箱”一栏 点击“管理域名邮箱”，然后打开一个新的页面，可以看到“创建域名邮箱”按钮，点击创建。 3、输入你的域名（如我的：weixing.me），选择你的域名提供商，然后完成下面的2步就OK了 4、验证域名，有2种方法，1）上传文件? 2）您的域名设置一个CNAME记录（不同域名商显示的提示略有不同，但是总体的意思是一样的，都是添加CNAME记录与MAX记录，我的是godaddy的，图片如下）  5、设置MX记录  6、进入验证成功与否界面，若成功怎显示成功，并开始添加你的邮箱，然后添加你的个性化域名邮箱的名称就OK了 7、小技巧：如果你想使用类似：mail.XXX.com的方式登录，还需要再多...</div></div></div></a><a class="pagination-related" href="/posts/20110311-foreign-designer-web-page-appreciate/" title="国外设计师经典web设计赏析"><img class="cover" src="/uploads/2011/03/erotic_lingerie_by_b3rko-d32w0es1_2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">国外设计师经典web设计赏析</div></div><div class="info-2"><div class="info-item-1">1、情色内衣网站  2、慈善机构网站  3、主题网站-微笑  4、汽车零件购物网站  5、企业站–e米卡光  6、美食网站  </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/20110627-pr-raise/" title="PR更新啦！（2011年6月27日）"><img class="cover" src="/uploads/2011/06/11_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-06-27</div><div class="info-item-2">PR更新啦！（2011年6月27日）</div></div><div class="info-2"><div class="info-item-1">今天最弱兄的一个留言让我注意了一下，他的PR升到4了，我一看还真是，于是查了下自己的PR，不看不知道啊，我也惊喜了一下，我的升为2了，呵呵，兴奋啊，我是2011年2月份开的这个博客，这才不到半年的时间，没想到啊……  兴奋之余也想了想，我的这个站点才开将近5个月的时间，最弱兄的也不过是2010年11月份开的，怎么会升的这么快呢，这可能意味着google对PR的算法有了很大程度的调整，首先是对新站的重视程度高了，从新站内容的秒收就能看出这一点，其次是对外链的重视程度减小了，我的站点没有几个PR高的外链，基本都是PR为0的新站，这对卖黑链这个行业应该会有不小的冲击，以后可能买黑链的就会少了，网站质量才是王道，内容为王，外链为皇的说法的后半句可能的改改了，权重应该没那么高了。所以老老实实做好站才是以后最重要的事情！ 这就是我今天对PR更新的一点想法，大家有什么看法多多交流！ </div></div></div></a><a class="pagination-related" href="/posts/20110717/" title="Page Speed Online &#8212; Google网页速度在线检测工具"><img class="cover" src="/uploads/2011/07/Page-Speed-weixing.me__2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-07-17</div><div class="info-item-2">Page Speed Online &#8212; Google网页速度在线检测工具</div></div><div class="info-2"><div class="info-item-1">网站打开速度的快慢直接影响网站用户体验，同时也影响SEO，且不看网站的内容有多好，网站的界面有多么的华丽，如果别人打开你的网站需要超过12分钟的时间，那么他还会继续访问你的网站吗？换为思考，如果是你，你会用12分钟的时间等待打开一个网站页面吗，要是我，我肯定重新再搜索引擎中打开一个类似内容的网站，如果那个网站的内容和我需要的一样，那么这个页面我直接关掉，我想很多人也是这也做的吧，所以网站的打开速度直接影响你的客户访问量，影响你的客户关系，直接影响你的money。  google是出了一个page speed的火狐的插件，想必大家都是知道的，可以很方便的为你测试网站的访问速度，进而给你提出优化的建议，我当时也懒得装，没有测试，最近知道了竟然google的page speed还有在线版的，网址：http://pagespeed.googlelabs.com,测了一下，73分，满分100分，下面还得你提了具体的优化建议，然后你就可以根据他的建议对网站进行优化，但是你愿不愿意听他的，那就有你自己决定了。  下面是我的测试结果：73分，大部分的建议是压缩图片、增加缓存、压缩javascri...</div></div></div></a><a class="pagination-related" href="/posts/20110228-googleblog-list-address/" title="谷歌官方博客列表"><img class="cover" src="/uploads/2011/02/google-feed_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-02-28</div><div class="info-item-2">谷歌官方博客列表</div></div><div class="info-2"><div class="info-item-1"> google官方博客地址： 由于谷歌的Blogger服务在中国大陆经常被封锁，如果你来自大陆，你很可能无法正常打开页面，本站提供官方博客RSS地址，欢迎订阅。(当然，由于FeedBurner也被封锁，可能你需要通过代理访问) |  || Official Google Blog | |  || AdWords API blog | |  || AJAX Search API blog | |  || Analytics 日本版 公式ブログ | |  || Blogger Buzz | |  || Blogger Buzz (Espa?ol) | |  || Blogs of Note | |  || Blogs of Note (Espa?ol) | |  || Custom Search Engine blog | |  || Google AdSense China Blog | |  || Google Analytics blog | |  || Google Base blog | |  || Google Base Blog-DE | |  || Google Ch...</div></div></div></a><a class="pagination-related" href="/posts/20111007-google-pr-clear/" title="google PR值清空"><img class="cover" src="/uploads/2011/10/PR-clear_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-10-07</div><div class="info-item-2">google PR值清空</div></div><div class="info-2"><div class="info-item-1">昨天看到google工具栏上googlePR值不显示了，一直为空，以为googlePR值又要更新了，也没当回事，今天看了一下还是为空，于是搜了一下，看到说是google PR值清空了，而不是我之前想的PR更新，据说是与专营许可证到期有关，PageRank的专利所有权归属斯坦福大学，有效期至2017年。而Google一次性买断专营许可证有效期只到2011年。 也许清空也是件好事吧，这样就没有了太多的链接买卖，也就不会有站长为了得到更高的PR值而费尽心思的采集采集，抄袭抄袭，而不顾用户的感受，认真的做好站点，放有用的内容信息，而不是大量的垃圾信息，大片的广告，让访客无比的厌烦！！但也许这知识暂时的，从前几次googlePR更新的频率来看，google还是不愿放弃PR值的，可能搞定了专营许可权的问题，PR值又会回归的，静观其变吧…… </div></div></div></a><a class="pagination-related" href="/posts/20110909-google-restructuring-backlinks/" title="google 重组反向链接"><img class="cover" src="/uploads/2011/09/Official-Google-Webmaster-Central-Blog-Reorganizing-internal-vs.-external-backli_2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2011-09-09</div><div class="info-item-2">google 重组反向链接</div></div><div class="info-2"><div class="info-item-1">昨天“谷歌中文网站管理员博客”更新了最新的文章，名为《重组内部与外部反向链接分类方式》，一下是引用，大家可以看一下，尤其是对玩SEO的，有些帮助！   今天，我们将改变我们对网站站长工具中链接数据的分类方式。正如大家所知，网站管理员工具采用两种不同的类别来编列指向您网站的链接，这两种分类为：来自其他网站的链接，以及来自您网站内部的链接。今天的更新不会改变您的链接总数，但希望能够以一种更贴近您想法的方式来呈现反向链接，表明哪些链接是来自您的网站内部的，哪些是来自其他网站的。 您可以在网站管理员工具中管理许多不同类型的网站，比如普通的域名（example.com）、子域名（www.example.com或 cats.example.com），或带有子文件夹路径的域名 www.example.com/cats/ or www.example.com/users/catlover/）。以前，只有以您的网站的确切URL开头的链接才会被被归类为内部链接：所以如果您输入www.example.com/users/catlover/ 作为您的网站，那么，来自 www.example.com/us...</div></div></div></a><a class="pagination-related" href="/posts/20100904-1/" title="Google URL语法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2010-09-04</div><div class="info-item-2">Google URL语法</div></div><div class="info-2"><div class="info-item-1">1. ? 使用Google URL 高级Google用户正是从Google的Web界面搜索域开始测试高级查询技巧的。他们不断地推敲查询关键字直到得到正确的结果为止。每个 Google查询都可以用一个URL来指向搜索结果页面。Google的搜索结果页面不是静态的。它们会在你点击Search（搜索）按钮或者打开一个链 接到结果页面的URL时动态创建的。通过Web界面提交的查询能够打开可以用简单的URL来表示的结果页面。例如，考虑查询ihackstuff。当你输 入这个查询之后，Google立即转向类似于下面的URL： www.google.com/search?q=happysnail.org 如果你收藏了这个URL并在以后打开它，或者在你的浏览器地址栏中输入这个URL时，Google会处理你对ihackstuff的搜索并返回相应 的结果。此时，这个URL不仅是一个连接到结果列表的链接，而且还是Google查询的一种简洁、美观的表达形式。任何经验丰富的Google搜索用户都 能看懂这个URL并知道查询的主题。这个URL也可以相当容易地进行修改。通过把happysnail.org改成h...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">352</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">712</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
