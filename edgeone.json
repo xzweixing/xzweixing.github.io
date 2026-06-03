@@ -1,1 +1,25 @@
-{"redirect":[{"source":"/","host":"weixing.me","destination":"https://www.weixing.me$request_uri","statusCode":301},{"source":"/*","scheme":"http","destination":"https://${host}$request_uri","statusCode":301}],"headers":[{"source":"/*","host":"*","headers":{"Strict-Transport-Security":"max-age=31536000;includeSubDomains"}}]}
+{
+  "redirect": [
+    {
+      "source": "/",
+      "host": "weixing.me",
+      "destination": "https://www.weixing.me$request_uri",
+      "statusCode": 301
+    },
+    {
+      "source": "/*",
+      "scheme": "http",
+      "destination": "https://${host}$request_uri",
+      "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/*",
+      "host": "*",
+      "headers": {
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+      }
+    }
+  ]
+}
