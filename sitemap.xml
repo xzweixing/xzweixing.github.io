@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.weixing.me/edgeone.json</loc>
+    
+    <lastmod>2026-06-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/posts/20241201-google-free-too-pagespeed-insights/</loc>
     
     <lastmod>2026-06-02</lastmod>
