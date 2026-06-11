@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.weixing.me/posts/20260607-ershi-chunqiu-shaonian-bufu-dangnian/</loc>
+    
+    <lastmod>2026-06-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/posts/20241201-google-free-too-pagespeed-insights/</loc>
     
     <lastmod>2026-06-02</lastmod>
@@ -8184,6 +8193,27 @@
   
   <url>
     <loc>https://www.weixing.me/tags/400%E7%94%B5%E8%AF%9D/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E9%AB%98%E8%80%83/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E4%BA%8C%E5%8D%81%E5%B9%B4/</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
