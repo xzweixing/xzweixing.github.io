@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>成功安装Windows11+Ubuntu24.04 LTS 双系统 | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="近期帮助朋友开发一个平台，windows系统在跑项目时总是有各种环境和Linux服务器不兼容的问题，于是准备安装Windows11+Ubuntu24.04 LTS 双系统。 一、前期准备工具1、U盘：≥8GB 空白U盘，优先USB3.0接口，读写速度更快，装机耗时更短 2、网络：稳定有线&#x2F;WiFi，用于下载系统镜像、后期装机驱动 二、工具+镜像下载地址（官方无毒）1、Ubuntu24.0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="成功安装Windows11+Ubuntu24.04 LTS 双系统">
+<meta property="og:url" content="https://www.weixing.me/posts/20260620-windows11-ubuntu24.04lts-install-shuangxitong/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="近期帮助朋友开发一个平台，windows系统在跑项目时总是有各种环境和Linux服务器不兼容的问题，于是准备安装Windows11+Ubuntu24.04 LTS 双系统。 一、前期准备工具1、U盘：≥8GB 空白U盘，优先USB3.0接口，读写速度更快，装机耗时更短 2、网络：稳定有线&#x2F;WiFi，用于下载系统镜像、后期装机驱动 二、工具+镜像下载地址（官方无毒）1、Ubuntu24.0">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.weixing.me/uploads/2026/06/UbuntuOs.jpg">
+<meta property="article:published_time" content="2026-06-20T15:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-21T05:24:57.515Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="Ubuntu24.04LTS">
+<meta property="article:tag" content="双系统装机">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.weixing.me/uploads/2026/06/UbuntuOs.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "成功安装Windows11+Ubuntu24.04 LTS 双系统",
+  "url": "https://www.weixing.me/posts/20260620-windows11-ubuntu24.04lts-install-shuangxitong/",
+  "image": "https://www.weixing.me/uploads/2026/06/UbuntuOs.jpg",
+  "datePublished": "2026-06-20T15:00:00.000Z",
+  "dateModified": "2026-06-21T05:24:57.515Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "WEIXING.ME",
+      "url": "https://www.weixing.me"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/posts/20260620-windows11-ubuntu24.04lts-install-shuangxitong/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '成功安装Windows11+Ubuntu24.04 LTS 双系统',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><style>#footer{background-color:#2c3e50!important}</style><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">354</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">717</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://shici.weixing.me/"><i class="fa-fw fas fa-feather-alt"></i><span> 诗词</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/uploads/2026/06/UbuntuOs.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a><a class="nav-page-title" href="/"><span class="site-name">成功安装Windows11+Ubuntu24.04 LTS 双系统</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://shici.weixing.me/"><i class="fa-fw fas fa-feather-alt"></i><span> 诗词</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">成功安装Windows11+Ubuntu24.04 LTS 双系统</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-20T15:00:00.000Z" title="发表于 2026-06-20 23:00:00">2026-06-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-06-21T05:24:57.515Z" title="更新于 2026-06-21 13:24:57">2026-06-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>近期帮助朋友开发一个平台，windows系统在跑项目时总是有各种环境和Linux服务器不兼容的问题，于是准备安装Windows11+Ubuntu24.04 LTS 双系统。</p>
+<h3 id="一、前期准备工具"><a href="#一、前期准备工具" class="headerlink" title="一、前期准备工具"></a>一、前期准备工具</h3><p>1、U盘：≥8GB 空白U盘，优先USB3.0接口，读写速度更快，装机耗时更短</p>
+<p>2、网络：稳定有线&#x2F;WiFi，用于下载系统镜像、后期装机驱动</p>
+<h3 id="二、工具-镜像下载地址（官方无毒）"><a href="#二、工具-镜像下载地址（官方无毒）" class="headerlink" title="二、工具+镜像下载地址（官方无毒）"></a>二、工具+镜像下载地址（官方无毒）</h3><p>1、<strong>Ubuntu24.04镜像下载</strong> 官网地址：<a target="_blank" rel="noopener" href="https://ubuntu.com/download/desktop">Ubuntu官方桌面版下载</a> 选择 <strong>Ubuntu 24.04 LTS Desktop</strong>，后缀.iso镜像，不要下载服务器版</p>
+<p>2、<strong>启动盘制作工具 Rufus</strong> 官网地址：<a target="_blank" rel="noopener" href="https://rufus.ie/">Rufus官方下载</a> 推荐版本：4.13 稳定版，无广告、无捆绑、适配UEFI双系统</p>
+<h3 id="三、Rufus制作Ubuntu24-04启动U盘"><a href="#三、Rufus制作Ubuntu24-04启动U盘" class="headerlink" title="三、Rufus制作Ubuntu24.04启动U盘"></a>三、Rufus制作Ubuntu24.04启动U盘</h3><p>1、 插入备好U盘，右键管理员身份打开Rufus，避免权限写入失败</p>
+<p>2、设备选项：下拉选中自己的U盘（核对容量，选错会清空硬盘）</p>
+<p>3、引导选择：点击【选择】，选中下载好的Ubuntu24.04 ISO镜像文件</p>
+<p>4、 分区方案：固定选择 <strong>GPT</strong>；目标系统类型：<strong>UEFI(非CSM)</strong>，适配Win11原厂分区</p>
+<p>5.、文件系统：默认FAT32，簇大小默认即可，无需修改</p>
+<p>6、底部高级选项：取消【添加修复文件】，勾选【使用ISO镜像模式写入】，最大限度保留系统原生引导</p>
+<p>7、点击右下角【开始】，弹窗全部确认点击【确定】，等待5-8分钟写入完成，提示就绪后安全弹出U盘</p>
+<h3 id="四、Windows11磁盘管理压缩分区"><a href="#四、Windows11磁盘管理压缩分区" class="headerlink" title="四、Windows11磁盘管理压缩分区"></a>四、Windows11磁盘管理压缩分区</h3><p>原理：必须提前在Windows划分空白空间，Ubuntu占用，不可安装在Windows已有分区内。</p>
+<p>1、 Win11桌面右键左下角开始菜单 → 点击【磁盘管理】</p>
+<p>2、找到系统硬盘，识别特征：带有 <strong>EFI系统分区</strong>、GPT分区表</p>
+<p>3、选中剩余大容量空闲分区，右键【压缩卷】</p>
+<p>4、压缩空间填写：<strong>157200 MB</strong>（150GB），点击压缩</p>
+<p>5、压缩完成后，出现<strong>黑色未分配空间</strong>，禁止右键新建简单卷，保持空白即可！</p>
+<p>红线避坑：千万不要格式化、分配盘符，一旦新建分区，Ubuntu无法识别空闲空间，会破坏Windows引导！</p>
+<h3 id="五、Ubuntu24-04LTS-桌面安装"><a href="#五、Ubuntu24-04LTS-桌面安装" class="headerlink" title="五、Ubuntu24.04LTS 桌面安装"></a>五、Ubuntu24.04LTS 桌面安装</h3><p>本小节为装机核心，重点标注分区、引导位置两大红线，照着点击，不会弄坏Windows系统。</p>
+<h4 id="第一步：U盘启动进入安装界面"><a href="#第一步：U盘启动进入安装界面" class="headerlink" title="第一步：U盘启动进入安装界面"></a>第一步：U盘启动进入安装界面</h4><p>1、插入做好的启动U盘，重启电脑</p>
+<p>2、开机连续按 <strong>F11</strong> 调出微星快捷启动菜单</p>
+<p>3、选择选项：<strong>UEFI: 你的U盘品牌</strong>，禁止选择Legacy开头U盘</p>
+<p>4、进入Ubuntu紫色安装主页</p>
+<h4 id="第二步：基础界面配置（无脑下一步）"><a href="#第二步：基础界面配置（无脑下一步）" class="headerlink" title="第二步：基础界面配置（无脑下一步）"></a>第二步：基础界面配置（无脑下一步）</h4><p>1、语言：左侧下滑选择【简体中文】→ 点击【安装Ubuntu】</p>
+<p>2、键盘布局：默认汉语(中国) → 下一步</p>
+<p>3、网络设置：连接有线&#x2F;WiFi，<strong>两个勾选全部打勾</strong> ✅ 安装时下载更新 ✅ 安装第三方图形、声卡、硬件驱动</p>
+<p>4、安装类型【重中之重】：选择 <strong>其他选项(手动分区)</strong> ❌ 禁止选择：安装Ubuntu alongside Windows（自动分区破坏Win引导）</p>
+<h4 id="第三步：150GB未分配空间手动分区（照搬大小即可）"><a href="#第三步：150GB未分配空间手动分区（照搬大小即可）" class="headerlink" title="第三步：150GB未分配空间手动分区（照搬大小即可）"></a>第三步：150GB未分配空间手动分区（照搬大小即可）</h4><p>选中页面底部黑色【未分配】空间，依次点击【+】新建分区，顺序不能乱：</p>
+<p>优点：单独划分<code>/home</code>分区，以后重装 Ubuntu 不会丢失项目代码、大模型文件</p>
+<p>1、安装类型页面选择「手动分区」，进入磁盘界面<br>2、找到磁盘 0 下<strong>150GB 未分配空间</strong>，点左下角「+」新建 3 个分区：<br>    1）<strong>交换分区 swap</strong><br>        大小：16G 内存填<code>16384MB</code>；32G 内存填<code>8192MB</code>，用途选择「交换空间」<br>    2） <strong>根分区 &#x2F;</strong><br>        大小：<code>60000MB</code>，文件系统<code>ext4</code>，挂载点选 <code>/</code><br>        存放系统、PHP&#x2F;Node&#x2F;MySQL 环境、Docker 镜像、显卡驱动<br>    3）<strong>&#x2F;home 数据分区</strong><br>        剩余全部空间（约 80GB），文件系统<code>ext4</code>，挂载点 <code>/home</code><br>        存放项目源码、本地大模型、数据库备份，重装系统仅格式化根分区，此分区数据保留<br>3、页面底部「用于安装引导程序的设备」下拉选择<strong>磁盘 0</strong>（整块硬盘，共用 Windows 自带 EFI 分区）<br>4、 确认分区后点击下一步，继续时区、用户名配置</p>
+<h5 id="⚠️-关键禁止操作"><a href="#⚠️-关键禁止操作" class="headerlink" title="⚠️ 关键禁止操作"></a>⚠️ 关键禁止操作</h5><ul>
+<li>不要右键这块 150GB 未分配空间「新建简单卷」，会变回 Windows NTFS 分区，Ubuntu 无法识别；</li>
+<li>全程禁止删除 &#x2F; 格式化 C 盘、D 盘，否则 Windows 系统损坏；</li>
+<li>引导设备务必选整块磁盘<code>磁盘0</code>，不要单独选分区，避免开机无双系统启动菜单。</li>
+</ul>
+<h4 id="第四步：引导安装位置（决定能否双系统开机）"><a href="#第四步：引导安装位置（决定能否双系统开机）" class="headerlink" title="第四步：引导安装位置（决定能否双系统开机）"></a>第四步：引导安装位置（决定能否双系统开机）</h4><p>页面最下方：<strong>用于安装引导程序的设备</strong></p>
+<p>下拉选择：带有 <strong>windows boot manager</strong> 的EFI分区，<strong>绝对不要选U盘</strong></p>
+<h4 id="第五步：收尾安装设置"><a href="#第五步：收尾安装设置" class="headerlink" title="第五步：收尾安装设置"></a>第五步：收尾安装设置</h4><p>1、 点击【现在安装】，弹窗确认写入磁盘，点击继续</p>
+<p>2、地区时区：选择上海，下一步</p>
+<p>3、账号设置：用户名、自定义主机名，设置开机密码</p>
+<p>4、等待系统拷贝文件10分钟，安装完成拔掉U盘，点击重启</p>
+<h4 id="✅-装机完成效果"><a href="#✅-装机完成效果" class="headerlink" title="✅ 装机完成效果"></a>✅ 装机完成效果</h4><p>重启自动进入Grub开机选择界面，可自由切换：Windows11 &#x2F; Ubuntu24.04，双系统安装完毕。</p>
+<p><img src="/uploads/2026/06/myUbuntuDesk.png" alt="我的Ubuntu电脑桌面"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.weixing.me">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.weixing.me/posts/20260620-windows11-ubuntu24.04lts-install-shuangxitong/">https://www.weixing.me/posts/20260620-windows11-ubuntu24.04lts-install-shuangxitong/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.weixing.me" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Ubuntu24-04LTS/">Ubuntu24.04LTS</a><a class="post-meta__tags" href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E8%A3%85%E6%9C%BA/">双系统装机</a></div><div class="post-share"><div class="social-share" data-image="/uploads/2026/06/UbuntuOs.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/posts/20260607-ershi-chunqiu-shaonian-bufu-dangnian/" title="二十春秋，少年不复当年——高考的一些感悟"><img class="cover" src="/uploads/2026/06/houzhong.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">二十春秋，少年不复当年——高考的一些感悟</div></div><div class="info-2"><div class="info-item-1">  廿载弹指一挥间，校园光景未曾迁。韶华一去无寻处，不负流年忆少年。今天是2026年的6月7日，高考第一天，算了下时间，距离我高考已经二十年了，不禁唏嘘，时间真是把杀猪刀，从风华正茂不懂世事的少年，变成了已过半生碌碌无为的中年大叔，再过几年孩子都要参加高考了，时间过的是真快！！！上午带闺女去了一趟徐州市高级中学高考考点，有警察维持秩序，家长有序排队等待接孩子，很多家长手里拿着向日葵，代表着一举夺魁。在门口待了一会，拍了几张照片，想起了自己2005年高考的往事，那时是第一次参加高考，高考前夕住进了表弟在这附近租的房子内，妈妈把我领到地方就回家了，留我自己在这里。高考前一天下午自己看考场，准备考试用品，然后就睡觉等待明天的考试，那时也是真傻，记得听别人说吃维生素C好，能增加抵抗力，有利于高考的发挥，我就在药店买了维生素C银翘片，高考睡觉前吃了1粒，一夜睡的很香，高考第一天上午吃了1粒，考试的时候也睡的很香，后来才知道维生素C银翘片石治感冒的，吃了会让人发困。记得很清楚，考完语文人家都说语文好考，作文是啥啥啥题目，我是什么都不记得，就连现在都不知道当年高考作文是啥。哎，当时是真傻，家里...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">354</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">717</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text">一、前期准备工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%B7%A5%E5%85%B7-%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%EF%BC%88%E5%AE%98%E6%96%B9%E6%97%A0%E6%AF%92%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">二、工具+镜像下载地址（官方无毒）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81Rufus%E5%88%B6%E4%BD%9CUbuntu24-04%E5%90%AF%E5%8A%A8U%E7%9B%98"><span class="toc-number">3.</span> <span class="toc-text">三、Rufus制作Ubuntu24.04启动U盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81Windows11%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86%E5%8E%8B%E7%BC%A9%E5%88%86%E5%8C%BA"><span class="toc-number">4.</span> <span class="toc-text">四、Windows11磁盘管理压缩分区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81Ubuntu24-04LTS-%E6%A1%8C%E9%9D%A2%E5%AE%89%E8%A3%85"><span class="toc-number">5.</span> <span class="toc-text">五、Ubuntu24.04LTS 桌面安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9AU%E7%9B%98%E5%90%AF%E5%8A%A8%E8%BF%9B%E5%85%A5%E5%AE%89%E8%A3%85%E7%95%8C%E9%9D%A2"><span class="toc-number">5.1.</span> <span class="toc-text">第一步：U盘启动进入安装界面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%95%8C%E9%9D%A2%E9%85%8D%E7%BD%AE%EF%BC%88%E6%97%A0%E8%84%91%E4%B8%8B%E4%B8%80%E6%AD%A5%EF%BC%89"><span class="toc-number">5.2.</span> <span class="toc-text">第二步：基础界面配置（无脑下一步）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A150GB%E6%9C%AA%E5%88%86%E9%85%8D%E7%A9%BA%E9%97%B4%E6%89%8B%E5%8A%A8%E5%88%86%E5%8C%BA%EF%BC%88%E7%85%A7%E6%90%AC%E5%A4%A7%E5%B0%8F%E5%8D%B3%E5%8F%AF%EF%BC%89"><span class="toc-number">5.3.</span> <span class="toc-text">第三步：150GB未分配空间手动分区（照搬大小即可）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%9A%A0%EF%B8%8F-%E5%85%B3%E9%94%AE%E7%A6%81%E6%AD%A2%E6%93%8D%E4%BD%9C"><span class="toc-number">5.3.1.</span> <span class="toc-text">⚠️ 关键禁止操作</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%BC%95%E5%AF%BC%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%EF%BC%88%E5%86%B3%E5%AE%9A%E8%83%BD%E5%90%A6%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%BC%80%E6%9C%BA%EF%BC%89"><span class="toc-number">5.4.</span> <span class="toc-text">第四步：引导安装位置（决定能否双系统开机）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E6%94%B6%E5%B0%BE%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE"><span class="toc-number">5.5.</span> <span class="toc-text">第五步：收尾安装设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%9C%85-%E8%A3%85%E6%9C%BA%E5%AE%8C%E6%88%90%E6%95%88%E6%9E%9C"><span class="toc-number">5.6.</span> <span class="toc-text">✅ 装机完成效果</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
