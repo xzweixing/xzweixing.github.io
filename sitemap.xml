@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20110403-song-yezaiyao-sunnan/</loc>
+    <loc>https://www.weixing.me/posts/20110405-seven-deadly-sins/</loc>
     
     <lastmod>2026-05-31</lastmod>
     
@@ -200,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20110405-seven-deadly-sins/</loc>
+    <loc>https://www.weixing.me/posts/20110403-song-yezaiyao-sunnan/</loc>
     
     <lastmod>2026-05-31</lastmod>
     
@@ -236,7 +236,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20110519-what-is-this-web/</loc>
+    <loc>https://www.weixing.me/posts/20110520-beicaiji/</loc>
     
     <lastmod>2026-05-31</lastmod>
     
@@ -245,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20110520-beicaiji/</loc>
+    <loc>https://www.weixing.me/posts/20110519-what-is-this-web/</loc>
     
     <lastmod>2026-05-31</lastmod>
     
@@ -335,7 +335,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20110920-why-programmerstechnology-is-low-in-china/</loc>
+    <loc>https://www.weixing.me/posts/20111006-steve-jobs-passed-away-today/</loc>
     
     <lastmod>2026-05-31</lastmod>
     
@@ -344,7 +344,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20111006-steve-jobs-passed-away-today/</loc>
+    <loc>https://www.weixing.me/posts/20110920-why-programmerstechnology-is-low-in-china/</loc>
     
     <lastmod>2026-05-31</lastmod>
     
@@ -425,6 +425,15 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/posts/20120914-geyusen-come-on/</loc>
+    
+    <lastmod>2026-05-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/posts/20120909-jiaoshijie-zhufuyu/</loc>
     
     <lastmod>2026-05-31</lastmod>
@@ -435,15 +444,6 @@
   
   <url>
     <loc>https://www.weixing.me/posts/20120914-baidu-hi-mianfeisong-mingxinpian/</loc>
-    
-    <lastmod>2026-05-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/posts/20120914-geyusen-come-on/</loc>
     
     <lastmod>2026-05-31</lastmod>
     
@@ -506,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20121216-bloger-darren-story/</loc>
+    <loc>https://www.weixing.me/posts/20121221-2012-12-21-end/</loc>
     
     <lastmod>2026-05-31</lastmod>
     
@@ -515,7 +515,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20121221-2012-12-21-end/</loc>
+    <loc>https://www.weixing.me/posts/20121216-bloger-darren-story/</loc>
     
     <lastmod>2026-05-31</lastmod>
     
@@ -1469,7 +1469,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20190422-wp-all-export-pro-2xml-csv-excel-download/</loc>
+    <loc>https://www.weixing.me/posts/20190422-poedit-soft-wordpress-plus-language-zh_cn/</loc>
     
     <lastmod>2019-04-22</lastmod>
     
@@ -1478,7 +1478,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20190422-poedit-soft-wordpress-plus-language-zh_cn/</loc>
+    <loc>https://www.weixing.me/posts/20190422-wp-all-export-pro-2xml-csv-excel-download/</loc>
     
     <lastmod>2019-04-22</lastmod>
     
@@ -1514,15 +1514,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20190331-wordpress-global-wpdb-database-code/</loc>
-    
-    <lastmod>2019-03-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/posts/20190331-wordpress-warning-missing-argument-2-for-wpdbprepare-solution/</loc>
     
     <lastmod>2019-03-31</lastmod>
@@ -1533,6 +1524,15 @@
   
   <url>
     <loc>https://www.weixing.me/posts/20190331-wordpress-wp_query-term-parameters/</loc>
+    
+    <lastmod>2019-03-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/posts/20190331-wordpress-global-wpdb-database-code/</loc>
     
     <lastmod>2019-03-31</lastmod>
     
@@ -2315,7 +2315,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20110624-float-div-zishiyingwenti/</loc>
+    <loc>https://www.weixing.me/posts/20110624-google-delete-bad-link/</loc>
     
     <lastmod>2011-06-24</lastmod>
     
@@ -2324,7 +2324,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20110624-google-delete-bad-link/</loc>
+    <loc>https://www.weixing.me/posts/20110624-float-div-zishiyingwenti/</loc>
     
     <lastmod>2011-06-24</lastmod>
     
@@ -2396,7 +2396,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20110510-javascript-check-browse-type/</loc>
+    <loc>https://www.weixing.me/posts/20110510-onfocus-delete-dashed-border/</loc>
     
     <lastmod>2011-05-10</lastmod>
     
@@ -2405,7 +2405,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20110510-onfocus-delete-dashed-border/</loc>
+    <loc>https://www.weixing.me/posts/20110510-javascript-check-browse-type/</loc>
     
     <lastmod>2011-05-10</lastmod>
     
@@ -2549,7 +2549,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20110319-share-your-web-article-to-baidu-to-add-your-web-weight/</loc>
+    <loc>https://www.weixing.me/posts/20110319-ten-baidu-site-stats-code/</loc>
     
     <lastmod>2011-03-19</lastmod>
     
@@ -2558,7 +2558,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20110319-ten-baidu-site-stats-code/</loc>
+    <loc>https://www.weixing.me/posts/20110319-share-your-web-article-to-baidu-to-add-your-web-weight/</loc>
     
     <lastmod>2011-03-19</lastmod>
     
@@ -3125,7 +3125,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20100906-2/</loc>
+    <loc>https://www.weixing.me/posts/20100906-1/</loc>
     
     <lastmod>2010-09-06</lastmod>
     
@@ -3134,7 +3134,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20100906/</loc>
+    <loc>https://www.weixing.me/posts/20100906-2/</loc>
     
     <lastmod>2010-09-06</lastmod>
     
@@ -3152,7 +3152,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20100906-1/</loc>
+    <loc>https://www.weixing.me/posts/20100906/</loc>
     
     <lastmod>2010-09-06</lastmod>
     
@@ -3161,7 +3161,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20100905-1/</loc>
+    <loc>https://www.weixing.me/posts/20100905-2/</loc>
     
     <lastmod>2010-09-05</lastmod>
     
@@ -3179,7 +3179,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20100905/</loc>
+    <loc>https://www.weixing.me/posts/20100905-1/</loc>
     
     <lastmod>2010-09-05</lastmod>
     
@@ -3188,7 +3188,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/posts/20100905-2/</loc>
+    <loc>https://www.weixing.me/posts/20100905/</loc>
     
     <lastmod>2010-09-05</lastmod>
     
@@ -3242,6 +3242,34 @@
 
   
   <url>
+    <loc>https://www.weixing.me/tags/%E5%8F%91%E5%B8%83%E4%BC%9A/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/iPod/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%8B%B9%E6%9E%9C/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/2010/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -3270,28 +3298,28 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E5%8F%91%E5%B8%83%E4%BC%9A/</loc>
+    <loc>https://www.weixing.me/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/iPod/</loc>
+    <loc>https://www.weixing.me/tags/IE6/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E8%8B%B9%E6%9E%9C/</loc>
+    <loc>https://www.weixing.me/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/2010/</loc>
+    <loc>https://www.weixing.me/tags/max-height/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3340,34 +3368,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/IE6/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/max-height/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/google-hacking/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -3375,14 +3375,14 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/javascript/</loc>
+    <loc>https://www.weixing.me/tags/%E5%85%BC%E5%AE%B9%E6%80%A7%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/XML/</loc>
+    <loc>https://www.weixing.me/tags/%E8%A1%A8%E7%8E%B0%E5%B1%82%E9%80%BB%E8%BE%91/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3390,27 +3390,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E4%B8%9A%E5%86%85%E6%A0%87%E5%87%86/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/UE/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3445,6 +3424,41 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/javascript/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/XML/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E4%B8%9A%E5%86%85%E6%A0%87%E5%87%86/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/UE/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E8%87%AA%E8%BA%AB%E5%AE%9A%E4%BD%8D/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -3452,14 +3466,28 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E5%85%BC%E5%AE%B9%E6%80%A7%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://www.weixing.me/tags/input/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E8%A1%A8%E7%8E%B0%E5%B1%82%E9%80%BB%E8%BE%91/</loc>
+    <loc>https://www.weixing.me/tags/onclick/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E9%93%BE%E6%8E%A5/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/button/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3487,20 +3515,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/UI/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%9B%BD%E5%A4%96%E7%BD%91%E7%AB%99/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/web-config/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -3516,6 +3530,13 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E8%B0%83%E8%AF%95/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/UI/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3544,6 +3565,13 @@
   
   <url>
     <loc>https://www.weixing.me/tags/UED/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%9B%BD%E5%A4%96%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3586,62 +3614,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E6%90%9E%E7%AC%91/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/input/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/onclick/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E9%93%BE%E6%8E%A5/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/button/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%AF%95%E4%B8%9A%E5%90%8E/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%95%99%E5%B8%88%E8%8A%82/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%8A%82%E6%97%A5%E5%BF%AB%E4%B9%90/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%AF%95%E4%B8%9A%E4%BA%86/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3697,6 +3669,34 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/%E6%AF%95%E4%B8%9A%E5%90%8E/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%95%99%E5%B8%88%E8%8A%82/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%8A%82%E6%97%A5%E5%BF%AB%E4%B9%90/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%AF%95%E4%B8%9A%E4%BA%86/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E5%8E%9F%E5%88%9B/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -3719,41 +3719,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/Break-Your-Heart/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%B9%BD%E9%BB%98/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E7%BB%8F%E5%85%B8/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E7%9F%AD%E4%BF%A1/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E4%B8%AD%E7%A7%8B%E7%A5%9D%E7%A6%8F/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E7%9C%9F%E6%8C%9A/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3803,6 +3768,41 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%B9%BD%E9%BB%98/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E7%BB%8F%E5%85%B8/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E7%9F%AD%E4%BF%A1/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E4%B8%AD%E7%A7%8B%E7%A5%9D%E7%A6%8F/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E7%9C%9F%E6%8C%9A/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4026,20 +4026,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/selected/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/option/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/CNN%E4%B8%93%E8%AE%BF/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -4054,6 +4040,20 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/selected/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/option/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E5%B1%9E%E6%80%A7/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -4062,27 +4062,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/vertical-align/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%BD%9C%E4%BC%8F/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%81%8C%E4%B8%9A%E9%98%B6%E6%AE%B5/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4110,14 +4089,77 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E8%83%8C%E6%99%AF/</loc>
+    <loc>https://www.weixing.me/tags/PS/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E9%80%8F%E6%98%8E/</loc>
+    <loc>https://www.weixing.me/tags/%E6%96%87%E5%AD%97%E6%B8%90%E5%8F%98%E8%89%B2/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/Photoshop/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%BD%9C%E4%BC%8F/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%81%8C%E4%B8%9A%E9%98%B6%E6%AE%B5/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%83%85%E4%B9%A6/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E5%B8%88/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/overflow-hidden/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E4%B8%8B%E6%96%B9%E7%A9%BA%E7%99%BD/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/background/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4152,90 +4194,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/PS/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%96%87%E5%AD%97%E6%B8%90%E5%8F%98%E8%89%B2/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/Photoshop/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%83%85%E4%B9%A6/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E5%B8%88/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E7%AD%B7%E5%AD%90%E5%85%84%E5%BC%9F/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/MV/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/11%E5%BA%A6%E9%9D%92%E6%98%A5/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%80%81%E7%94%B7%E5%AD%A9/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/overflow-hidden/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E4%B8%8B%E6%96%B9%E7%A9%BA%E7%99%BD/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/background/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/%E5%88%86%E6%88%905%E4%BB%BD/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -4250,7 +4208,28 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/%E7%AD%B7%E5%AD%90%E5%85%84%E5%BC%9F/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E6%AD%8C%E6%9B%B2/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%80%81%E7%94%B7%E5%AD%A9/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/IIS/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4278,7 +4257,14 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/IIS/</loc>
+    <loc>https://www.weixing.me/tags/MV/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/11%E5%BA%A6%E9%9D%92%E6%98%A5/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4320,6 +4306,20 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/%E8%83%8C%E6%99%AF/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E9%80%8F%E6%98%8E/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E5%9B%BE%E6%96%87/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -4342,34 +4342,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/MP3/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%A7%86%E5%90%AC/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%B0%8F%E6%97%A5%E6%9C%AC%E5%90%AC%E7%9D%80/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%AD%8C%E8%AF%8D/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4405,6 +4377,34 @@
   
   <url>
     <loc>https://www.weixing.me/tags/css3/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/MP3/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%A7%86%E5%90%AC/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%B0%8F%E6%97%A5%E6%9C%AC%E5%90%AC%E7%9D%80/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%AD%8C%E8%AF%8D/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4453,7 +4453,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E5%B9%BD%E9%BB%98%E7%9D%BF%E6%99%BA/</loc>
+    <loc>https://www.weixing.me/tags/%E5%8F%B2%E8%AE%B0%C2%B7%E5%85%AB%E9%9B%B6%E5%90%8E%E4%BC%A0/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4474,7 +4474,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E5%8F%B2%E8%AE%B0%C2%B7%E5%85%AB%E9%9B%B6%E5%90%8E%E4%BC%A0/</loc>
+    <loc>https://www.weixing.me/tags/%E5%B9%BD%E9%BB%98%E7%9D%BF%E6%99%BA/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4565,20 +4565,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/Masonry/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%8F%92%E4%BB%B6/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/%E5%A5%8B%E6%96%97/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -4635,21 +4621,21 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/Masonry/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%8F%92%E4%BB%B6/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/prototype-js/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/jquery-Ajax%E8%8E%B7%E5%BE%97%E5%90%8E%E5%8F%B0%E8%BF%94%E5%9B%9E%E5%80%BC/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/ajax/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4684,6 +4670,20 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/jquery-Ajax%E8%8E%B7%E5%BE%97%E5%90%8E%E5%8F%B0%E8%BF%94%E5%9B%9E%E5%80%BC/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/ajax/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E4%B8%89%E5%A2%83%E7%95%8C/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -4712,70 +4712,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/asp/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/%E5%86%B2%E7%AA%81/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%A0%87%E7%AD%BE%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/bloginfo/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%8E%B7%E5%BE%97%E6%9F%90%E5%88%86%E7%B1%BB%E4%B8%8B%E7%9A%84%E6%96%87%E7%AB%A0/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/seo/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E9%BB%91%E9%93%BE/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4796,7 +4733,63 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/demo%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</loc>
+    <loc>https://www.weixing.me/tags/asp/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%8E%B7%E5%BE%97%E6%9F%90%E5%88%86%E7%B1%BB%E4%B8%8B%E7%9A%84%E6%96%87%E7%AB%A0/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%A0%87%E7%AD%BE%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/bloginfo/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/seo/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E9%BB%91%E9%93%BE/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4831,6 +4824,13 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/demo%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -4839,6 +4839,13 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E4%B8%AA%E6%80%A7%E5%8C%96%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/javascript%E8%8E%B7%E5%BE%97%E7%BD%91%E9%A1%B5URL/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4866,13 +4873,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/javascript%E8%8E%B7%E5%BE%97%E7%BD%91%E9%A1%B5URL/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/%E8%85%BE%E8%AE%AF/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -4881,13 +4881,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/iWeibo/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E7%99%BE%E5%BA%A6%E7%BB%8F%E9%AA%8C/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4950,6 +4943,13 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/%E7%99%BE%E5%BA%A6%E7%BB%8F%E9%AA%8C/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E6%B8%85%E7%90%86%E7%AC%94%E8%AE%B0%E6%9C%AC/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -4965,6 +4965,20 @@
   
   <url>
     <loc>https://www.weixing.me/tags/gfirefox4%E5%B0%9D%E9%B2%9C/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%B0%B7%E6%AD%8C%E7%A9%BF%E8%B6%8A/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%84%9A%E4%BA%BA%E8%8A%82/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4992,35 +5006,14 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E8%B0%B7%E6%AD%8C%E7%A9%BF%E8%B6%8A/</loc>
+    <loc>https://www.weixing.me/tags/%E4%B8%83%E5%AE%97%E7%BD%AA/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E6%84%9A%E4%BA%BA%E8%8A%82/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%91%A8%E6%9D%B0%E4%BC%A6/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%A4%A9%E5%9C%B0%E4%B8%80%E6%96%97/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E7%A7%91%E6%AF%94/</loc>
+    <loc>https://www.weixing.me/tags/%E6%AC%B2%E6%9C%9B/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5048,28 +5041,21 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E4%B8%83%E5%AE%97%E7%BD%AA/</loc>
+    <loc>https://www.weixing.me/tags/%E5%91%A8%E6%9D%B0%E4%BC%A6/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E6%AC%B2%E6%9C%9B/</loc>
+    <loc>https://www.weixing.me/tags/%E5%A4%A9%E5%9C%B0%E4%B8%80%E6%96%97/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E4%BB%BF%E8%85%BE%E8%AE%AFCDCwordpress%E4%B8%BB%E9%A2%98/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%85%BE%E8%AE%AFCDC/</loc>
+    <loc>https://www.weixing.me/tags/%E7%A7%91%E6%AF%94/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5091,6 +5077,20 @@
   
   <url>
     <loc>https://www.weixing.me/tags/googl/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E4%BB%BF%E8%85%BE%E8%AE%AFCDCwordpress%E4%B8%BB%E9%A2%98/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%85%BE%E8%AE%AFCDC/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5279,20 +5279,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E6%A8%A1%E6%9D%BF%E5%88%B6%E4%BD%9C/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/cocodaddy/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/png%E8%BD%ACico/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -5307,7 +5293,14 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E6%9C%89%E6%84%9F/</loc>
+    <loc>https://www.weixing.me/tags/%E6%A8%A1%E6%9D%BF%E5%88%B6%E4%BD%9C/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/cocodaddy/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5329,20 +5322,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E7%89%87%E5%B0%BE%E6%9B%B2/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%BF%94%E8%88%AA/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%9B%9E%E5%AE%B6/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5377,6 +5356,20 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/aleax/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%8F%90%E5%8D%87/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/onfocus-this-blur/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -5385,6 +5378,20 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E8%99%9A%E7%BA%BF%E8%BE%B9%E6%A1%86/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%BF%94%E8%88%AA/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%9B%9E%E5%AE%B6/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5412,14 +5419,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E7%96%91%E9%97%AE/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%A2%AB%E9%87%87%E9%9B%86%E4%BA%86/</loc>
+    <loc>https://www.weixing.me/tags/%E6%9C%89%E6%84%9F/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5434,34 +5434,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E8%A2%AB%E9%87%87%E9%9B%86/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/aleax/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%8F%90%E5%8D%87/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E7%A7%91%E6%8A%80%E5%9B%AD/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%9B%9E%E5%BD%92%E6%A0%A1%E5%9B%AD/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5496,14 +5468,28 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E5%BC%BA%E5%88%B6%E4%B8%8B%E8%BD%BD/</loc>
+    <loc>https://www.weixing.me/tags/%E7%96%91%E9%97%AE/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E9%87%8D%E5%AE%9A%E5%90%91/</loc>
+    <loc>https://www.weixing.me/tags/%E8%A2%AB%E9%87%87%E9%9B%86%E4%BA%86/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E7%A7%91%E6%8A%80%E5%9B%AD/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%9B%9E%E5%BD%92%E6%A0%A1%E5%9B%AD/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5538,6 +5524,27 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/%E5%BC%BA%E5%88%B6%E4%B8%8B%E8%BD%BD/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E9%87%8D%E5%AE%9A%E5%90%91/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/back-to-top/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E5%8D%96%E7%9A%84%E4%B8%8D%E5%8F%AA%E6%98%AF%E8%B4%B1/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -5552,7 +5559,14 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/back-to-top/</loc>
+    <loc>https://www.weixing.me/tags/Microsoft-VBScript-%E8%BF%90%E8%A1%8C%E6%97%B6%E9%94%99%E8%AF%AF-800a01fa/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%88%A0%E9%99%A4%E6%AD%BB%E9%93%BE/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5567,20 +5581,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/float/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%88%A0%E9%99%A4%E6%AD%BB%E9%93%BE/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/Microsoft-VBScript-%E8%BF%90%E8%A1%8C%E6%97%B6%E9%94%99%E8%AF%AF-800a01fa/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5622,20 +5622,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E5%BE%90%E5%B7%9E%E4%BC%8F%E7%BE%8A%E8%8A%82/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E4%BC%8F%E7%BE%8A%E8%8A%82/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/%E7%BD%91%E9%A1%B5%E9%80%9F%E5%BA%A6%E5%9C%A8%E7%BA%BF%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -5644,6 +5630,20 @@
   
   <url>
     <loc>https://www.weixing.me/tags/Page-Speed/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%BE%90%E5%B7%9E%E4%BC%8F%E7%BE%8A%E8%8A%82/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E4%BC%8F%E7%BE%8A%E8%8A%82/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5748,6 +5748,13 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E5%B0%8F%E6%97%B6%E5%80%99/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -5769,7 +5776,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88/</loc>
+    <loc>https://www.weixing.me/tags/Strict%E5%92%8CTransitional-%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5791,13 +5798,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/Strict%E5%92%8CTransitional-%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -5923,34 +5923,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E4%B8%AD%E5%9B%BD%E7%A8%8B%E5%BA%8F%E5%91%98/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%8A%80%E6%9C%AF%E4%BD%8E/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/select%E7%9A%84text/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/select%E7%9A%84value/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/access/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -5972,6 +5944,20 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/select%E7%9A%84text/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/select%E7%9A%84value/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E4%B9%94%E5%B8%83%E6%96%AF%E5%8E%BB%E4%B8%96/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -5980,6 +5966,20 @@
   
   <url>
     <loc>https://www.weixing.me/tags/google-PR-%E6%B8%85%E7%A9%BA/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E4%B8%AD%E5%9B%BD%E7%A8%8B%E5%BA%8F%E5%91%98/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%8A%80%E6%9C%AF%E4%BD%8E/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6042,20 +6042,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E4%BC%81%E4%B8%9A%E4%B8%BB%E9%A2%98/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E4%BC%81%E4%B8%9A%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/%E4%B8%8B%E4%B8%80%E7%AF%87/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -6071,6 +6057,20 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E4%B8%8A%E4%B8%80%E7%AF%87/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E4%BC%81%E4%B8%9A%E4%B8%BB%E9%A2%98/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E4%BC%81%E4%B8%9A%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6154,13 +6154,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/iframe%E4%BC%A0%E5%80%BC/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/%E8%B4%AB%E5%9B%B0%E6%AF%8D%E4%BA%B2/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -6183,20 +6176,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E8%81%94%E9%80%9A/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E9%9A%94%E8%A1%8C%E6%8D%A2%E8%89%B2/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/table/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6238,6 +6217,13 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/iframe%E4%BC%A0%E5%80%BC/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E8%81%94%E9%80%9A%E5%8F%B7%E7%A0%81/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -6267,6 +6253,20 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E5%A5%B3%E4%BA%BA%E7%9A%84%E5%B9%B8%E7%A6%8F/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E9%9A%94%E8%A1%8C%E6%8D%A2%E8%89%B2/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/table/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6322,41 +6322,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E5%93%B2%E5%AD%A6/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%BD%BB%E4%BF%A1/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E4%BA%BA%E7%94%9F/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%A4%A7%E6%84%8F/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%B4%AA%E5%A9%AA/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/%E6%88%90%E5%8A%9F/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -6393,41 +6358,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E9%98%BF%E9%87%8C%E6%97%BA%E6%97%BA/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%A5%89%E7%8C%AE%E7%88%B1%E5%BF%83/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%BE%90%E5%B7%9E%E5%BF%97%E6%84%BF%E8%80%85%E4%BF%B1%E4%B9%90%E9%83%A8/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E7%B4%A7%E6%80%A5%E6%B1%82%E5%8A%A9/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%90%9C%E7%B4%A2%E6%8F%90%E7%A4%BA/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%8F%90%E7%A4%BA%E7%82%B9%E5%87%BB%E6%B6%88%E5%A4%B1/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6490,6 +6420,20 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/%E6%90%9C%E7%B4%A2%E6%8F%90%E7%A4%BA/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%8F%90%E7%A4%BA%E7%82%B9%E5%87%BB%E6%B6%88%E5%A4%B1/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E6%B8%85%E6%98%8E%E8%8A%82/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -6532,14 +6476,21 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E6%B1%89%E5%AD%97%E8%BD%AC%E6%8B%BC%E9%9F%B3/</loc>
+    <loc>https://www.weixing.me/tags/%E5%A5%89%E7%8C%AE%E7%88%B1%E5%BF%83/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/</loc>
+    <loc>https://www.weixing.me/tags/%E5%BE%90%E5%B7%9E%E5%BF%97%E6%84%BF%E8%80%85%E4%BF%B1%E4%B9%90%E9%83%A8/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E7%B4%A7%E6%80%A5%E6%B1%82%E5%8A%A9/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6554,6 +6505,20 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E8%B5%9A%E9%92%B1%E9%A6%96%E9%80%89/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%B1%89%E5%AD%97%E8%BD%AC%E6%8B%BC%E9%9F%B3/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6581,6 +6546,20 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/%E8%8C%83%E7%8E%AE%E7%90%AA/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%9C%80%E5%88%9D%E7%9A%84%E6%A2%A6%E6%83%B3/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E6%8E%A5%E6%94%B6%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -6602,6 +6581,20 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/S5830%E6%88%AA%E5%B1%8F/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E4%B8%89%E6%98%9F/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E9%AB%98%E6%B8%85%E4%B8%8B%E8%BD%BD/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -6616,14 +6609,35 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E8%8C%83%E7%8E%AE%E7%90%AA/</loc>
+    <loc>https://www.weixing.me/tags/%E5%93%B2%E5%AD%A6/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E6%9C%80%E5%88%9D%E7%9A%84%E6%A2%A6%E6%83%B3/</loc>
+    <loc>https://www.weixing.me/tags/%E8%BD%BB%E4%BF%A1/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E4%BA%BA%E7%94%9F/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%A4%A7%E6%84%8F/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%B4%AA%E5%A9%AA/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6638,20 +6652,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E7%94%B5%E5%8A%A8%E8%BD%A6%E7%94%B5%E6%B1%A0%E8%A2%AB%E7%9B%97/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/S5830%E6%88%AA%E5%B1%8F/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E4%B8%89%E6%98%9F/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6756,6 +6756,20 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/403-1%E9%94%99%E8%AF%AF/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%9B%9E%E5%88%B0%E6%AD%A3%E8%BD%A8/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E5%A4%A7%E5%85%A8/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -6777,20 +6791,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E5%9B%9E%E5%88%B0%E6%AD%A3%E8%BD%A8/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/403-1%E9%94%99%E8%AF%AF/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/%E4%B8%AD%E5%9B%BD%E6%95%99%E8%82%B2/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -6799,6 +6799,13 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E7%81%B0%E5%A7%91%E5%A8%98/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%AD%8C%E6%B5%B4%E6%A3%AE/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6833,13 +6840,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E6%AD%8C%E6%B5%B4%E6%A3%AE/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/iphone5/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -6855,6 +6855,13 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E7%88%B1%E7%96%AF/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%89%B2%E6%83%85%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6889,28 +6896,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E8%89%B2%E6%83%85%E7%BD%91%E7%AB%99/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/Chinese-Conversion/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E7%9C%BC%E7%A5%9E/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%96%9C%E6%AC%A2%E4%BD%A0/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6959,7 +6945,14 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://www.weixing.me/tags/%E7%9C%BC%E7%A5%9E/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%96%9C%E6%AC%A2%E4%BD%A0/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -6981,6 +6974,13 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E6%8A%A2%E6%B3%A8/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -7015,20 +7015,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E8%81%8C%E4%B8%9A%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%88%9B%E4%B8%9A%E6%95%85%E4%BA%8B/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/PowerV5/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -7044,20 +7030,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E4%B8%96%E7%95%8C%E6%9C%AB%E6%97%A5/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/O2O/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E7%A7%91%E6%8A%80/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -7085,6 +7057,20 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/%E8%81%8C%E4%B8%9A%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%88%9B%E4%B8%9A%E6%95%85%E4%BA%8B/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E5%A4%87%E6%A1%88%E9%93%BE%E6%8E%A5/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -7106,6 +7092,27 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/O2O/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E7%A7%91%E6%8A%80/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%9E%83%E5%9C%BEyunfile/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E4%B9%94%E5%B8%83%E6%96%AF/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -7114,6 +7121,27 @@
   
   <url>
     <loc>https://www.weixing.me/tags/CEO/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/4G/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/WIFI/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -7149,34 +7177,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%9E%83%E5%9C%BEyunfile/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/4G/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/WIFI/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -7267,20 +7267,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E5%BE%AE%E4%BF%A1/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E4%B8%AD%E7%A7%8B/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/%E5%88%9B%E6%84%8F/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -7302,28 +7288,14 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E6%88%91%E6%98%AF%E5%BF%97%E6%84%BF%E8%80%85/</loc>
+    <loc>https://www.weixing.me/tags/%E5%BE%AE%E4%BF%A1/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E7%A4%BC%E8%B5%9E/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%AF%97%E6%AD%8C/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%BF%97%E6%84%BF%E8%80%85/</loc>
+    <loc>https://www.weixing.me/tags/%E4%B8%AD%E7%A7%8B/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -7352,6 +7324,34 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E5%88%B7%E6%A6%9C/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E6%88%91%E6%98%AF%E5%BF%97%E6%84%BF%E8%80%85/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E7%A4%BC%E8%B5%9E/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%AF%97%E6%AD%8C/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%BF%97%E6%84%BF%E8%80%85/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -7449,27 +7449,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E5%85%AC%E4%BC%97%E8%B4%A6%E5%8F%B7/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%BE%AE%E8%90%A5%E9%94%80/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%BF%AB%E9%80%9F%E5%A2%9E%E5%8A%A0%E7%B2%89%E4%B8%9D/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/%E6%A2%A6%E6%83%B3/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -7491,6 +7470,34 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/%E8%87%B4%E5%AF%8C/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%85%AC%E4%BC%97%E8%B4%A6%E5%8F%B7/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%BE%AE%E8%90%A5%E9%94%80/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%BF%AB%E9%80%9F%E5%A2%9E%E5%8A%A0%E7%B2%89%E4%B8%9D/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E6%AF%95%E4%B8%9A%E5%AD%A3/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -7505,7 +7512,14 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E8%87%B4%E5%AF%8C/</loc>
+    <loc>https://www.weixing.me/tags/%E6%95%B2%E4%BB%A3%E7%A0%81/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -7527,20 +7541,6 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E5%A5%94%E8%B7%91%E5%90%A7/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%95%B2%E4%BB%A3%E7%A0%81/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -7624,20 +7624,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E8%8F%9C%E5%8D%95icon/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/wordpress-icon/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/%E8%AE%B8%E5%B7%8D/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -7653,6 +7639,27 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E7%94%9F%E6%B4%BB%E4%B8%8D%E6%AD%A2%E7%9C%BC%E5%89%8D%E7%9A%84%E8%8B%9F%E4%B8%94/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/Adminimize/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%8F%9C%E5%8D%95icon/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/wordpress-icon/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -7680,27 +7687,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/Adminimize/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%99%9A%E6%8B%9F%E6%89%93%E5%8D%B0%E6%9C%BA/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/Microsoft-XPS/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/%E6%A4%8D%E4%BF%9D%E6%97%A0%E4%BA%BA%E6%9C%BA/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -7716,6 +7702,20 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E6%A4%8D%E4%BF%9D/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%99%9A%E6%8B%9F%E6%89%93%E5%8D%B0%E6%9C%BA/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/Microsoft-XPS/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -7771,27 +7771,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E8%85%BE%E8%AE%AF%E5%A4%A7%E7%8E%8B%E5%8D%A1/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E5%A4%A7%E7%8E%8B%E8%B6%85%E7%BA%A7%E4%BC%9A%E5%91%98%E5%8D%A1/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/QQ%E8%B6%85%E7%BA%A7%E4%BC%9A%E5%91%98/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/https/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -7814,6 +7793,27 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E8%AF%81%E4%B9%A6/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%85%BE%E8%AE%AF%E5%A4%A7%E7%8E%8B%E5%8D%A1/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%A4%A7%E7%8E%8B%E8%B6%85%E7%BA%A7%E4%BC%9A%E5%91%98%E5%8D%A1/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/QQ%E8%B6%85%E7%BA%A7%E4%BC%9A%E5%91%98/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -7925,48 +7925,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/LNMP/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E9%98%BF%E9%87%8C%E4%BA%91ECS/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E8%85%BE%E8%AE%AF%E4%BA%91CVM/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/LAMP/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/Ubuntu/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -8037,6 +7995,48 @@
   </url>
   
   <url>
+    <loc>https://www.weixing.me/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/LNMP/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E9%98%BF%E9%87%8C%E4%BA%91ECS/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E8%85%BE%E8%AE%AF%E4%BA%91CVM/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/LAMP/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.weixing.me/tags/%E7%8E%8B%E8%8B%A5%E7%90%B3/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -8086,13 +8086,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/global-wpdb/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/wpdb-prepare/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -8108,6 +8101,41 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/global-wpdb/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/admin-ajax/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/functions/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/wp-ajax-nopriv/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/Poedit/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -8149,27 +8177,6 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/admin-ajax/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/functions/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/wp-ajax-nopriv/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/Python/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -8198,35 +8205,7 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/Poedit/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.weixing.me/tags/PageSpeed/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/Deepseek/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.weixing.me/tags/IGA%E8%82%BE%E7%97%85/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -8240,14 +8219,21 @@
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/Ubuntu24-04LTS/</loc>
+    <loc>https://www.weixing.me/tags/Deepseek/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E8%A3%85%E6%9C%BA/</loc>
+    <loc>https://www.weixing.me/tags/%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/IGA%E8%82%BE%E7%97%85/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -8269,6 +8255,20 @@
   
   <url>
     <loc>https://www.weixing.me/tags/%E4%BA%8C%E5%8D%81%E5%B9%B4/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/Ubuntu24-04LTS/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.weixing.me/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E8%A3%85%E6%9C%BA/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -8326,14 +8326,14 @@
 
   
   <url>
-    <loc>https://www.weixing.me/categories/coding/</loc>
+    <loc>https://www.weixing.me/categories/life/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.weixing.me/categories/life/</loc>
+    <loc>https://www.weixing.me/categories/coding/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
