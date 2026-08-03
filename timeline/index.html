@@ -1,0 +1,178 @@
+extends includes/layout.pug
+
+block content
+  #timeline-page
+    #article-container
+      //- 初始为空，由下方 JS 通过 API 动态填充
+
+    #timeline-loading(style="display:none;text-align:center;padding:20px;color:#999")
+      i.fas.fa-spinner.fa-spin
+      span  加载中...
+
+    #timeline-end(style="display:none;text-align:center;padding:20px;color:#999") —— 已经到底啦 ——
+
+    script.
+      (function () {
+        var container = document.getElementById('article-container');
+        var loadingEl = document.getElementById('timeline-loading');
+        var endEl = document.getElementById('timeline-end');
+        var page = 1;
+        var loading = false;
+        var ended = false;
+        var avatarUrl = '!{url_for(theme.avatar.img)}';
+        var authorName = '!{config.author}';
+
+        var nlRegex = new RegExp('\\n', 'g');
+        function escapeHtml(text) {
+          return text
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(nlRegex, '<br>');
+        }
+
+        function toggleExpand(btn) {
+          var wrap = btn.parentElement;
+          var full = wrap.querySelector('.tl-full');
+          var short = wrap.querySelector('.tl-short');
+          if (full.style.display === 'none') {
+            full.style.display = '';
+            short.style.display = 'none';
+            btn.textContent = '收起';
+          } else {
+            full.style.display = 'none';
+            short.style.display = '';
+            btn.textContent = '展开全文';
+          }
+        }
+
+        function buildCard(post) {
+          var item = document.createElement('div');
+          item.className = 'timeline-post-item';
+
+          var header = document.createElement('div');
+          header.className = 'timeline-post-header';
+
+          var avatarLink = document.createElement('a');
+          avatarLink.className = 'timeline-post-avatar';
+          avatarLink.title = post.created_at || '';
+          var avatarImg = document.createElement('img');
+          avatarImg.className = 'no-lightbox';
+          avatarImg.src = avatarUrl;
+          avatarImg.alt = authorName;
+          avatarLink.appendChild(avatarImg);
+
+          var info = document.createElement('div');
+          info.className = 'timeline-post-info';
+          var timeEl = document.createElement('time');
+          timeEl.className = 'timeline-post-date';
+          timeEl.textContent = post.created_at || '';
+          info.appendChild(timeEl);
+
+          header.appendChild(avatarLink);
+          header.appendChild(info);
+          item.appendChild(header);
+
+          var content = document.createElement('div');
+          content.className = 'timeline-post-content';
+
+          if (post.images && post.images.length) {
+            var gridDiv = document.createElement('div');
+            var count = post.images.length;
+            if (count === 1) gridDiv.className = 'timeline-img-grid tl-img-1';
+            else if (count === 2) gridDiv.className = 'timeline-img-grid tl-img-2';
+            else if (count === 3) gridDiv.className = 'timeline-img-grid tl-img-3';
+            else if (count === 4) gridDiv.className = 'timeline-img-grid tl-img-4';
+            else gridDiv.className = 'timeline-img-grid tl-img-grid';
+
+            var imgs = post.images.slice(0, 9);
+            imgs.forEach(function (url) {
+              var imgWrap = document.createElement('div');
+              imgWrap.className = 'timeline-img-grid-item';
+              var img = document.createElement('img');
+              img.src = url;
+              img.className = 'no-lightbox';
+              img.loading = 'lazy';
+              imgWrap.appendChild(img);
+              gridDiv.appendChild(imgWrap);
+            });
+            if (post.images.length > 9) {
+              var moreWrap = document.createElement('div');
+              moreWrap.className = 'timeline-img-grid-item timeline-img-more';
+              moreWrap.textContent = '+' + (post.images.length - 9);
+              gridDiv.appendChild(moreWrap);
+            }
+            content.appendChild(gridDiv);
+          }
+
+          var text = post.content || '';
+          if (text.length > 300) {
+            var textWrap = document.createElement('div');
+            textWrap.className = 'tl-text-wrap';
+
+            var shortDiv = document.createElement('div');
+            shortDiv.className = 'tl-short';
+            shortDiv.innerHTML = escapeHtml(text.substring(0, 300));
+
+            var fullDiv = document.createElement('div');
+            fullDiv.className = 'tl-full';
+            fullDiv.style.display = 'none';
+            fullDiv.innerHTML = escapeHtml(text);
+
+            var expandBtn = document.createElement('a');
+            expandBtn.className = 'tl-expand-btn';
+            expandBtn.href = 'javascript:void(0)';
+            expandBtn.textContent = '展开全文';
+            expandBtn.onclick = function () { toggleExpand(this); };
+
+            textWrap.appendChild(shortDiv);
+            textWrap.appendChild(fullDiv);
+            textWrap.appendChild(expandBtn);
+            content.appendChild(textWrap);
+          } else {
+            var textDiv = document.createElement('div');
+            textDiv.className = 'tl-text';
+            textDiv.innerHTML = escapeHtml(text);
+            content.appendChild(textDiv);
+          }
+
+          item.appendChild(content);
+          return item;
+        }
+
+        function loadPage() {
+          if (loading || ended) return;
+          loading = true;
+          loadingEl.style.display = '';
+
+          fetch('https://api.weixing.me/posts?page=' + page + '&size=10')
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+              (data.posts || []).forEach(function (post) {
+                container.appendChild(buildCard(post));
+              });
+              page++;
+              if (!data.has_more) {
+                ended = true;
+                endEl.style.display = '';
+              }
+              loadingEl.style.display = 'none';
+              loading = false;
+            })
+            .catch(function () {
+              loadingEl.style.display = 'none';
+              loading = false;
+            });
+        }
+
+        loadPage();
+
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting && !loading && !ended) loadPage();
+            });
+          }, { rootMargin: '600px' });
+          observer.observe(loadingEl);
+        }
+      })();
