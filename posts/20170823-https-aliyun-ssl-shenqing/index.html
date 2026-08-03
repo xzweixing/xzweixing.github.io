@@ -281,6 +281,32 @@
   font-weight: 600;
 }
 
+/* === 文字排版 & 折叠 === */
+.tl-text,
+.tl-short,
+.tl-full {
+  font-size: .95em;
+  line-height: 1.8;
+  color: var(--font-color);
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+.tl-text-wrap {
+  margin-top: 10px;
+}
+.tl-expand-btn {
+  display: inline-block;
+  margin-top: 6px;
+  color: #49b1f5;
+  font-size: .9em;
+  text-decoration: none;
+  cursor: pointer;
+}
+.tl-expand-btn:hover {
+  color: #3a9fd4;
+  text-decoration: underline;
+}
+
 /* === 响应式 === */
 @media screen and (max-width: 768px) {
   .timeline-post-item {
