@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>wordpress 微信小程序学习制作中 | WEIXING.ME</title><meta name="author" content="WEIXING.ME"><meta name="copyright" content="WEIXING.ME"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="wordpress 微信小程序学习制作中 wordpress 微信小程序学习制作中 wordpress 微信小程序学习制作中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wordpress 微信小程序学习制作中">
+<meta property="og:url" content="https://www.weixing.me/posts/20180404-wordpress-weixinapps-study/index.html">
+<meta property="og:site_name" content="WEIXING.ME">
+<meta property="og:description" content="wordpress 微信小程序学习制作中 wordpress 微信小程序学习制作中 wordpress 微信小程序学习制作中">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.weixing.me/img/touxiang.jpg">
+<meta property="article:published_time" content="2018-04-04T04:00:00.000Z">
+<meta property="article:modified_time" content="2018-04-04T04:00:00.000Z">
+<meta property="article:author" content="WEIXING.ME">
+<meta property="article:tag" content="WordPress">
+<meta property="article:tag" content="微信开发">
+<meta property="article:tag" content="微信小程序">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.weixing.me/img/touxiang.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "wordpress 微信小程序学习制作中",
+  "url": "https://www.weixing.me/posts/20180404-wordpress-weixinapps-study/",
+  "image": "https://www.weixing.me/img/touxiang.jpg",
+  "datePublished": "2018-04-04T04:00:00.000Z",
+  "dateModified": "2018-04-04T04:00:00.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "WEIXING.ME",
+      "url": "https://www.weixing.me"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.weixing.me/posts/20180404-wordpress-weixinapps-study/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'wordpress 微信小程序学习制作中',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><style>#footer{background-color:#2c3e50!important}</style><style>
+/* === 时序手记 - 微博时间线样式 === */
+.timeline-post-item {
+  margin-bottom: 24px;
+  padding: 24px 28px 20px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-box-shadow);
+  transition: all .3s ease;
+}
+.timeline-post-item:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,.12);
+}
+.timeline-post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--blockquote-border-color, rgba(73,177,245,.2));
+}
+.timeline-post-avatar {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 12px;
+}
+.timeline-post-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 !important;
+}
+.timeline-post-info {
+  flex: 1;
+  min-width: 0;
+}
+.timeline-post-date {
+  font-size: .85em;
+  color: #999;
+}
+.timeline-post-content {
+  font-size: .95em;
+  line-height: 1.8;
+  color: var(--font-color);
+  word-break: break-word;
+}
+.timeline-post-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+.timeline-post-content > *:last-child {
+  margin-bottom: 0;
+}
+.timeline-post-content pre {
+  border-radius: 8px;
+}
+.timeline-post-content table {
+  width: 100%;
+}
+
+/* === 微博风格图片九宫格 === */
+.timeline-img-grid {
+  display: grid;
+  gap: 4px;
+  margin-top: 10px;
+  max-width: 480px;
+}
+/* 1张图：单图，限制大小 */
+.tl-img-1 {
+  grid-template-columns: minmax(120px, 200px);
+}
+/* 2张图：横排 */
+.tl-img-2 {
+  grid-template-columns: 1fr 1fr;
+}
+/* 3张图：横排 */
+.tl-img-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+/* 4张图：2x2 */
+.tl-img-4 {
+  grid-template-columns: 1fr 1fr;
+}
+/* 5~9张图：3列 */
+.tl-img-grid {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.timeline-img-grid-item {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #f0f0f0;
+}
+.timeline-img-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 !important;
+  border-radius: 0;
+  cursor: pointer;
+  transition: transform .2s;
+}
+.timeline-img-grid-item img:hover {
+  transform: scale(1.03);
+}
+.timeline-img-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+/* === 文字排版 & 折叠 === */
+.tl-text,
+.tl-short,
+.tl-full {
+  font-size: .95em;
+  line-height: 1.8;
+  color: var(--font-color);
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+.tl-text-wrap {
+  margin-top: 10px;
+}
+.tl-expand-btn {
+  display: inline-block;
+  margin-top: 6px;
+  color: #49b1f5;
+  font-size: .9em;
+  text-decoration: none;
+  cursor: pointer;
+}
+.tl-expand-btn:hover {
+  color: #3a9fd4;
+  text-decoration: underline;
+}
+
+/* === 响应式 === */
+@media screen and (max-width: 768px) {
+  .timeline-post-item {
+    margin-bottom: 16px;
+    padding: 20px 16px 18px;
+  }
+  .timeline-post-header {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+  }
+  .timeline-post-avatar {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+  }
+  .timeline-post-content {
+    font-size: .9em;
+  }
+}
+</style>
+<meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">356</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">726</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fas fa-clock"></i><span> 时序</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://shici.weixing.me/"><i class="fa-fw fas fa-feather-alt"></i><span> 诗词</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/top.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">WEIXING.ME</span></a><a class="nav-page-title" href="/"><span class="site-name">wordpress 微信小程序学习制作中</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fas fa-clock"></i><span> 时序</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://shici.weixing.me/"><i class="fa-fw fas fa-feather-alt"></i><span> 诗词</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">wordpress 微信小程序学习制作中</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-04-04T04:00:00.000Z" title="发表于 2018-04-04 12:00:00">2018-04-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2018-04-04T04:00:00.000Z" title="更新于 2018-04-04 12:00:00">2018-04-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/coding/">技术开发</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>wordpress 微信小程序学习制作中</p>
+<p>wordpress 微信小程序学习制作中</p>
+<p>wordpress 微信小程序学习制作中</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://www.weixing.me">WEIXING.ME</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://www.weixing.me/posts/20180404-wordpress-weixinapps-study/">https://www.weixing.me/posts/20180404-wordpress-weixinapps-study/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://www.weixing.me" target="_blank">WEIXING.ME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/WordPress/">WordPress</a><a class="post-meta__tags" href="/tags/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/">微信开发</a><a class="post-meta__tags" href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></div><div class="post-share"><div class="social-share" data-image="/img/touxiang.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/20180502-cvm-baota-lnmp-lamp/" title="腾讯云CVM安装宝塔面板及LNMP/LAMP环境配置"><img class="cover" src="/uploads/2018/05/2018050212133799-300x288_2.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">腾讯云CVM安装宝塔面板及LNMP/LAMP环境配置</div></div><div class="info-2"><div class="info-item-1">前几天新购腾讯的CVM云服务器一台，安装了宝塔的管理面板以及LNMP&#x2F;LAMP环境，现在将安装方法分享给大家，其实阿里云的ECS的安装方式也是一样的，下面是详细步骤： 1、使用远程登录软件连接我们的服务器。 采用密码登录 Linux 实例（本例中选择使用** PUTTY**，大家也可以选择其他类型的登录软件，推荐下载地址：https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html）。  登录默认账户为root，密码为你之前设置的密码（此时输入密码是不显示任何内容的，但你确实已经输入）  2、使用命令行安装宝塔面板 [su_highlight]yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install.sh &amp;&amp; sh install.sh[&#x2F;su_highlight] 你可以直接复制上面代码，然后鼠标右击就直接粘贴上去了，点击y开始安装  安装完毕后给出登录账户密码...</div></div></div></a><a class="pagination-related" href="/posts/20180316-http-to-https-htaccess/" title="HTTP访问跳转至HTTPS(.htaccess方法)"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">HTTP访问跳转至HTTPS(.htaccess方法)</div></div><div class="info-2"><div class="info-item-1">最近在研究小程序的开发，网站必须要是https的，所以想把从http打开的链接全部跳转到https，之前魏星博客就写过**10个经典.htaccess应用**的文章，里面没有此项功能，今天算是补上一个，话不多说，直接上代码。 &#96;RewriteEngine on RewriteBase &#x2F; RewriteCond %{SERVER_PORT} !^443$ RewriteRule ^.*$ https:&#x2F;&#x2F;%{SERVER_NAME}%{REQUEST_URI} [L,R] &#96; </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/20170806-weixin-xiaochengxu-xuexi-1tian/" title="微信小程序开发学习第一天，创建小程序"><img class="cover" src="/uploads/2017/08/kaifazhegongju_2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2017-08-06</div><div class="info-item-2">微信小程序开发学习第一天，创建小程序</div></div><div class="info-2"><div class="info-item-1">微信小程序很是火爆，魏星今天开始学习微信小程序的制作，第一天学习创建小程序 首先在官网下载开发者工具（点击官网下载），下载安装完毕后，打开显示如下界面 用微信扫面二维码，手机上确认登录开发者工具  我们选择本地小程序项目，接下来是添加项目   如果有AppID就填写完毕，如果没有，就点击无AppID，点击无AppID不影响本地测试  如果您是首次开发该项目，且项目目录路径文件夹为空的话，系统会自动让您选择是否在当前目录中创建quick start 项目，我们默认选择打钩，点击添加项目，系统默认给出一个小程序的项目默认文件  本小程序一共有三个界面，分别为index、logs、page2（本人自己添加测试使用，后面将讲解），每一个小程序页面是由同路径下同名的四个不同后缀文件的组成，如：index.js、index.wxml、index.wxss、index.json。.js后缀的文件是脚本文件，.json后缀的文件是配置文件，.wxss后缀的是样式表文件，.wxml后缀的文件是页面结构文件。 wxml就相当于web页面中的html，wxss相当于css，js就是脚本文件，json是...</div></div></div></a><a class="pagination-related" href="/posts/20190331-wordpress-warning-missing-argument-2-for-wpdbprepare-solution/" title="wordpress解决Warning: Missing argument 2 for wpdb::prepare()方法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-03-31</div><div class="info-item-2">wordpress解决Warning: Missing argument 2 for wpdb::prepare()方法</div></div><div class="info-2"><div class="info-item-1">在使用global $wpdb时，对数据进行查询，举个栗子  get_var($wpdb-&gt;prepare(“SELECT count(*) FROM $wpdb-&gt;postmeta where meta_key&#x3D;’key_price’ and meta_value&#x3D;’100’”));echo $IsHave;?&gt; 上面的代码输出后就会报Warning: Missing argument 2 for wpdb::prepare()的错误。 使用$wpdb-&gt;prepare是因为mysql语句中可能含有单引号双引号这样的字符，如果不加 处理直接送给mysql，可能会导致错误。于是这里通过一个prepare来对mysql语句进行预处理。prepare的语法是： $sql &#x3D; $wpdb-&gt;prepare( ‘query’ [, value_parameter, value_parameter … ] ); 在query中可以包含%d,%S,%f，分别表示后面参数的类型是整数，字符和浮点。所以我们将代码改成这样： $IsHav...</div></div></div></a><a class="pagination-related" href="/posts/20190331-wordpress-global-wpdb-database-code/" title="wordpress通过global $wpdb操作数据库"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-03-31</div><div class="info-item-2">wordpress通过global $wpdb操作数据库</div></div><div class="info-2"><div class="info-item-1">有时候我们用wordpress实现一些功能的时候，wordpress自带的一些函数可能不能直接满足我们的需求，这就要求我们直接对数据库进行操作，wordpress中我们可以通过global $wpdb对象来操作，它是封装好的数据库操作类，通过它我们可以省去连接数据库的步骤（连接使用的是WordPress配置中的数据库），直接进行查询操作。 要使用$wpdb对象进行数据库查询时，需要先拿到全局变量，在你需要查询的地方使用如下声明即可： global $wpdb; 下面的例子就是我进行的一个简单的查询：  get_var($wpdb-&gt;prepare(“SELECT count(*) FROM $wpdb-&gt;postmeta where meta_key&#x3D;%d and meta_value&#x3D;%s”,’identityNo’,$cidentityNo));echo $IsHave;?&gt; 其他操作详见官方资料：https://codex.wordpress.org/zh-cn:Class_Reference/wpdb 更多数据库查询函数 $wpdb ...</div></div></div></a><a class="pagination-related" href="/posts/20190422-poedit-soft-wordpress-plus-language-zh_cn/" title="使用Poedit软件对wordpress插件进行汉化，附下载地址"><img class="cover" src="/uploads/2019/04/2019042215140486_2.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-22</div><div class="info-item-2">使用Poedit软件对wordpress插件进行汉化，附下载地址</div></div><div class="info-2"><div class="info-item-1">使用WP All Export Pro对数据进行导出，因为是给客户用的，所以就想着进行汉化，方便用户使用，找资料发现Poedit这款软件，真的很好用，推荐大家使用。下面做简单的介绍： 1、打开界面  2、选择第三条《翻译wordpress的主题或插件》，我选择的是WP All Export Pro插件  3、打开后选择要翻译的语言，也可直接手动输入：zh_CN 4、翻译你的插件，翻译完后点击验证按钮，看有没有错误，有的话根据提示修改 5、保存你的语言包，点击保存按钮即可，文件会直接保存在language文件夹下，也可另存为其他路径 6、找到的语言包上传至插件相关路径  最后附Poedit绿色破解版下载地址：http://pan.baidu.com/s/1qYipLW4 ，来源于网络。开发者可直接download。 </div></div></div></a><a class="pagination-related" href="/posts/20160422-wordpress-chajian-adminimize/" title="wordpress插件Adminimize&#8211;不同角色隐藏&#x2F;显示不同的功能"><img class="cover" src="/uploads/2016/04/11_2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2016-04-22</div><div class="info-item-2">wordpress插件Adminimize&#8211;不同角色隐藏&#x2F;显示不同的功能</div></div><div class="info-2"><div class="info-item-1"> 今天用wordpress给朋友做一个企业网站，主题基本做好，由于朋友不懂wordpress，后台很多东西都不知道是干嘛用的，为了简化后台显示的内容，在网上找到了一款名叫“Adminimize”的插件，果然是很强大，可以把后台的所有的模块都可以根据不同的角色隐藏&#x2F;显示不同的功能，如果你不想让“编辑”角色的账号显示“标签”功能，就直接在“编辑”角色的“标签”功能的前面打钩，提交后，该角色就没有此功能了，其他的不多说了，功能强大谁用谁知道。后台插件安装直接搜索Adminimize就可以了！！ </div></div></div></a><a class="pagination-related" href="/posts/20190520-wxapp-substring/" title="微信小程序开发&#8211;截取字符串，文字超出显示省略号"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-05-20</div><div class="info-item-2">微信小程序开发&#8211;截取字符串，文字超出显示省略号</div></div><div class="info-2"><div class="info-item-1">微信小程序开发时，显示的文字超出后显示省略号，通过截取字符串的方法实现，直接上代码： success(res){ let activityPostscash&#x3D;res.data.data activityPostscash.forEach((item) &#x3D;&gt; { if (item.intro.length&gt;18){ item.intro &#x3D; item.intro.substring(0, 18)+”…” } }) that.setData({ activityPosts:res.data.data }); console.log(res.data.data) } </div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WEIXING.ME</div><div class="author-info-description">魏星博客 - 记录工作、学习、生活</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">356</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">726</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" href="/sitemap.xml"><i class="fa fa-rss"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xzweixing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:weixing.me@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
