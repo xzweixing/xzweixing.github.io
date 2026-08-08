@@ -565,23 +565,20 @@
 .pinned-card-compact .timeline-video-block .tl-video-wrap {
   max-width: 100%;
 }
-/* 置顶顺序编号角标 */
+/* 置顶角标：放右上角，替代原编号位置，显示「📌 置顶」文字 */
 .pinned-order-badge {
   position: absolute;
   top: 8px;
   right: 8px;
   background: #e74c3c;
   color: #fff;
-  font-size: .72em;
-  font-weight: 600;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: .7em;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 2px 8px;
   z-index: 2;
-  line-height: 1;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 
 /* 定位信息 */
@@ -605,7 +602,7 @@
 .timeline-post-location .loc-pin {
   flex-shrink: 0;
 }
-</style><div id="timeline-page"><div id="pinned-grid" style="display:none"></div><div id="article-container"></div><div id="timeline-loading" style="display:none;text-align:center;padding:20px;color:#999"><i class="fas fa-spinner fa-spin"></i><span> 加载中...</span></div><div id="timeline-end" style="display:none;text-align:center;padding:20px;color:#999">—— 已经到底啦 ——</div><div id="tl-lightbox"><span class="tlb-close" onclick="tlCloseLightbox()">×</span><span class="tlb-nav tlb-prev" onclick="tlLbNav(-1)">‹</span><img id="tl-lightbox-img" src=""><span class="tlb-nav tlb-next" onclick="tlLbNav(1)">›</span><div class="tlb-counter" id="tlb-counter"></div></div><script>(function () {
+</style><div class="nc" id="timeline-page"><div id="pinned-grid" style="display:none"></div><div id="article-container"></div><div id="timeline-loading" style="display:none;text-align:center;padding:20px;color:#999"><i class="fas fa-spinner fa-spin"></i><span> 加载中...</span></div><div id="timeline-end" style="display:none;text-align:center;padding:20px;color:#999">—— 已经到底啦 ——</div><div id="tl-lightbox"><span class="tlb-close" onclick="tlCloseLightbox()">×</span><span class="tlb-nav tlb-prev" onclick="tlLbNav(-1)">‹</span><img id="tl-lightbox-img" src=""><span class="tlb-nav tlb-next" onclick="tlLbNav(1)">›</span><div class="tlb-counter" id="tlb-counter"></div></div><script>(function () {
   var container = document.getElementById('article-container');
   var loadingEl = document.getElementById('timeline-loading');
   var endEl = document.getElementById('timeline-end');
@@ -880,10 +877,10 @@
     var item = document.createElement('div');
     item.className = 'timeline-post-item pinned-item pinned-card-compact';
 
-    // 顺序编号角标 ①②③
+    // 右上角置顶角标（替代原编号位置，显示「📌 置顶」文字）
     var badge = document.createElement('span');
     badge.className = 'pinned-order-badge';
-    badge.textContent = ['①', '②', '③'][index] || (index + 1);
+    badge.textContent = '📌 置顶';
     item.appendChild(badge);
 
     var header = document.createElement('div');
@@ -902,10 +899,6 @@
     timeEl.className = 'timeline-post-date';
     timeEl.textContent = post.created_at || '';
     info.appendChild(timeEl);
-    var pinnedTag = document.createElement('span');
-    pinnedTag.className = 'tl-pinned-tag';
-    pinnedTag.textContent = '📌';
-    info.appendChild(pinnedTag);
     var locEl = buildLocationEl(post.location);
     if (locEl) info.appendChild(locEl);
     header.appendChild(avatarLink);
@@ -1127,4 +1120,4 @@
           </div>
           <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web-ops/"><span class="card-category-list-name">建站运维</span><span class="card-category-list-count">56</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/coding/"><span class="card-category-list-name">技术开发</span><span class="card-category-list-count">104</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/life/"><span class="card-category-list-name">生活随笔</span><span class="card-category-list-count">152</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/tech-news/"><span class="card-category-list-name">科技见闻</span><span class="card-category-list-count">45</span></a></li>
-          </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">357</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-08-08T14:12:13.905Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
+          </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">357</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-08-08T14:48:11.318Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
