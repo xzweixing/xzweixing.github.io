@@ -230,9 +230,21 @@
   margin-bottom: 14px;
   max-width: 480px;
 }
-/* 1张图：单图，限制大小 */
+/* 1张图：单图，保留原始宽高比，仅限制最大尺寸 */
 .tl-img-1 {
-  grid-template-columns: minmax(120px, 200px);
+  grid-template-columns: minmax(120px, 480px);
+  max-width: 480px;
+}
+/* 单图项：不强制正方形，按图片实际比例显示 */
+.tl-img-1 .timeline-img-grid-item {
+  aspect-ratio: auto;
+  overflow: hidden;
+}
+.tl-img-1 .timeline-img-grid-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 /* 2张图：横排 */
 .tl-img-2 {
@@ -335,7 +347,7 @@
 <p>提示消息：</p>
 <p><a href="https://www.weixing.me/wp-content/uploads/2011/07/33_%E5%89%AF%E6%9C%AC.jpg"><img src="https://www.weixing.me/wp-content/uploads/2011/07/33_%E5%89%AF%E6%9C%AC.jpg"></a></p>
 <p>提示下载新版本浏览器</p>
-<p>最后为了感谢你的支持，只要是添加此段代码并且符合以下要求的网站都可以提交你的网站网址、logo图片，到邮箱：<a href="mailto:&#116;&#x68;&#101;&#x69;&#101;&#x36;&#99;&#111;&#x75;&#110;&#116;&#100;&#x6f;&#x77;&#x6e;&#x40;&#x68;&#x6f;&#x74;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109;">theie6countdown@hotmail.com</a> ，他们会为你的网站加上友情链接。</p>
+<p>最后为了感谢你的支持，只要是添加此段代码并且符合以下要求的网站都可以提交你的网站网址、logo图片，到邮箱：<a href="mailto:&#116;&#x68;&#101;&#105;&#x65;&#x36;&#99;&#111;&#x75;&#110;&#x74;&#x64;&#x6f;&#x77;&#110;&#64;&#x68;&#x6f;&#x74;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">theie6countdown@hotmail.com</a> ，他们会为你的网站加上友情链接。</p>
 <p><strong>要求</strong>：</p>
 <blockquote>
 </blockquote>
