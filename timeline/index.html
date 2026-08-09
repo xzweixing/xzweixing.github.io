@@ -616,6 +616,66 @@
 .timeline-post-location .loc-pin {
   flex-shrink: 0;
 }
+
+/* 评论 footer（博主附注）：默认显示最新 2 条，超过折叠 */
+.tl-comments {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f0;
+}
+.tl-comments-title {
+  font-size: .82em;
+  color: #999;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.tl-comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.tl-comment-item {
+  padding: 8px 10px;
+  background: #f9f9fb;
+  border-radius: 8px;
+  border-left: 3px solid #49b1f5;
+}
+.tl-comment-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.tl-comment-badge {
+  display: inline-block;
+  background: #49b1f5;
+  color: #fff;
+  font-size: .68em;
+  padding: 1px 6px;
+  border-radius: 3px;
+  line-height: 1.4;
+}
+.tl-comment-time {
+  font-size: .72em;
+  color: #aaa;
+}
+.tl-comment-content {
+  font-size: .88em;
+  line-height: 1.5;
+  color: #333;
+  word-break: break-word;
+}
+.tl-comments-toggle {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: .8em;
+  color: #49b1f5;
+  cursor: pointer;
+  text-decoration: none;
+}
+.tl-comments-toggle:hover {
+  text-decoration: underline;
+}
 </style><script>(function () {
   var container = document.getElementById('article-container');
   var loadingEl = document.getElementById('timeline-loading');
@@ -640,9 +700,9 @@
     function getMediaType(url) {
       var filename = String(url).split('?')[0].split('#')[0].split('/').pop();
       var ext = filename.indexOf('.') >= 0 ? filename.split('.').pop().toLowerCase() : '';
-      if (['jpg', 'jpeg', 'png', 'gif', 'webp'].indexOf(ext) >= 0) return 'image';
-      if (['mp4', 'webm', 'mov', 'm4v'].indexOf(ext) >= 0) return 'video';
-      if (['mp3', 'm4a', 'wav', 'ogg', 'aac', 'flac'].indexOf(ext) >= 0) return 'audio';
+      if (['jpg', 'jpeg', 'png', 'gif', 'webp', 'avif'].indexOf(ext) >= 0) return 'image';
+      if (['mp4', 'webm', 'mov', 'm4v', 'ogv'].indexOf(ext) >= 0) return 'video';
+      if (['mp3', 'm4a', 'wav', 'ogg', 'aac', 'flac', 'opus'].indexOf(ext) >= 0) return 'audio';
       return 'image';
     }
 
@@ -755,6 +815,104 @@
         short.style.display = '';
         btn.textContent = '展开全文';
       }
+    }
+
+    // 构建评论 footer（博主附注）
+    // 默认显示最新 COMMENT_PREVIEW_COUNT 条（后端已返回），超过则折叠并显示「展开全部」按钮
+    // 无评论或旧后端字段缺失时返回 null，卡片无 footer
+    var COMMENT_PREVIEW_COUNT = 2;
+
+    function buildCommentsFooter(post) {
+      var count = post.comment_count || 0;
+      var previewComments = post.comments || [];
+      if (count === 0 || previewComments.length === 0) return null;
+
+      var footer = document.createElement('div');
+      footer.className = 'tl-comments';
+
+      var title = document.createElement('div');
+      title.className = 'tl-comments-title';
+      title.textContent = '💬 博主附注';
+      footer.appendChild(title);
+
+      var list = document.createElement('div');
+      list.className = 'tl-comment-list';
+      previewComments.forEach(function (c) {
+        list.appendChild(buildCommentItem(c));
+      });
+      footer.appendChild(list);
+
+      // 超过预览条数，显示「展开全部」按钮
+      if (count > COMMENT_PREVIEW_COUNT) {
+        var toggleBtn = document.createElement('a');
+        toggleBtn.className = 'tl-comments-toggle';
+        toggleBtn.href = 'javascript:void(0)';
+        toggleBtn.textContent = '展开全部（共 ' + count + ' 条）';
+        // 闭包捕获预览评论，供「收起」时恢复
+        (function (btn, postId, previews) {
+          var expanded = false;
+          btn.onclick = function () {
+            if (!expanded) {
+              // 展开：fetch 全量评论
+              expanded = true;
+              btn.textContent = '加载中...';
+              fetch('https://api.weixing.me/posts/' + postId + '/comments')
+                .then(function (r) { return r.json(); })
+                .then(function (data) {
+                  var allComments = data.comments || [];
+                  list.innerHTML = '';
+                  allComments.forEach(function (c) {
+                    list.appendChild(buildCommentItem(c));
+                  });
+                  btn.textContent = '收起';
+                })
+                .catch(function () {
+                  expanded = false;
+                  btn.textContent = '加载失败，点击重试';
+                });
+            } else {
+              // 收起：用闭包捕获的预览评论恢复
+              expanded = false;
+              list.innerHTML = '';
+              previews.forEach(function (c) {
+                list.appendChild(buildCommentItem(c));
+              });
+              btn.textContent = '展开全部（共 ' + count + ' 条）';
+            }
+          };
+        })(toggleBtn, post.id, previewComments);
+        footer.appendChild(toggleBtn);
+      }
+
+      return footer;
+    }
+
+    // 构建单条评论 DOM 元素
+    function buildCommentItem(c) {
+      var item = document.createElement('div');
+      item.className = 'tl-comment-item';
+
+      var header = document.createElement('div');
+      header.className = 'tl-comment-header';
+
+      var badge = document.createElement('span');
+      badge.className = 'tl-comment-badge';
+      badge.textContent = '博主';
+      header.appendChild(badge);
+
+      var time = document.createElement('span');
+      time.className = 'tl-comment-time';
+      time.textContent = c.created_at || '';
+      header.appendChild(time);
+
+      item.appendChild(header);
+
+      var content = document.createElement('div');
+      content.className = 'tl-comment-content';
+      content.innerHTML = escapeHtml(c.content || '');
+      item.appendChild(content);
+
+      return item;
     }
 
     function buildCard(post) {
@@ -883,6 +1041,11 @@
       }
 
       item.appendChild(content);
+
+      // 评论 footer（博主附注，默认显示最新 2 条，超过折叠）
+      var commentsFooter = buildCommentsFooter(post);
+      if (commentsFooter) item.appendChild(commentsFooter);
+
       return item;
     }
 
@@ -1134,4 +1297,4 @@
           </div>
           <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web-ops/"><span class="card-category-list-name">建站运维</span><span class="card-category-list-count">56</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/coding/"><span class="card-category-list-name">技术开发</span><span class="card-category-list-count">104</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/life/"><span class="card-category-list-name">生活随笔</span><span class="card-category-list-count">152</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/tech-news/"><span class="card-category-list-name">科技见闻</span><span class="card-category-list-count">45</span></a></li>
-          </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">357</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-08-08T15:21:55.283Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
+          </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">357</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-08-09T02:44:15.385Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2010 - 2026 By WEIXING.ME</span></div><div class="footer_custom_text">框架HEXO | 主题Butterfly | <a href=https://www.weixing.me/sitemap/>网站地图</a> | <a  rel="nofollow" target="_blank" href="http://beian.miit.gov.cn">苏ICP备2024138432</a> | <a  rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031102020149">苏公网安备32031102020149</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
