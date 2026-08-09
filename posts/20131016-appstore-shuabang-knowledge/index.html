@@ -236,13 +236,17 @@
 /* 1张图：单图，保留原始宽高比，短边限制 200px */
 .tl-img-1 {
   grid-template-columns: auto;
+  /* width:max-content 让 grid 容器收缩到图片实际宽度，
+     避免图片右边出现 grid item 的灰色背景 */
+  width: max-content;
   max-width: 100%;
 }
-/* 单图项：不强制正方形，按图片实际比例显示 */
+/* 单图项：不强制正方形，按图片实际比例显示，背景透明 */
 .tl-img-1 .timeline-img-grid-item {
   aspect-ratio: auto;
   overflow: hidden;
   max-width: 100%;
+  background: transparent;
 }
 .tl-img-1 .timeline-img-grid-item img {
   /* 单图尺寸完全由 CSS 控制：
