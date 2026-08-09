@@ -231,10 +231,10 @@
   margin-bottom: 14px;
   max-width: 480px;
 }
-/* 1张图：单图，保留原始宽高比，仅限制最大尺寸 */
+/* 1张图：单图，保留原始宽高比，短边限制 200px */
 .tl-img-1 {
-  grid-template-columns: minmax(120px, 480px);
-  max-width: 480px;
+  grid-template-columns: max-content;
+  max-width: 100%;
 }
 /* 单图项：不强制正方形，按图片实际比例显示 */
 .tl-img-1 .timeline-img-grid-item {
@@ -242,8 +242,6 @@
   overflow: hidden;
 }
 .tl-img-1 .timeline-img-grid-item img {
-  width: 100%;
-  height: auto;
   object-fit: contain;
   display: block;
 }
